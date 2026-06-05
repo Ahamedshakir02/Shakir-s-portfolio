@@ -1,0 +1,12 @@
+export default function ToTop({ show }) {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  return (
+    <button
+      className={`to-top${show ? ' show' : ''}`}
+      aria-label="Back to top"
+      onClick={() => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })}
+    >
+      ↑
+    </button>
+  )
+}
