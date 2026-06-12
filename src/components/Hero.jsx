@@ -36,8 +36,8 @@ export default function Hero() {
         </div>
 
         <div className="hero-photo">
-          <ImageSlot placeholder="Drop your photo" />
-          <span className="frame-tag">portrait.jpg</span>
+          <ImageSlot src="/assets/Ahamed-Shakir-Photo.png" alt="Ahamed Shakir — portrait" />
+          <span className="frame-tag">portrait.png</span>
         </div>
       </div>
 
