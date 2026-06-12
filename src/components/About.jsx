@@ -7,7 +7,7 @@ export default function About() {
         <div className="sec-label reveal"><b>01</b> The gist</div>
         <div className="about-grid">
           <p className="about-lead reveal">
-            Fresh CS grad from <span className="hl">APJ Abdul Kalam Technological University</span>,
+            CS grad from <span className="hl">APJ Abdul Kalam Technological University</span>,
             building across hardware and software — embedded systems, applied NLP, machine learning,
             and mobile. Basically, if it computes, I've probably poked at it.
           </p>
@@ -28,6 +28,9 @@ export default function About() {
                 <span className="tag" key={t}>{t}</span>
               ))}
             </div>
+            <p style={{ marginTop: 20, fontSize: '0.95rem', opacity: 0.85 }}>
+              Find my certifications, skills, and GitHub projects on my <a href="https://g.dev/ahamedshakir" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Google Developer profile</a>.
+            </p>
           </div>
         </div>
       </div>

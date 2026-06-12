@@ -143,12 +143,12 @@ export const timeline = [
 ]
 
 export const certs = [
-  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Generative AI' },
-  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Large Language Models' },
-  { issuer: 'Google', yr: 'Jun 2024', title: 'Introduction to Responsible AI' },
-  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise-grade AI' },
-  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise Data Science' },
-  { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AZ-900)' },
+  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Generative AI', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
+  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Large Language Models', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
+  { issuer: 'Google', yr: 'Jun 2024', title: 'Introduction to Responsible AI', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
+  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise-grade AI', href: 'https://www.youracclaim.com/credentials/CREDENTIAL_ID' },
+  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise Data Science', href: 'https://www.youracclaim.com/credentials/CREDENTIAL_ID' },
+  { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AZ-900)', href: 'https://learn.microsoft.com/en-us/users/ahamed-shakir/credentials/CREDENTIAL_ID' },
 ]
 
 export const mulearnMeta = [
@@ -166,6 +166,7 @@ export const languages = [
 export const contactLinks = [
   { href: 'mailto:ahamedshakir02@gmail.com', label: '✉ ahamedshakir02@gmail.com' },
   { href: 'https://github.com/ahamedshakir02', label: '↗ GitHub', external: true },
+  { href: 'https://g.dev/ahamedshakir', label: '↗ Google Developer', external: true },
   { href: 'https://www.linkedin.com/in/ahamed-shakir', label: '↗ LinkedIn', external: true },
   { href: 'https://app.mulearn.org/profile/ahamedshakir@mulearn', label: '↗ µLearn', external: true },
 ]
