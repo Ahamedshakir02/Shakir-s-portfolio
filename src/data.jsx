@@ -47,7 +47,7 @@ export const projects = [
     ],
     media: '/assets/proj-1.png',
     alt: 'FIR document analysis — NLP entity extraction concept',
-    link: 'https://github.com/ahamedshakir02',
+    link: 'https://github.com/Ahamedshakir02/firai',
     linkLabel: 'View on GitHub',
   },
   {
@@ -65,7 +65,7 @@ export const projects = [
     ],
     media: '/assets/proj-2.png',
     alt: 'GPS and IMU safety monitoring — live route and impact detection concept',
-    link: 'https://github.com/ahamedshakir02',
+    link: 'https://github.com/Ahamedshakir02/TailSafe',
     linkLabel: 'View on GitHub',
   },
   {
@@ -83,7 +83,7 @@ export const projects = [
     ],
     media: '/assets/proj-3.png',
     alt: 'Disease diagnosis ANN — neural network and signal concept',
-    link: 'https://github.com/ahamedshakir02',
+    link: 'https://github.com/Ahamedshakir02/Strokeprediction-ML',
     linkLabel: 'View on GitHub',
   },
   {
@@ -168,5 +168,4 @@ export const contactLinks = [
   { href: 'https://github.com/ahamedshakir02', label: '↗ GitHub', external: true },
   { href: 'https://www.linkedin.com/in/ahamed-shakir', label: '↗ LinkedIn', external: true },
   { href: 'https://app.mulearn.org/profile/ahamedshakir@mulearn', label: '↗ µLearn', external: true },
-  { href: 'tel:+919447533289', label: '☎ +91 94475 33289' },
 ]
