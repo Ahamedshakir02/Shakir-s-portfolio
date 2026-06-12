@@ -27,8 +27,11 @@ npm run preview  # preview the production build
 - `index.html` — `<head>` metadata: favicon, Open Graph / Twitter tags, fonts, no-flash theme script.
 - `public/` — static assets served at the site root:
   - `favicon.svg`
+  - `robots.txt` — SEO: instructs search engines to crawl the site and points to the sitemap.
+  - `sitemap.xml` — SEO: XML map of all site URLs for search engine indexing.
   - `assets/` — project images (`proj-1…4.png`), the hero portrait (`Ahamed-Shakir-Photo.png`),
     the social-preview card (`og-image.png`), and the résumé / CV PDFs.
+- `vercel.json` — Vercel deployment config: SPA rewrite rule to handle deep links (`/#section`).
 
 ## Notes
 
@@ -39,6 +42,12 @@ npm run preview  # preview the production build
   regenerate it if the headline or branding changes.
 - **Résumé / CV:** the hero has two download buttons → `assets/Ahamed-Shakir-Resume.pdf` and
   `assets/Ahamed-Shakir-CV.pdf`.
+- **Certifications:** Each cert in `src/data.jsx` includes an `href` field. The `Certs` component
+  renders them as clickable links to credential verification pages (Coursera, Credly, Microsoft Learn).
+  Update the placeholder URLs with actual credential links.
+- **SEO:** `robots.txt` + `sitemap.xml` help search engines crawl and index the site. 
+  `index.html` includes `<meta name="author">` and `<meta name="theme-color">` tags.
+- **Deployment:** `vercel.json` configured for SPA routing (deep links like `/#skills` work correctly).
 - Theme is applied before paint by an inline script in `index.html` to avoid a flash.
 - Honors `prefers-reduced-motion` for reveals, counters, smooth scroll, and the mobile menu.
 - Fonts: Unbounded (display), IBM Plex Sans (body), IBM Plex Mono (labels), loaded from Google Fonts.
