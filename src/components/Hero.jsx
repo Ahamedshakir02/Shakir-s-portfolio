@@ -26,8 +26,11 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#work">See the work <span className="arrow">→</span></a>
-            <a className="btn btn-ghost" href="/assets/Ahamed-Shakir-CV.docx" download>
+            <a className="btn btn-ghost" href="/assets/Ahamed-Shakir-Resume.pdf" download>
               Grab my résumé <span className="arrow">↓</span>
+            </a>
+            <a className="btn btn-ghost" href="/assets/Ahamed-Shakir-CV.pdf" download>
+              Full CV <span className="arrow">↓</span>
             </a>
           </div>
         </div>

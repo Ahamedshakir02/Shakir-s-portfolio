@@ -15,13 +15,6 @@ export default function Languages() {
             </div>
           ))}
         </div>
-        <div className="note reveal" style={{ marginTop: 28 }}>
-          <span className="tagm">Writing · soon</span>
-          <span>
-            Notes on Edge AI, IoT, and applied NLP are coming — once I stop building long enough to
-            write them down. Want a blog section here? Say the word and it's done.
-          </span>
-        </div>
       </div>
     </section>
   )
