@@ -8,6 +8,7 @@ import Path from './components/Path.jsx'
 import Certs from './components/Certs.jsx'
 import Mulearn from './components/Mulearn.jsx'
 import Languages from './components/Languages.jsx'
+import Faq from './components/Faq.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import ToTop from './components/ToTop.jsx'
@@ -32,6 +33,7 @@ export default function App() {
       <Certs />
       <Mulearn />
       <Languages />
+      <Faq />
       <Contact />
       <Footer />
       <ToTop show={showTop} />
