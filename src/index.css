@@ -341,6 +341,33 @@ img { display: block; max-width: 100%; }
 .note .tagm { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--line-2); border-radius: 100px; padding: 6px 12px; white-space: nowrap; }
 
 /* =========================================================================
+   FAQ
+   ========================================================================= */
+.faq-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 26px 4px; transition: color .25s;
+}
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary:hover { color: var(--accent); }
+.faq-item > summary h3 {
+  font-family: var(--font-display); font-weight: 600; font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.25; letter-spacing: -0.015em; text-wrap: balance;
+}
+.faq-mark { position: relative; flex: none; width: 16px; height: 16px; }
+.faq-mark::before, .faq-mark::after {
+  content: ""; position: absolute; background: var(--accent); transition: transform .25s var(--ease), opacity .25s;
+}
+.faq-mark::before { top: 7px; left: 0; width: 16px; height: 2px; }
+.faq-mark::after { top: 0; left: 7px; width: 2px; height: 16px; }
+.faq-item[open] .faq-mark::after { transform: scaleY(0); opacity: 0; }
+.faq-item > p {
+  color: var(--ink-2); max-width: 72ch; font-size: clamp(15px, 1.4vw, 17px); line-height: 1.65;
+  padding: 0 4px 28px;
+}
+
+/* =========================================================================
    Contact
    ========================================================================= */
 .contact { text-align: center; }
