@@ -1,0 +1,57 @@
+# Ahamed Shakir M P
+
+> AI, IoT & Mobile Engineer. Computer Science graduate (B.Tech, APJ Abdul Kalam
+> Technological University / KTU) from Kerala, India. Builds Edge AI, applied NLP,
+> machine-learning models, IoT/embedded systems, and React Native mobile apps.
+> Open to international engineering roles.
+
+- **Name:** Ahamed Shakir M P (Ahamed Shakir)
+- **Location:** Kerala, India
+- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer, Photographer
+- **Education:** B.Tech in Computer Science & Engineering, APJ Abdul Kalam Technological University (KTU), 2022–2026
+- **Website:** https://shakir-s-portfolio.vercel.app/
+- **Email:** ahamedshakir02@gmail.com
+- **Availability:** Actively seeking international engineering roles in AI/ML, IoT, and mobile.
+
+## Skills
+
+- **Languages:** Python, Java, JavaScript, C
+- **AI / ML:** NLP, text extraction, Scikit-learn, Pandas, NumPy, ANN / deep learning, LLMs, generative AI
+- **Prompt Engineering:** prompt design, system prompts, few-shot & chain-of-thought, LLM app building, RAG workflows, evals & iteration
+- **Web & Mobile:** React Native, HTML, CSS, REST APIs
+- **Cloud & Tools:** Firebase RTDB, MongoDB, Google Colab, Git, GitHub, VS Code
+- **Hardware / IoT:** ESP32, Neo-6M GPS, MPU6050 IMU, BLE, WebSocket, microSD
+- **Design & UX:** Figma, wireframing, UX prototyping, user-flow design
+
+## Projects
+
+- **AI-Based FIR Document Analysis & Information Extraction** — NLP pipeline that extracts names, dates, locations, and incidents from unstructured police FIR documents (PDF parsing, tokenization, regex), with an LLM-powered natural-language Q&A layer. https://github.com/Ahamedshakir02/firai
+- **Real-Time GPS & IMU Safety Monitoring App (TailSafe)** — ESP32 firmware reading a Neo-6M GPS and MPU6050 IMU, streaming over BLE and WebSocket into a React Native app, with automatic accident SOS detection, geofencing, live maps, and offline microSD logging. https://github.com/Ahamedshakir02/TailSafe
+- **Disease Diagnosis Prediction with an ANN** — tuned multi-layer artificial neural network achieving 98%+ test accuracy, rigorously evaluated with a confusion matrix, precision, recall, and F1. https://github.com/Ahamedshakir02/Strokeprediction-ML
+- **µLearn Mobile App — Onboarding UX** — end-to-end 8-screen onboarding redesign for an app used by thousands of Kerala students, from low-fi wireframes to usability-tested high-fi prototypes; reduced onboarding steps by 30%.
+
+## Experience
+
+- **Campus Lead — GTech µLearn, MES College of Engineering** (Jul 2025 – Apr 2026). GTech µLearn is Kerala's largest student developer community, backed by the Government of Kerala. Grew active student participation by 40%, ran 10+ technical workshops (AI, Web Dev, Cybersecurity, Open Source) reaching 100+ students per semester, and coordinated 10+ mentors across institutions.
+
+## Certifications
+
+- Google — Introduction to Generative AI (2024)
+- Google — Introduction to Large Language Models (2024)
+- Google — Introduction to Responsible AI (2024)
+- IBM — Getting Started with Enterprise-grade AI (2024)
+- IBM — Getting Started with Enterprise Data Science (2024)
+- Microsoft — Azure AI Fundamentals, AZ-900 (2024)
+
+## Languages
+
+- English — professional working proficiency
+- Malayalam — native speaker
+- Arabic — basic conversational
+
+## Links
+
+- GitHub: https://github.com/ahamedshakir02
+- LinkedIn: https://www.linkedin.com/in/ahamed-shakir
+- Google Developer: https://g.dev/ahamedshakir
+- µLearn: https://app.mulearn.org/profile/ahamedshakir@mulearn
