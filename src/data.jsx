@@ -6,6 +6,7 @@ export const navLinks = [
   { href: '#work', label: 'Work' },
   { href: '#path', label: 'Path' },
   { href: '#mulearn', label: 'µLearn' },
+  { href: '#faq', label: 'FAQ' },
 ]
 
 export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer', 'Photographer']
@@ -161,6 +162,33 @@ export const languages = [
   { name: 'English', level: 'Professional working', lvl: 0.85 },
   { name: 'Malayalam', level: 'Native speaker', lvl: 1 },
   { name: 'Arabic', level: 'Basic conversational', lvl: 0.45 },
+]
+
+export const faqs = [
+  {
+    q: 'Who is Ahamed Shakir?',
+    a: "Ahamed Shakir M P is a Computer Science graduate (B.Tech, APJ Abdul Kalam Technological University) and engineer from Kerala, India, specializing in AI, IoT, and mobile development. He builds Edge AI and applied NLP systems, embedded/IoT hardware, and React Native mobile apps.",
+  },
+  {
+    q: 'What does Ahamed Shakir build?',
+    a: "He builds at the intersection of AI and the physical world: NLP pipelines and LLM-powered tools, machine-learning models, IoT and embedded systems on microcontrollers like the ESP32, and React Native mobile apps. Highlights include an NLP system that reads and answers questions about police FIR documents and a real-time GPS/IMU accident-detection safety app.",
+  },
+  {
+    q: "What are Ahamed Shakir's key skills and technologies?",
+    a: "Languages: Python, Java, JavaScript, and C. AI/ML: NLP, deep learning, LLMs, generative AI, prompt engineering, RAG workflows, Scikit-learn, Pandas, and NumPy. Mobile & web: React Native, HTML, CSS, and REST APIs. Hardware/IoT: ESP32, GPS and IMU sensors, BLE, and WebSocket. Cloud & tools: Firebase, MongoDB, Git, and Figma.",
+  },
+  {
+    q: 'Is Ahamed Shakir available for hire?',
+    a: "Yes. Ahamed is actively seeking international engineering roles in AI/ML, IoT, and mobile development. The fastest way to reach him is by email at ahamedshakir02@gmail.com or via LinkedIn.",
+  },
+  {
+    q: "What is Ahamed Shakir's experience and leadership background?",
+    a: "He served as Campus Lead for GTech µLearn — Kerala's largest student developer community, backed by the Government of Kerala — at MES College of Engineering. He grew active student participation by 40%, ran 10+ technical workshops in AI, web development, cybersecurity, and open source, and coordinated 10+ mentors across institutions.",
+  },
+  {
+    q: 'How can I contact Ahamed Shakir?',
+    a: "Email ahamedshakir02@gmail.com, or connect on GitHub (github.com/ahamedshakir02), LinkedIn (linkedin.com/in/ahamed-shakir), and his Google Developer profile (g.dev/ahamedshakir).",
+  },
 ]
 
 export const contactLinks = [
