@@ -4,7 +4,10 @@ export default function ToTop({ show }) {
     <button
       className={`to-top${show ? ' show' : ''}`}
       aria-label="Back to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })}
+      onClick={() => {
+        if (window.__lenis) window.__lenis.scrollTo(0)
+        else window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
+      }}
     >
       ↑
     </button>
