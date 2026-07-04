@@ -14,7 +14,7 @@ export default function Contact() {
               className="clink"
               key={l.label}
               href={l.href}
-              {...(l.external ? { target: '_blank', rel: 'noopener' } : {})}
+              {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               {l.label}
             </a>
