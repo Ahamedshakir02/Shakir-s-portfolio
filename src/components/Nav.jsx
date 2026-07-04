@@ -5,20 +5,23 @@ import { MoonIcon, SunIcon } from './icons.jsx'
 export default function Nav({ scrolled, onToggleTheme }) {
   const [open, setOpen] = useState(false)
 
-  // Lock body scroll while the mobile menu is open, and close on Escape.
+  // Lock scroll while the mobile menu is open (native + Lenis), close on Escape.
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+    if (open) window.__lenis?.stop()
+    else window.__lenis?.start()
     const onKey = (e) => e.key === 'Escape' && setOpen(false)
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
+      window.__lenis?.start()
       window.removeEventListener('keydown', onKey)
     }
   }, [open])
 
   return (
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
-      <a className="nav-brand" href="#top" onClick={() => setOpen(false)}>
+      <a className="nav-brand" href="/#top" onClick={() => setOpen(false)}>
         <span className="dot" /> Ahamed Shakir
       </a>
 
@@ -26,7 +29,7 @@ export default function Nav({ scrolled, onToggleTheme }) {
         {navLinks.map((l) => (
           <a key={l.href} href={l.href}>{l.label}</a>
         ))}
-        <a href="#contact" className="nav-cta">Get in touch</a>
+        <a href="/#contact" className="nav-cta">Get in touch</a>
         <button
           className="theme-toggle"
           onClick={onToggleTheme}
@@ -64,12 +67,12 @@ export default function Nav({ scrolled, onToggleTheme }) {
       <div
         id="mobile-menu"
         className={`nav-sheet${open ? ' open' : ''}`}
-        hidden={!open}
+        aria-hidden={!open}
       >
         {navLinks.map((l) => (
           <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
         ))}
-        <a href="#contact" className="nav-cta" onClick={() => setOpen(false)}>Get in touch</a>
+        <a href="/#contact" className="nav-cta" onClick={() => setOpen(false)}>Get in touch</a>
       </div>
     </nav>
   )

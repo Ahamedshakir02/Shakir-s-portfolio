@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shakir-s-portfolio.vercel.app/assets/og-image.png</image:loc>
+      <image:title>Ahamed Shakir — AI, IoT and Mobile Engineer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://shakir-s-portfolio.vercel.app/assets/Ahamed-Shakir-Photo.png</image:loc>
+      <image:title>Ahamed Shakir — portrait</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/fir-ai</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/thengapari</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/tailsafe</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/disease-ann</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/holytouch</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shakir-s-portfolio.vercel.app/work/safari-typing</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

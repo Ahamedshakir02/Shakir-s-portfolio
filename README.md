@@ -22,13 +22,16 @@ npm run preview  # preview the production build
   `ImageSlot`, and `icons`.
 - `src/hooks/` — `useTheme` (light/dark + localStorage), `useScrolled` (nav + back-to-top),
   `useReveal` (IntersectionObserver scroll reveals).
-- `src/data.jsx` — all section content (nav links, projects, timeline, certs, languages, contact).
+- `src/data.jsx` — all section content (nav links, projects, timeline, certs, languages, **FAQ**, contact).
 - `src/index.css` — the full design system (CSS variables, light/dark, responsive layout).
-- `index.html` — `<head>` metadata: favicon, Open Graph / Twitter tags, fonts, no-flash theme script.
+- `index.html` — `<head>` metadata: canonical + robots, Open Graph / Twitter tags, **JSON-LD structured
+  data** (Person, WebSite, ProfilePage, FAQPage), fonts, no-flash theme script — plus a `<noscript>`
+  content fallback for crawlers/AI engines that don't run JavaScript.
 - `public/` — static assets served at the site root:
   - `favicon.svg`
-  - `robots.txt` — SEO: instructs search engines to crawl the site and points to the sitemap.
-  - `sitemap.xml` — SEO: XML map of all site URLs for search engine indexing.
+  - `robots.txt` — SEO: instructs search engines (and AI/answer-engine crawlers) to crawl the site and points to the sitemap.
+  - `sitemap.xml` — SEO: XML map of all site URLs (with image entries) for search engine indexing.
+  - `llms.txt` — GEO: a plain-Markdown profile summary for LLM / AI crawlers that don't run JavaScript.
   - `assets/` — project images (`proj-1…4.png`), the hero portrait (`Ahamed-Shakir-Photo.png`),
     the social-preview card (`og-image.png`), and the résumé / CV PDFs.
 - `vercel.json` — Vercel deployment config: SPA rewrite rule to handle deep links (`/#section`).
