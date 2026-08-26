@@ -16,7 +16,7 @@ export default function Skills() {
         {skills.map((row) => (
           <div
             key={row.idx}
-            className="reveal grid gap-4 py-7 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-8"
+            className="reveal grid gap-4 py-7 md:grid-cols-[minmax(0,17rem)_1fr] md:gap-8 lg:grid-cols-[minmax(0,24rem)_1fr]"
           >
             <h3 className="flex items-baseline gap-3 font-display text-heading font-medium">
               <span className="label text-muted">{row.idx}</span>
