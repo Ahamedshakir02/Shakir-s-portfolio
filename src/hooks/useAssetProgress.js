@@ -24,9 +24,19 @@ export function useAssetProgress() {
     // Web fonts — the wordmark itself depends on these.
     if (document.fonts?.ready) tasks.push(document.fonts.ready)
 
-    // Every image already in the DOM. decode() resolves once the bitmap is
-    // actually ready to paint, which is what "loaded" should mean here.
+    // Only the images that genuinely gate the first paint: same-origin and not
+    // lazy. Waiting on the rest was the bug — a lazy image the viewport never
+    // reaches leaves its decode pending, so the loader sat until the safety
+    // timeout instead of clearing as soon as the page was ready. Worse,
+    // calling decode() on a lazy image forces it to load, pulling third-party
+    // screenshots into the critical path of the homepage.
     for (const img of document.images) {
+      if (img.loading === 'lazy') continue
+      try {
+        if (new URL(img.src, location.href).origin !== location.origin) continue
+      } catch {
+        continue // malformed src — not something to block paint on
+      }
       tasks.push(
         img.decode
           ? img.decode().catch(() => undefined)
