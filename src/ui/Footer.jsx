@@ -7,14 +7,18 @@ export default function Footer() {
           <b className="font-medium text-accent">Available worldwide</b>
         </p>
         <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <a href="/assets/Ahamed-Shakir-CV.pdf" download className="hover:text-ink">
+          <a
+            href="/assets/Ahamed-Shakir-CV.pdf"
+            download
+            className="inline-flex min-h-11 items-center hover:text-ink"
+          >
             Full CV ↓
           </a>
           <a
             href="https://g.dev/ahamedshakir"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-ink"
+            className="inline-flex min-h-11 items-center hover:text-ink"
           >
             Google Developer Profile ↗
           </a>

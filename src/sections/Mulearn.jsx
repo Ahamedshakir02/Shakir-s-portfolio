@@ -49,8 +49,8 @@ export default function Mulearn() {
           <p className="mt-5 max-w-[54ch] text-ink-2">
             Leading my campus chapter wasn&apos;t enough — I&apos;m an active learner here too.
             µLearn is Kerala&apos;s largest student developer community, backed by the Government of
-            Kerala. That badge on the left? My live rank, pulled straight from my profile. No
-            screenshots, no fibbing.
+            Kerala. That badge? My live rank, pulled straight from my profile. No screenshots,
+            no fibbing.
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-5 border-t border-line pt-6 sm:grid-cols-3">

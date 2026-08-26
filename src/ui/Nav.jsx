@@ -75,7 +75,11 @@ export default function Nav({ scrolled, onToggleTheme }) {
       }`}
     >
       <div className="flex items-center justify-between px-[clamp(22px,6vw,96px)]">
-        <a href="/#top" onClick={close} className="flex items-center gap-2.5 font-mono text-caption">
+        <a
+          href="/#top"
+          onClick={close}
+          className="-my-2 inline-flex min-h-11 items-center gap-2.5 py-2 font-mono text-caption"
+        >
           <span className="size-[7px] rounded-full bg-accent" />
           Ahamed Shakir
         </a>
