@@ -129,65 +129,161 @@
       "mainEntity": { "@id": "https://shakir-s-portfolio.vercel.app/#person" },
       "primaryImageOfPage": "https://shakir-s-portfolio.vercel.app/assets/og-image.png",
       "inLanguage": "en"
-    }
-  ]
-}
-</script>
-
-<!-- Structured data: FAQ (for Answer Engine Optimization) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://shakir-s-portfolio.vercel.app/#faq",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who is Ahamed Shakir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ahamed Shakir M P is a Computer Science graduate (B.Tech, APJ Abdul Kalam Technological University) and engineer from Kerala, India, specializing in AI, IoT, and mobile development. He builds Edge AI and applied NLP systems, embedded/IoT hardware, and React Native mobile apps."
-      }
     },
     {
-      "@type": "Question",
-      "name": "What does Ahamed Shakir build?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "He builds at the intersection of AI and the physical world: NLP pipelines and LLM-powered tools, machine-learning models, IoT and embedded systems on microcontrollers like the ESP32, Flutter and React Native mobile apps, and production client websites. Highlights include FIR-AI, an AI investigation assistant for Kerala Police; ThengaPari, a four-app Flutter marketplace; and a real-time GPS/IMU accident-detection safety app."
-      }
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/fir-ai#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/fir-ai",
+      "name": "FIR-AI — Investigation Assistant for Kerala Police",
+      "genre": "Applied AI · Document Intelligence",
+      "description": "An AI investigation assistant that reads unstructured police FIR documents: entity extraction, cross-case intelligence, and multilingual natural-language Q&A, on a 100% custom-built NLP engine.",
+      "keywords": [
+        "Python",
+        "NLP",
+        "Custom AI Engine",
+        "LLMs",
+        "PDF Processing"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/firai"
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What are Ahamed Shakir's key skills and technologies?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Languages: Python, Java, JavaScript, and C. AI/ML: NLP, deep learning, LLMs, generative AI, prompt engineering, RAG workflows, Scikit-learn, Pandas, and NumPy. Mobile & web: React Native, HTML, CSS, and REST APIs. Hardware/IoT: ESP32, GPS and IMU sensors, BLE, and WebSocket. Cloud & tools: Firebase, MongoDB, Git, and Figma."
-      }
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/thengapari#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/thengapari",
+      "name": "ThengaPari — Agri-Harvest Marketplace",
+      "genre": "Product · Flutter Monorepo",
+      "description": "A hyperlocal agri-harvest marketplace for Kerala: four standalone Flutter apps built from one Melos monorepo and a shared core package, on a single Firebase backend with TypeScript Cloud Functions.",
+      "keywords": [
+        "Flutter",
+        "Dart",
+        "Riverpod",
+        "Firebase",
+        "TypeScript Cloud Functions",
+        "Razorpay",
+        "Melos"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/Thengapari"
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Is Ahamed Shakir available for hire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Ahamed is actively seeking international engineering roles in AI/ML, IoT, and mobile development. The fastest way to reach him is by email at ahamedshakir02@gmail.com or via LinkedIn."
-      }
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/tailsafe#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/tailsafe",
+      "name": "Real-Time GPS & IMU Safety Monitoring App",
+      "genre": "IoT · Embedded + Mobile",
+      "description": "ESP32 firmware reading a Neo-6M GPS and MPU6050 IMU, streaming over BLE and WebSocket into React Native, with automatic crash-detection SOS, geofencing, and offline microSD logging.",
+      "keywords": [
+        "React Native",
+        "Firebase",
+        "ESP32",
+        "Neo-6M GPS",
+        "MPU6050",
+        "WebSocket",
+        "BLE"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/TailSafe"
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What is Ahamed Shakir's experience and leadership background?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "He served as Campus Lead for GTech µLearn — Kerala's largest student developer community, backed by the Government of Kerala — at MES College of Engineering. He grew active student participation by 40%, ran 10+ technical workshops in AI, web development, cybersecurity, and open source, and coordinated 10+ mentors across institutions."
-      }
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/disease-ann#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/disease-ann",
+      "name": "Disease Diagnosis Prediction with an ANN",
+      "genre": "Machine Learning · Healthcare",
+      "description": "A multi-layer artificial neural network predicting disease diagnoses from patient data, with rigorous handling of class imbalance and evaluation by confusion matrix, precision, recall, and F1.",
+      "keywords": [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Google Colab"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/Strokeprediction-ML"
+      ]
     },
     {
-      "@type": "Question",
-      "name": "How can I contact Ahamed Shakir?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Email ahamedshakir02@gmail.com, or connect on GitHub (github.com/ahamedshakir02), LinkedIn (linkedin.com/in/ahamed-shakir), and his Google Developer profile (g.dev/ahamedshakir)."
-      }
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/holytouch#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/holytouch",
+      "name": "Holytouch — Construction & Design Studio Site",
+      "genre": "Client Work · Web",
+      "description": "A premium multi-page marketing site for a Kerala construction and design firm, with a branded preloader, page-transition curtain, Lenis smooth scroll, and fully reduced-motion-safe animation.",
+      "keywords": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Lenis"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/holytouch-website",
+        "https://holytouch-website.vercel.app"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://shakir-s-portfolio.vercel.app/work/safari-typing#project",
+      "url": "https://shakir-s-portfolio.vercel.app/work/safari-typing",
+      "name": "Safari Typing Services — Bilingual Business Site",
+      "genre": "Client Work · Web",
+      "description": "A bilingual English/Arabic site for a government typing and document-services centre in Ajman, UAE: fifteen service detail pages, a WhatsApp-first zero-backend contact flow, and JSON-LD structured data.",
+      "keywords": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "React Router"
+      ],
+      "creator": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#person"
+      },
+      "isPartOf": {
+        "@id": "https://shakir-s-portfolio.vercel.app/#website"
+      },
+      "inLanguage": "en",
+      "sameAs": [
+        "https://github.com/Ahamedshakir02/safari-typing",
+        "https://www.safaritypingservices.com"
+      ]
     }
   ]
 }
