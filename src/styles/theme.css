@@ -18,10 +18,13 @@
   --color-paper-3:   #e2d0b2;   /* pressed / active surface */
   --color-ink:       #2b1d14;   /* deep espresso cocoa */
   --color-ink-2:     #5d4636;   /* body copy */
-  --color-muted:     #8a7050;   /* captions — darkened from #9c8467 for AA */
+  --color-muted:     #755d41;   /* captions — dark enough for AA on paper-2 */
   --color-line:      #ddccb0;   /* hairline rule */
   --color-line-2:    #cdb795;   /* emphasised rule / border */
-  --color-accent:    #b5612f;   /* warm cocoa-clay */
+  /* Warm cocoa-clay. #b5612f sat at the luminance midpoint, where neither
+     cream nor ink text cleared 4.5:1 on it — this is deep enough to carry
+     cream text and to be read as small text on both paper tones. */
+  --color-accent:    #974d22;
   --color-accent-ink: #f3ead9;  /* text on accent */
 
   /* ---- Spacing scale --------------------------------------------------- */
