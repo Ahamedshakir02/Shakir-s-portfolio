@@ -6,8 +6,3 @@ export default function Section({ id, className = '', children }) {
     </section>
   )
 }
-
-/** The hairline rule that separates sections. */
-export function Rule() {
-  return <div className="wrap"><hr className="border-0 border-t border-line" /></div>
-}

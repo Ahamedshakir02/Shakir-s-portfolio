@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { contactLinks } from '../content/index.js'
 import Section from '../ui/Section.jsx'
+import SectionHeader from '../ui/SectionHeader.jsx'
 import Button from '../ui/Button.jsx'
 
 const EMAIL = 'ahamedshakir02@gmail.com'
@@ -153,9 +154,7 @@ function ContactForm() {
 export default function Contact() {
   return (
     <Section id="contact">
-      <div className="label mb-10 flex items-baseline gap-3 text-muted reveal">
-        <b className="font-medium text-accent">08</b> Let&apos;s build something
-      </div>
+      <SectionHeader idx="08" label="Let&apos;s build something" className="mb-10" />
 
       <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div className="reveal">
@@ -187,7 +186,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="reveal" data-delay="1"><ContactForm /></div>
+        <div className="reveal"><ContactForm /></div>
       </div>
     </Section>
   )

@@ -1,23 +1,22 @@
 import { aboutTags } from '../content/index.js'
 import Section from '../ui/Section.jsx'
+import SectionHeader from '../ui/SectionHeader.jsx'
 import Chip from '../ui/Chip.jsx'
 
 export default function About() {
   return (
     <Section id="about">
-      <div className="label mb-10 flex items-baseline gap-3 text-muted reveal">
-        <b className="font-medium text-accent">01</b> The gist
-      </div>
+      <SectionHeader idx="01" label="The gist" className="mb-10" />
 
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
-        <p className="reveal font-display text-heading font-medium text-balance">
+        <h2 className="reveal font-display text-heading font-medium text-balance">
           CS grad from{' '}
           <span className="text-accent">APJ Abdul Kalam Technological University</span>, building
           across hardware and software — embedded systems, applied NLP, machine learning, and
           mobile. Basically, if it computes, I&apos;ve probably poked at it.
-        </p>
+        </h2>
 
-        <div className="reveal space-y-5 text-ink-2" data-delay="1">
+        <div className="reveal space-y-5 text-ink-2">
           <p>
             My favourite spot is the bit most people avoid: where physical hardware meets messy
             software. Microcontrollers and IMU sensors on one end, LLM-powered query interfaces and
