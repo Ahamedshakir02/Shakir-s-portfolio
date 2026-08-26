@@ -7,14 +7,17 @@ import { gsap, prefersReducedMotion } from './gsap.js'
  */
 export default function Curtain({ pathname }) {
   const ref = useRef(null)
-  const first = useRef(true)
+  const prevPath = useRef(pathname)
 
   useEffect(() => {
-    // Don't wipe on the very first render — the preloader already covers it.
-    if (first.current) {
-      first.current = false
-      return
-    }
+    // Only wipe on an actual route change. Comparing the pathname rather than
+    // holding a "have I run yet" flag matters: StrictMode invokes effects
+    // twice on mount, which would flip such a flag on the first pass and then
+    // play the curtain on the second — a full-screen wipe the instant the
+    // preloader clears, which reads as the page reloading itself.
+    if (prevPath.current === pathname) return
+    prevPath.current = pathname
+
     if (prefersReducedMotion() || !ref.current) return
 
     const tl = gsap.timeline()
