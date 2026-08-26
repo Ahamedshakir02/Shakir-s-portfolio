@@ -16,7 +16,7 @@
 ## Skills
 
 - **Languages:** Python, Java, JavaScript, C
-- **AI / ML:** NLP, text extraction, Scikit-learn, Pandas, NumPy, ANN / deep learning, LLMs, generative AI
+- **AI / ML:** NLP, text extraction, Scikit-learn, Pandas, NumPy, LLMs, generative AI
 - **Prompt Engineering:** prompt design, system prompts, few-shot & chain-of-thought, LLM app building, RAG workflows, evals & iteration
 - **Web & Mobile:** React, React Native, Flutter, Dart, Tailwind CSS, Framer Motion, GSAP, HTML, CSS, REST APIs
 - **Cloud & Tools:** Firebase, Cloud Functions, Razorpay, MongoDB, Google Colab, Git, GitHub, VS Code
