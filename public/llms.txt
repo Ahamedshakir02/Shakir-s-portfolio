@@ -3,7 +3,7 @@
 > AI, IoT & Mobile Engineer. Computer Science graduate (B.Tech, APJ Abdul Kalam
 > Technological University / KTU) from Kerala, India. Builds Edge AI, applied NLP,
 > machine-learning models, IoT/embedded systems, and React Native mobile apps.
-> Open to international engineering roles.
+> Freelancing in web and AI engineering since June 2026, and open to international engineering roles.
 
 - **Name:** Ahamed Shakir M P (Ahamed Shakir)
 - **Location:** Kerala, India
@@ -11,7 +11,7 @@
 - **Education:** B.Tech in Computer Science & Engineering, APJ Abdul Kalam Technological University (KTU), 2022–2026
 - **Website:** https://shakir-s-portfolio.vercel.app/
 - **Email:** ahamedshakir02@gmail.com
-- **Availability:** Actively seeking international engineering roles in AI/ML, IoT, and mobile.
+- **Availability:** Currently freelancing (web & AI engineering) and open to full-time international engineering roles in AI/ML, IoT, and mobile.
 
 ## Skills
 
@@ -33,6 +33,8 @@
 - **Safari Typing Services — Bilingual Business Site** — bilingual English/Arabic client website for a government document-services centre in Ajman, UAE: 15 service detail pages, WhatsApp-first contact flow, JSON-LD. Live: https://www.safaritypingservices.com — source: https://github.com/Ahamedshakir02/safari-typing — case study: https://shakir-s-portfolio.vercel.app/work/safari-typing
 
 ## Experience
+
+- **Freelance Engineer — Web & AI** (Jun 2026 – present, Kerala, India, working remotely). Shipping production work for clients since graduating: Safari Typing Services, a bilingual English/Arabic document-services centre in Ajman, UAE, live at safaritypingservices.com; and Holytouch, a construction and design firm in Kerala. Also built ThengaPari, a Melos monorepo of four standalone Flutter apps on one Firebase backend. Handles briefs end to end — scoping, design system, build, SEO and structured data, deployment, and post-launch changes.
 
 - **Campus Lead — GTech µLearn, MES College of Engineering** (Jul 2025 – Apr 2026). GTech µLearn is Kerala's largest student developer community, backed by the Government of Kerala. Grew active student participation by 40%, ran 10+ technical workshops (AI, Web Dev, Cybersecurity, Open Source) reaching 100+ students per semester, and coordinated 10+ mentors across institutions.
 
