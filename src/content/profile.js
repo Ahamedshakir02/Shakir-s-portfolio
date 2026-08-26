@@ -8,7 +8,7 @@ export const navLinks = [
   { href: '/#mulearn', label: 'µLearn' },
 ]
 
-export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer', 'Photographer']
+export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer']
 
 export const stats = [
   { count: 40, suffix: '%', label: 'growth I drove on campus' },
