@@ -3,6 +3,12 @@ import Section from '../ui/Section.jsx'
 import SectionHeader from '../ui/SectionHeader.jsx'
 
 /**
+ * NOT CURRENTLY MOUNTED. Parked in Aug 2026 because none of the six entries had
+ * a verified credential URL, and a section called "Receipts. I keep them."
+ * listing six unlinked lines invites the one question it cannot answer. The
+ * component and src/content/certs.js are intact: add the hrefs, render <Certs />
+ * in App.jsx again, and renumber the sections below it.
+ *
  * A certificate renders as a link only when it has a verified `href`.
  * Entries without one stay plain text rather than becoming a dead anchor.
  */

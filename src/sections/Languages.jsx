@@ -6,13 +6,13 @@ export default function Languages() {
   return (
     <Section id="languages">
       <SectionHeader
-        idx="07"
+        idx="06"
         label="Languages"
         title={<>I&apos;ll meet you<br />in your language.</>}
       />
 
       <ul className="mt-12 grid gap-8 sm:grid-cols-3">
-        {languages.map((l, i) => (
+        {languages.map((l) => (
           <li key={l.name} className="reveal">
             <h3 className="font-display text-heading font-medium">{l.name}</h3>
             <p className="mt-1 text-caption text-muted">{l.level}</p>

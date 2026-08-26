@@ -8,12 +8,12 @@ export const navLinks = [
   { href: '/#mulearn', label: 'µLearn' },
 ]
 
-export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer', 'Photographer']
+export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer']
 
 export const stats = [
   { count: 40, suffix: '%', label: 'growth I drove on campus' },
   { count: 10, suffix: '+', label: 'workshops I actually ran' },
-  { count: 98, suffix: '%', label: 'model accuracy, no rounding up' },
+  { count: 89, suffix: '%', label: 'best model accuracy, on imbalanced clinical data' },
   { count: 3, suffix: ' langs', label: 'spoken, give or take a verb tense' },
 ]
 

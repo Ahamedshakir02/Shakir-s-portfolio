@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
+import { useDocumentMeta } from '../hooks/useDocumentMeta.js'
 import { projects } from '../content/index.js'
 import { ArrowOutIcon } from '../ui/Icons.jsx'
 import Section from '../ui/Section.jsx'
@@ -16,12 +16,13 @@ export default function ProjectPage() {
   const i = projects.findIndex((p) => p.slug === slug)
   const p = projects[i]
 
-  useEffect(() => {
-    if (!p) return
-    const prev = document.title
-    document.title = `${p.title} — Ahamed Shakir`
-    return () => { document.title = prev }
-  }, [p])
+  // Hooks must run unconditionally, so this is called before the guard below.
+  useDocumentMeta({
+    title: p ? `${p.title} — Ahamed Shakir` : undefined,
+    description: p?.seoDescription,
+    path: p ? `/work/${p.slug}` : undefined,
+    image: p?.media ?? undefined,
+  })
 
   if (!p) return <Navigate to="/" replace />
   const next = projects[(i + 1) % projects.length]

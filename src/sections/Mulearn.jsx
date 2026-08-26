@@ -14,7 +14,7 @@ export default function Mulearn() {
 
   return (
     <Section id="mulearn">
-      <SectionHeader idx="06" label="Community" className="mb-10" />
+      <SectionHeader idx="05" label="Community" className="mb-10" />
 
       <div className="reveal grid items-center gap-10 rounded-card border border-line bg-paper-2/40 p-6 md:p-10 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-14">
         {/* Fixed-ratio box: the badge is fetched from mulearn.org, so reserving

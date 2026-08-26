@@ -7,7 +7,7 @@ export const certs = [
   { issuer: 'Google', yr: 'Jun 2024', title: 'Introduction to Responsible AI' },
   { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise-grade AI' },
   { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise Data Science' },
-  { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AZ-900)' },
+  { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AI-900)' },
 ]
 
 export const mulearnMeta = [

@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,37 +17,37 @@
   </url>
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/work/fir-ai</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/work/thengapari</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/work/tailsafe</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shakir-s-portfolio.vercel.app/work/disease-ann</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://shakir-s-portfolio.vercel.app/work/stroke-prediction</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/work/holytouch</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shakir-s-portfolio.vercel.app/work/safari-typing</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

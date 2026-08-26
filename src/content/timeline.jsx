@@ -2,6 +2,18 @@
 
 export const timeline = [
   {
+    when: 'Jun 2026 – present',
+    where: ['Freelance · Web & AI Engineering', 'Kerala, India · working remotely'],
+    title: 'Freelance Engineer',
+    role: 'Building and shipping for real clients since graduating — production websites with live users, plus my own product and AI work between briefs.',
+    list: [
+      <>Shipped <b>two client sites into production</b>: <b>Safari Typing Services</b>, a bilingual English/Arabic centre in Ajman, UAE now live at safaritypingservices.com serving customers in five languages, and <b>Holytouch</b>, a construction and design firm in Kerala.</>,
+      <>Built <b>ThengaPari</b> as a Melos monorepo — four standalone Flutter apps on one shared core package and a single Firebase backend with TypeScript Cloud Functions and Razorpay payments.</>,
+      <>Handling briefs end to end: scoping with the client, design system, build, SEO and structured data, deployment, and the follow-up changes after launch.</>,
+      <>Open to <b>full-time engineering roles</b>, internationally or remote, alongside the freelance work.</>,
+    ],
+  },
+  {
     when: 'Jul 2025 – Apr 2026',
     where: ['GTech µLearn · MES College of Engineering', 'Kuttippuram, India'],
     title: 'Campus Lead',

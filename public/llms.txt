@@ -3,20 +3,20 @@
 > AI, IoT & Mobile Engineer. Computer Science graduate (B.Tech, APJ Abdul Kalam
 > Technological University / KTU) from Kerala, India. Builds Edge AI, applied NLP,
 > machine-learning models, IoT/embedded systems, and React Native mobile apps.
-> Open to international engineering roles.
+> Freelancing in web and AI engineering since June 2026, and open to international engineering roles.
 
 - **Name:** Ahamed Shakir M P (Ahamed Shakir)
 - **Location:** Kerala, India
-- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer, Photographer
+- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer
 - **Education:** B.Tech in Computer Science & Engineering, APJ Abdul Kalam Technological University (KTU), 2022–2026
 - **Website:** https://shakir-s-portfolio.vercel.app/
 - **Email:** ahamedshakir02@gmail.com
-- **Availability:** Actively seeking international engineering roles in AI/ML, IoT, and mobile.
+- **Availability:** Currently freelancing (web & AI engineering) and open to full-time international engineering roles in AI/ML, IoT, and mobile.
 
 ## Skills
 
 - **Languages:** Python, Java, JavaScript, C
-- **AI / ML:** NLP, text extraction, Scikit-learn, Pandas, NumPy, ANN / deep learning, LLMs, generative AI
+- **AI / ML:** NLP, text extraction, Scikit-learn, Pandas, NumPy, LLMs, generative AI
 - **Prompt Engineering:** prompt design, system prompts, few-shot & chain-of-thought, LLM app building, RAG workflows, evals & iteration
 - **Web & Mobile:** React, React Native, Flutter, Dart, Tailwind CSS, Framer Motion, GSAP, HTML, CSS, REST APIs
 - **Cloud & Tools:** Firebase, Cloud Functions, Razorpay, MongoDB, Google Colab, Git, GitHub, VS Code
@@ -28,11 +28,13 @@
 - **FIR-AI — Investigation Assistant for Kerala Police** — AI-powered investigation assistant with a 100% custom-built AI engine: real-time FIR analysis, entity extraction, case intelligence, legal guidance, and multilingual support. https://github.com/Ahamedshakir02/firai — case study: https://shakir-s-portfolio.vercel.app/work/fir-ai
 - **ThengaPari — Agri-Harvest Marketplace** — hyperlocal marketplace for Kerala built as a Melos monorepo: four standalone Flutter apps (Homeowner, Worker, Site Manager, B2B) sharing one core package and one Firebase backend, with TypeScript Cloud Functions, Razorpay payments, and Riverpod state. https://github.com/Ahamedshakir02/Thengapari — case study: https://shakir-s-portfolio.vercel.app/work/thengapari
 - **Real-Time GPS & IMU Safety Monitoring App (TailSafe)** — ESP32 firmware reading a Neo-6M GPS and MPU6050 IMU, streaming over BLE and WebSocket into a React Native app, with automatic accident SOS detection, geofencing, live maps, and offline microSD logging. https://github.com/Ahamedshakir02/TailSafe — case study: https://shakir-s-portfolio.vercel.app/work/tailsafe
-- **Disease Diagnosis Prediction with an ANN** — tuned multi-layer artificial neural network achieving 98%+ test accuracy, rigorously evaluated with a confusion matrix, precision, recall, and F1. https://github.com/Ahamedshakir02/Strokeprediction-ML — case study: https://shakir-s-portfolio.vercel.app/work/disease-ann
+- **Stroke Prediction on Imbalanced Clinical Data** — SVM, Decision Tree and KNN compared on a stroke dataset with 972 negative to 50 positive test cases, using SMOTE resampling and StandardScaler. Best accuracy 89.2% (Decision Tree), mean 82.9%; the Decision Tree recovers 8 of 50 stroke cases (recall 0.16) while the less accurate SVM recovers 24 of 50 (recall 0.48), which is the finding the project is built around. https://github.com/Ahamedshakir02/Strokeprediction-ML — case study: https://shakir-s-portfolio.vercel.app/work/stroke-prediction
 - **Holytouch — Construction & Design Studio Site** — premium multi-page client website for a Kerala construction & design firm (React, Vite, Tailwind CSS, Framer Motion, Lenis), with a branded preloader and page-transition curtain. Live: https://holytouch-website.vercel.app — source: https://github.com/Ahamedshakir02/holytouch-website — case study: https://shakir-s-portfolio.vercel.app/work/holytouch
 - **Safari Typing Services — Bilingual Business Site** — bilingual English/Arabic client website for a government document-services centre in Ajman, UAE: 15 service detail pages, WhatsApp-first contact flow, JSON-LD. Live: https://www.safaritypingservices.com — source: https://github.com/Ahamedshakir02/safari-typing — case study: https://shakir-s-portfolio.vercel.app/work/safari-typing
 
 ## Experience
+
+- **Freelance Engineer — Web & AI** (Jun 2026 – present, Kerala, India, working remotely). Shipping production work for clients since graduating: Safari Typing Services, a bilingual English/Arabic document-services centre in Ajman, UAE, live at safaritypingservices.com; and Holytouch, a construction and design firm in Kerala. Also built ThengaPari, a Melos monorepo of four standalone Flutter apps on one Firebase backend. Handles briefs end to end — scoping, design system, build, SEO and structured data, deployment, and post-launch changes.
 
 - **Campus Lead — GTech µLearn, MES College of Engineering** (Jul 2025 – Apr 2026). GTech µLearn is Kerala's largest student developer community, backed by the Government of Kerala. Grew active student participation by 40%, ran 10+ technical workshops (AI, Web Dev, Cybersecurity, Open Source) reaching 100+ students per semester, and coordinated 10+ mentors across institutions.
 
@@ -43,7 +45,7 @@
 - Google — Introduction to Responsible AI (2024)
 - IBM — Getting Started with Enterprise-grade AI (2024)
 - IBM — Getting Started with Enterprise Data Science (2024)
-- Microsoft — Azure AI Fundamentals, AZ-900 (2024)
+- Microsoft — Azure AI Fundamentals, AI-900 (2024)
 
 ## Languages
 

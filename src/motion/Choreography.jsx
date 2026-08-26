@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { gsap, ScrollTrigger, prefersReducedMotion } from './gsap.js'
 import { useLoadGate } from '../app/loadGate.js'
 
@@ -15,27 +16,32 @@ import { useLoadGate } from '../app/loadGate.js'
  */
 export default function Choreography({ pathname = '/' }) {
   const gateOpen = useLoadGate((s) => s.open)
+  const navigate = useNavigate()
 
-  // Anchor links route through Lenis. Independent of the gate so navigation
-  // works even if something upstream fails.
+  // In-page anchors go through the router rather than the browser.
+  //
+  // Two bugs used to live here. From a case study, a "/#about" link was let
+  // through as "a real navigation", which tore down the SPA and reloaded it —
+  // skipping the route curtain on the one path that most needs it. And on the
+  // home page the handler scrolled without ever updating the URL, so Back did
+  // not retrace sections and a shared "/#work" link landed at the top.
+  //
+  // Navigating instead makes the location the single source of truth; the
+  // scroll itself is handled in App, keyed on the hash.
   useEffect(() => {
     const onClick = (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
       const a = e.target.closest('a[href^="#"], a[href^="/#"]')
-      if (!a) return
+      if (!a || a.target === '_blank') return
       const href = a.getAttribute('href')
       const id = href.slice(href.indexOf('#') + 1)
       if (!id) return
-      // A "/#x" link from a sub-page is a real navigation — let it through.
-      if (href.startsWith('/#') && window.location.pathname !== '/') return
-      const target = document.getElementById(id)
-      if (!target) return
       e.preventDefault()
-      if (window.__lenis) window.__lenis.scrollTo(target, { offset: -10 })
-      else target.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
+      navigate(`/#${id}`)
     }
     document.addEventListener('click', onClick)
     return () => document.removeEventListener('click', onClick)
-  }, [])
+  }, [navigate])
 
   useEffect(() => {
     if (!gateOpen || prefersReducedMotion()) return

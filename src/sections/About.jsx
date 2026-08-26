@@ -25,8 +25,9 @@ export default function About() {
           <p>
             The proof is in the work — an accident-detection system that bridges embedded hardware
             with a live mobile app, and an NLP system that reads and answers questions about
-            unstructured police documents. Now I&apos;m hunting for international engineering roles
-            where I can build things that genuinely matter (and ship them).
+            unstructured police documents. Since graduating I&apos;ve been freelancing — two client
+            sites live in production so far — and I&apos;m open to international engineering
+            roles where I can build things that genuinely matter (and ship them).
           </p>
 
           <ul className="flex flex-wrap gap-2 pt-2">

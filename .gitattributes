@@ -1,0 +1,13 @@
+# Normalise line endings. Without this, committing from Windows rewrites whole
+# files to CRLF and every diff and blame becomes noise.
+* text=auto eol=lf
+
+# Binary assets must never be touched.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text eol=lf
+*.pdf  binary
+*.docx binary
+*.ico  binary

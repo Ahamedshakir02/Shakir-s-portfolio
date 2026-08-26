@@ -5,6 +5,8 @@ export const projects = [
   {
     idx: '01',
     slug: 'fir-ai',
+    seoDescription:
+      'An AI investigation assistant that reads unstructured police FIR documents: entity extraction, cross-case intelligence, and multilingual natural-language Q&A, on a 100% custom-built NLP engine.',
     title: 'FIR-AI — Investigation Assistant for Kerala Police',
     type: 'Applied AI · Document Intelligence',
     desc: (
@@ -21,7 +23,7 @@ export const projects = [
     link: 'https://github.com/Ahamedshakir02/firai',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/firai', caption: 'firai — repository' },
+      { src: '/assets/shots/gh-firai.png', caption: 'firai — repository' },
     ],
     details: [
       {
@@ -48,6 +50,8 @@ export const projects = [
   {
     idx: '02',
     slug: 'thengapari',
+    seoDescription:
+      'A hyperlocal agri-harvest marketplace for Kerala: four standalone Flutter apps built from one Melos monorepo and a shared core package, on a single Firebase backend with TypeScript Cloud Functions.',
     title: 'ThengaPari — Agri-Harvest Marketplace',
     type: 'Product · Flutter Monorepo',
     desc: (
@@ -59,12 +63,12 @@ export const projects = [
       { b: '1 backend', s: 'FIREBASE + TS FUNCTIONS' },
       { b: 'Payments', s: 'RAZORPAY INTEGRATION' },
     ],
-    media: null,
-    alt: 'ThengaPari — four-app Flutter marketplace',
+    media: '/assets/proj-4.png',
+    alt: 'ThengaPari — multi-screen Flutter app flow',
     link: 'https://github.com/Ahamedshakir02/Thengapari',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/Thengapari', caption: 'Thengapari — monorepo repository' },
+      { src: '/assets/shots/gh-thengapari.png', caption: 'Thengapari — monorepo repository' },
     ],
     details: [
       {
@@ -91,6 +95,8 @@ export const projects = [
   {
     idx: '03',
     slug: 'tailsafe',
+    seoDescription:
+      'ESP32 firmware reading a Neo-6M GPS and MPU6050 IMU, streaming over BLE and WebSocket into React Native, with automatic crash-detection SOS, geofencing, and offline microSD logging.',
     title: 'Real-Time GPS & IMU Safety Monitoring App',
     type: 'IoT · Embedded + Mobile',
     desc: (
@@ -107,8 +113,8 @@ export const projects = [
     link: 'https://github.com/Ahamedshakir02/TailSafe',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/TailSafe', caption: 'TailSafe — repository' },
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/TrailSafeApp', caption: 'TrailSafeApp — React Native app repository' },
+      { src: '/assets/shots/gh-tailsafe.png', caption: 'TailSafe — repository' },
+      { src: '/assets/shots/gh-trailsafeapp.png', caption: 'TrailSafeApp — React Native app repository' },
     ],
     details: [
       {
@@ -133,42 +139,48 @@ export const projects = [
   },
   {
     idx: '04',
-    slug: 'disease-ann',
-    title: 'Disease Diagnosis Prediction with an ANN',
+    slug: 'stroke-prediction',
+    seoDescription:
+      'Stroke prediction on a heavily imbalanced clinical dataset — SVM, Decision Tree and KNN compared with SMOTE resampling, where the highest-accuracy model turns out to be the worst one for catching strokes.',
+    title: 'Stroke Prediction on Imbalanced Clinical Data',
     type: 'Machine Learning · Healthcare',
     desc: (
-      <>An Artificial Neural Network that predicts disease diagnoses from patient data — and actually earns its accuracy. I did the unglamorous bits properly: cleaning the data, wrangling class imbalance, normalizing, scaling features, encoding labels. Then designed and tuned a multi-layer ANN and held it accountable with a confusion matrix, precision, recall, and F1. No cherry-picked metrics.</>
+      <>Three classical models — SVM, Decision Tree, KNN — trained to predict stroke risk on a dataset where only <em>50 of 1,022</em> test cases are positive. The interesting result is the uncomfortable one: the model with the best accuracy (89.2%) catches the fewest strokes. Accuracy is the wrong metric here, and the project is about showing why.</>
     ),
-    stack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Google Colab'],
+    stack: ['Python', 'Scikit-learn', 'SMOTE', 'Pandas', 'NumPy', 'Google Colab'],
     feats: [
-      { b: '98%+', s: 'TEST ACCURACY' },
-      { b: 'Multi-layer', s: 'TUNED HYPERPARAMETERS' },
-      { b: 'F1 · Recall', s: 'RIGOROUS EVALUATION' },
+      { b: '89.2%', s: 'BEST ACCURACY · DECISION TREE' },
+      { b: '3 models', s: 'SVM · DECISION TREE · KNN' },
+      { b: '972:50', s: 'CLASS IMBALANCE HANDLED' },
     ],
     media: '/assets/proj-3.png',
-    alt: 'Disease diagnosis ANN — neural network and signal concept',
+    alt: 'Stroke prediction — model comparison on imbalanced clinical data',
     link: 'https://github.com/Ahamedshakir02/Strokeprediction-ML',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/Strokeprediction-ML', caption: 'Strokeprediction-ML — repository' },
+      { src: '/assets/shots/gh-strokeprediction-ml.png', caption: 'Strokeprediction-ML — repository' },
     ],
     details: [
       {
-        h: 'The data work',
+        h: 'The problem with the data',
         ps: [
-          'Medical datasets are messy and imbalanced — far more healthy records than positive diagnoses, which lets a lazy model score high accuracy by always predicting "healthy." The pipeline addresses that head-on: cleaning, handling class imbalance, normalizing and scaling features, and encoding labels before a single epoch runs. Most of the final accuracy was earned here, not in the model.',
+          'The stroke dataset is severely imbalanced: of 1,022 held-out cases, 972 are negative and 50 are positive. A model that predicts "no stroke" every single time scores 95% accuracy and is completely useless, which makes accuracy an actively misleading metric on this problem.',
+          'The pipeline deals with that before any model runs: missing values imputed, features standardised with StandardScaler, and the training set rebalanced with SMOTE so the minority class is actually represented while the held-out test set stays untouched and honest.',
         ],
       },
       {
-        h: 'The model',
+        h: 'Three models, compared',
         ps: [
-          'A multi-layer artificial neural network, designed and tuned by hand: layer sizes, activation functions, learning rate, and regularization all iterated against validation performance rather than copied from a tutorial. Built with Scikit-learn, Pandas, and NumPy in Google Colab.',
+          'Support Vector Machine, Decision Tree, and K-Nearest Neighbours were each trained and scored on the same split — 79.2%, 89.2% and 80.2% accuracy respectively, averaging 82.9%.',
+          'Ranked on accuracy the Decision Tree wins. Ranked on the thing that matters — catching strokes — it is the worst of the three.',
         ],
       },
       {
-        h: 'Honest evaluation',
+        h: 'What the confusion matrices actually say',
         ps: [
-          'A 98%+ test accuracy means nothing on imbalanced medical data unless recall holds up — a missed diagnosis is the expensive error. So the model is held accountable with a full confusion matrix, precision, recall, and F1, and it clears them without cherry-picking. That evaluation discipline is the actual deliverable of this project.',
+          'The Decision Tree reaches 89.2% accuracy while recovering 8 of the 50 stroke cases: recall 0.16, F1 0.13. The SVM scores nearly ten points lower at 79.2% accuracy but recovers 24 of 50: recall 0.48, F1 0.18. In a screening context, where a missed stroke is far more expensive than a false alarm, the less accurate model is the better one.',
+          'Precision on the positive class stays low across all three (around 0.11), which is the honest limit of this approach on this dataset — resampling raises recall but floods the positives with false alarms. Fixing that properly needs cost-sensitive learning or a threshold tuned against a clinical cost function, not a better classifier.',
+          'That gap between a headline accuracy number and a model that is any use is the actual deliverable here.',
         ],
       },
     ],
@@ -176,6 +188,8 @@ export const projects = [
   {
     idx: '05',
     slug: 'holytouch',
+    seoDescription:
+      'A premium multi-page marketing site for a Kerala construction and design firm, with a branded preloader, page-transition curtain, Lenis smooth scroll, and fully reduced-motion-safe animation.',
     title: 'Holytouch — Construction & Design Studio Site',
     type: 'Client Work · Web',
     desc: (
@@ -187,16 +201,16 @@ export const projects = [
       { b: 'Fluid', s: 'CLAMP() TYPE SYSTEM' },
       { b: 'A11y', s: 'REDUCED-MOTION SAFE' },
     ],
-    media: null,
-    alt: 'Holytouch — construction company website',
+    media: '/assets/shots/holytouch-home.jpg',
+    alt: 'Holytouch — construction and design studio website',
     live: 'https://holytouch-website.vercel.app',
     link: 'https://github.com/Ahamedshakir02/holytouch-website',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/', caption: 'Home — hero' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/services', caption: 'Services' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/projects', caption: 'Projects' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/contact', caption: 'Contact' },
+      { src: '/assets/shots/holytouch-home.jpg', caption: 'Home — hero' },
+      { src: '/assets/shots/holytouch-services.jpg', caption: 'Services' },
+      { src: '/assets/shots/holytouch-projects.jpg', caption: 'Projects' },
+      { src: '/assets/shots/holytouch-contact.jpg', caption: 'Contact' },
     ],
     details: [
       {
@@ -222,6 +236,8 @@ export const projects = [
   {
     idx: '06',
     slug: 'safari-typing',
+    seoDescription:
+      'A bilingual English/Arabic site for a government typing and document-services centre in Ajman, UAE: fifteen service detail pages, a WhatsApp-first zero-backend contact flow, and JSON-LD structured data.',
     title: 'Safari Typing Services — Bilingual Business Site',
     type: 'Client Work · Web',
     desc: (
@@ -233,16 +249,16 @@ export const projects = [
       { b: '15', s: 'SERVICE DETAIL PAGES' },
       { b: 'WhatsApp', s: 'ZERO-BACKEND CONTACT' },
     ],
-    media: 'https://www.safaritypingservices.com/og-image.jpg',
+    media: '/assets/shots/safari-home.jpg',
     alt: 'Safari Typing Services — bilingual business website',
     live: 'https://www.safaritypingservices.com',
     link: 'https://github.com/Ahamedshakir02/safari-typing',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/', caption: 'Home — bilingual hero' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/services', caption: 'All 15 service areas' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/about', caption: 'About' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/contact', caption: 'Contact — WhatsApp-first' },
+      { src: '/assets/shots/safari-home.jpg', caption: 'Home — bilingual hero' },
+      { src: '/assets/shots/safari-services.jpg', caption: 'All 15 service areas' },
+      { src: '/assets/shots/safari-about.jpg', caption: 'About' },
+      { src: '/assets/shots/safari-contact.jpg', caption: 'Contact — WhatsApp-first' },
     ],
     details: [
       {
