@@ -20,7 +20,7 @@ function ProjectCard({ p }) {
         src={p.media}
         alt={p.alt}
         placeholder={p.alt}
-        className="aspect-16/10 shrink-0"
+        className="aspect-16/10 shrink-0 lg:aspect-auto lg:min-h-0 lg:flex-1"
         imgClassName="project-media scale-110"
       />
 
@@ -52,7 +52,7 @@ function ProjectCard({ p }) {
 
       <Link
         to={`/work/${p.slug}`}
-        className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
+        className="inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
       >
         Read the case study <span aria-hidden="true">→</span>
       </Link>
@@ -75,10 +75,16 @@ export default function Work() {
           Choreography pins this and scrubs the track sideways — see
           src/motion/Choreography.jsx. The rail stays inside the content
           column because ScrollTrigger fixes the pinned element's width. */}
-      <div data-rail className="mt-12 lg:overflow-hidden">
-        <div data-rail-track className="grid gap-6 md:grid-cols-2 lg:flex lg:w-max lg:gap-8">
+      <div
+        data-rail
+        className="mt-12 lg:overflow-hidden lg:[mask-image:linear-gradient(to_right,transparent_0,#000_5rem,#000_calc(100%-5rem),transparent_100%)]"
+      >
+        <div data-rail-track className="grid gap-6 md:grid-cols-2 lg:flex lg:w-max lg:gap-8 lg:px-24">
           {projects.map((p) => (
-            <div key={p.idx} className="lg:w-[26rem] lg:shrink-0">
+            <div
+              key={p.idx}
+              className="lg:h-[calc(100dvh-var(--nav-h)-3rem)] lg:max-h-[40rem] lg:w-[26rem] lg:shrink-0"
+            >
               <ProjectCard p={p} />
             </div>
           ))}

@@ -53,6 +53,11 @@
   --text-label--letter-spacing: 0.16em;
 
   /* ---- Shape & motion --------------------------------------------------- */
+  /* Height of the scrolled nav. Single source of truth: the pinned project
+     rail offsets by it so cards never slide under the fixed header, and the
+     rail's own height is derived from it. */
+  --nav-h: 5.25rem;
+
   --radius-card: 20px;
   --radius-pill: 100px;
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);

@@ -54,10 +54,15 @@ export default function Choreography({ pathname = '/' }) {
         })
       }
 
-      // Horizontal rail through the projects.
+      // Horizontal rail through the projects. The pin has to clear the fixed
+      // nav, or the top of every card sits underneath it.
       const rail = document.querySelector('[data-rail]')
       const track = rail?.querySelector('[data-rail-track]')
       if (rail && track) {
+        const navOffset = () => {
+          const raw = getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+          return parseFloat(raw) * (raw.includes('rem') ? 16 : 1) || 84
+        }
         const distance = () => track.scrollWidth - rail.clientWidth
         if (distance() > 0) {
           gsap.to(track, {
@@ -65,7 +70,7 @@ export default function Choreography({ pathname = '/' }) {
             ease: 'none',
             scrollTrigger: {
               trigger: rail,
-              start: 'top top',
+              start: () => `top top+=${navOffset()}`,
               end: () => '+=' + distance(),
               pin: true,
               scrub: 1,
