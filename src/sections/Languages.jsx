@@ -12,7 +12,7 @@ export default function Languages() {
       />
 
       <ul className="mt-12 grid gap-8 sm:grid-cols-3">
-        {languages.map((l, i) => (
+        {languages.map((l) => (
           <li key={l.name} className="reveal">
             <h3 className="font-display text-heading font-medium">{l.name}</h3>
             <p className="mt-1 text-caption text-muted">{l.level}</p>
