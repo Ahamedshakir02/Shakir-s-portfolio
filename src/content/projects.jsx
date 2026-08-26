@@ -139,22 +139,22 @@ export const projects = [
   },
   {
     idx: '04',
-    slug: 'disease-ann',
+    slug: 'stroke-prediction',
     seoDescription:
-      'A multi-layer artificial neural network predicting disease diagnoses from patient data, with rigorous handling of class imbalance and evaluation by confusion matrix, precision, recall, and F1.',
-    title: 'Disease Diagnosis Prediction with an ANN',
+      'Stroke prediction on a heavily imbalanced clinical dataset — SVM, Decision Tree and KNN compared with SMOTE resampling, where the highest-accuracy model turns out to be the worst one for catching strokes.',
+    title: 'Stroke Prediction on Imbalanced Clinical Data',
     type: 'Machine Learning · Healthcare',
     desc: (
-      <>An Artificial Neural Network that predicts disease diagnoses from patient data — and actually earns its accuracy. I did the unglamorous bits properly: cleaning the data, wrangling class imbalance, normalizing, scaling features, encoding labels. Then designed and tuned a multi-layer ANN and held it accountable with a confusion matrix, precision, recall, and F1. No cherry-picked metrics.</>
+      <>Three classical models — SVM, Decision Tree, KNN — trained to predict stroke risk on a dataset where only <em>50 of 1,022</em> test cases are positive. The interesting result is the uncomfortable one: the model with the best accuracy (89.2%) catches the fewest strokes. Accuracy is the wrong metric here, and the project is about showing why.</>
     ),
-    stack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Google Colab'],
+    stack: ['Python', 'Scikit-learn', 'SMOTE', 'Pandas', 'NumPy', 'Google Colab'],
     feats: [
-      { b: '98%+', s: 'TEST ACCURACY' },
-      { b: 'Multi-layer', s: 'TUNED HYPERPARAMETERS' },
-      { b: 'F1 · Recall', s: 'RIGOROUS EVALUATION' },
+      { b: '89.2%', s: 'BEST ACCURACY · DECISION TREE' },
+      { b: '3 models', s: 'SVM · DECISION TREE · KNN' },
+      { b: '972:50', s: 'CLASS IMBALANCE HANDLED' },
     ],
     media: '/assets/proj-3.png',
-    alt: 'Disease diagnosis ANN — neural network and signal concept',
+    alt: 'Stroke prediction — model comparison on imbalanced clinical data',
     link: 'https://github.com/Ahamedshakir02/Strokeprediction-ML',
     linkLabel: 'View on GitHub',
     shots: [
@@ -162,21 +162,25 @@ export const projects = [
     ],
     details: [
       {
-        h: 'The data work',
+        h: 'The problem with the data',
         ps: [
-          'Medical datasets are messy and imbalanced — far more healthy records than positive diagnoses, which lets a lazy model score high accuracy by always predicting "healthy." The pipeline addresses that head-on: cleaning, handling class imbalance, normalizing and scaling features, and encoding labels before a single epoch runs. Most of the final accuracy was earned here, not in the model.',
+          'The stroke dataset is severely imbalanced: of 1,022 held-out cases, 972 are negative and 50 are positive. A model that predicts "no stroke" every single time scores 95% accuracy and is completely useless, which makes accuracy an actively misleading metric on this problem.',
+          'The pipeline deals with that before any model runs: missing values imputed, features standardised with StandardScaler, and the training set rebalanced with SMOTE so the minority class is actually represented while the held-out test set stays untouched and honest.',
         ],
       },
       {
-        h: 'The model',
+        h: 'Three models, compared',
         ps: [
-          'A multi-layer artificial neural network, designed and tuned by hand: layer sizes, activation functions, learning rate, and regularization all iterated against validation performance rather than copied from a tutorial. Built with Scikit-learn, Pandas, and NumPy in Google Colab.',
+          'Support Vector Machine, Decision Tree, and K-Nearest Neighbours were each trained and scored on the same split — 79.2%, 89.2% and 80.2% accuracy respectively, averaging 82.9%.',
+          'Ranked on accuracy the Decision Tree wins. Ranked on the thing that matters — catching strokes — it is the worst of the three.',
         ],
       },
       {
-        h: 'Honest evaluation',
+        h: 'What the confusion matrices actually say',
         ps: [
-          'A 98%+ test accuracy means nothing on imbalanced medical data unless recall holds up — a missed diagnosis is the expensive error. So the model is held accountable with a full confusion matrix, precision, recall, and F1, and it clears them without cherry-picking. That evaluation discipline is the actual deliverable of this project.',
+          'The Decision Tree reaches 89.2% accuracy while recovering 8 of the 50 stroke cases: recall 0.16, F1 0.13. The SVM scores nearly ten points lower at 79.2% accuracy but recovers 24 of 50: recall 0.48, F1 0.18. In a screening context, where a missed stroke is far more expensive than a false alarm, the less accurate model is the better one.',
+          'Precision on the positive class stays low across all three (around 0.11), which is the honest limit of this approach on this dataset — resampling raises recall but floods the positives with false alarms. Fixing that properly needs cost-sensitive learning or a threshold tuned against a clinical cost function, not a better classifier.',
+          'That gap between a headline accuracy number and a model that is any use is the actual deliverable here.',
         ],
       },
     ],
