@@ -5,6 +5,8 @@ export const projects = [
   {
     idx: '01',
     slug: 'fir-ai',
+    seoDescription:
+      'An AI investigation assistant that reads unstructured police FIR documents: entity extraction, cross-case intelligence, and multilingual natural-language Q&A, on a 100% custom-built NLP engine.',
     title: 'FIR-AI — Investigation Assistant for Kerala Police',
     type: 'Applied AI · Document Intelligence',
     desc: (
@@ -48,6 +50,8 @@ export const projects = [
   {
     idx: '02',
     slug: 'thengapari',
+    seoDescription:
+      'A hyperlocal agri-harvest marketplace for Kerala: four standalone Flutter apps built from one Melos monorepo and a shared core package, on a single Firebase backend with TypeScript Cloud Functions.',
     title: 'ThengaPari — Agri-Harvest Marketplace',
     type: 'Product · Flutter Monorepo',
     desc: (
@@ -91,6 +95,8 @@ export const projects = [
   {
     idx: '03',
     slug: 'tailsafe',
+    seoDescription:
+      'ESP32 firmware reading a Neo-6M GPS and MPU6050 IMU, streaming over BLE and WebSocket into React Native, with automatic crash-detection SOS, geofencing, and offline microSD logging.',
     title: 'Real-Time GPS & IMU Safety Monitoring App',
     type: 'IoT · Embedded + Mobile',
     desc: (
@@ -134,6 +140,8 @@ export const projects = [
   {
     idx: '04',
     slug: 'disease-ann',
+    seoDescription:
+      'A multi-layer artificial neural network predicting disease diagnoses from patient data, with rigorous handling of class imbalance and evaluation by confusion matrix, precision, recall, and F1.',
     title: 'Disease Diagnosis Prediction with an ANN',
     type: 'Machine Learning · Healthcare',
     desc: (
@@ -176,6 +184,8 @@ export const projects = [
   {
     idx: '05',
     slug: 'holytouch',
+    seoDescription:
+      'A premium multi-page marketing site for a Kerala construction and design firm, with a branded preloader, page-transition curtain, Lenis smooth scroll, and fully reduced-motion-safe animation.',
     title: 'Holytouch — Construction & Design Studio Site',
     type: 'Client Work · Web',
     desc: (
@@ -222,6 +232,8 @@ export const projects = [
   {
     idx: '06',
     slug: 'safari-typing',
+    seoDescription:
+      'A bilingual English/Arabic site for a government typing and document-services centre in Ajman, UAE: fifteen service detail pages, a WhatsApp-first zero-backend contact flow, and JSON-LD structured data.',
     title: 'Safari Typing Services — Bilingual Business Site',
     type: 'Client Work · Web',
     desc: (
