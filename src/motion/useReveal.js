@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap, ScrollTrigger, prefersReducedMotion } from './gsap.js'
+import { useLoadGate } from '../app/loadGate.js'
 
-gsap.registerPlugin(ScrollTrigger)
 
 /**
  * Scroll reveals, Lenis-synced via ScrollTrigger. Adds the `in` class in
@@ -10,14 +9,19 @@ gsap.registerPlugin(ScrollTrigger)
  *
  * Pass a dependency (e.g. the current pathname) so reveals re-attach to the
  * fresh elements after a route change. Reduced motion: reveal immediately.
+ *
+ * Nothing is armed until the load gate opens, so no section quietly reveals
+ * itself behind the preloader.
  */
 export function useReveal(dep) {
+  const gateOpen = useLoadGate((s) => s.open)
+
   useEffect(() => {
+    if (!gateOpen) return
     const els = gsap.utils.toArray('.reveal:not(.in), .lang:not(.in)')
     if (!els.length) return
 
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) {
+    if (prefersReducedMotion()) {
       els.forEach((el) => el.classList.add('in'))
       return
     }
@@ -35,5 +39,5 @@ export function useReveal(dep) {
     requestAnimationFrame(() => ScrollTrigger.refresh())
 
     return () => batch.forEach((t) => t.kill())
-  }, [dep])
+  }, [dep, gateOpen])
 }

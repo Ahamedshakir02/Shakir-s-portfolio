@@ -1,10 +1,7 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { setScroll } from './scroll.js'
+import { gsap, ScrollTrigger } from './gsap.js'
 
-gsap.registerPlugin(ScrollTrigger)
 
 /**
  * The single source of truth for scrolling.
@@ -33,15 +30,8 @@ export default function SmoothScroll({ children }) {
       syncTouch: false, // native momentum on touch feels better than forced smoothing
     })
 
-    lenis.on('scroll', (e) => {
-      ScrollTrigger.update()
-      const limit = lenis.limit || 1
-      setScroll({
-        progress: e.scroll / limit,
-        scrollY: e.scroll,
-        velocity: e.velocity,
-      })
-    })
+    // ScrollTrigger must read Lenis's position, not the native scroll event.
+    lenis.on('scroll', ScrollTrigger.update)
 
     const raf = (time) => lenis.raf(time * 1000)
     gsap.ticker.add(raf)
