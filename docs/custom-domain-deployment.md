@@ -456,7 +456,7 @@ After deploying on your custom domain:
 <loc>https://ahamedshakir.com/</loc>
 ```
 
-### `src/index.css` — No changes needed (CSS is domain-agnostic)
+### `src/styles/theme.css` — No changes needed (CSS is domain-agnostic)
 
 ### `VITE_API_URL` or similar env vars — Update if you use any:
 
