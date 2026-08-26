@@ -51,7 +51,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <figure data-hero-photo className="relative mx-auto w-full max-w-sm lg:max-w-none">
+        <div data-hero-photo className="relative mx-auto w-full max-w-sm lg:max-w-none">
           <img
             src="/assets/Ahamed-Shakir-Photo.png"
             alt="Ahamed Shakir"
@@ -61,10 +61,7 @@ export default function Hero() {
             decoding="async"
             className="w-full rounded-card border border-line object-cover"
           />
-          <figcaption className="label absolute -bottom-3 right-4 rounded-pill border border-line bg-paper px-3 py-1 text-muted">
-            portrait.png
-          </figcaption>
-        </figure>
+        </div>
       </div>
 
       <div className="label absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-muted md:flex">
