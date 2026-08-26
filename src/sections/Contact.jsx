@@ -154,7 +154,7 @@ function ContactForm() {
 export default function Contact() {
   return (
     <Section id="contact">
-      <SectionHeader idx="08" label="Let&apos;s build something" className="mb-10" />
+      <SectionHeader idx="07" label="Let&apos;s build something" className="mb-10" />
 
       <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div className="reveal">
