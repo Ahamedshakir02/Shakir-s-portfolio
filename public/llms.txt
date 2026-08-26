@@ -7,7 +7,7 @@
 
 - **Name:** Ahamed Shakir M P (Ahamed Shakir)
 - **Location:** Kerala, India
-- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer, Photographer
+- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer
 - **Education:** B.Tech in Computer Science & Engineering, APJ Abdul Kalam Technological University (KTU), 2022–2026
 - **Website:** https://shakir-s-portfolio.vercel.app/
 - **Email:** ahamedshakir02@gmail.com
@@ -43,7 +43,7 @@
 - Google — Introduction to Responsible AI (2024)
 - IBM — Getting Started with Enterprise-grade AI (2024)
 - IBM — Getting Started with Enterprise Data Science (2024)
-- Microsoft — Azure AI Fundamentals, AZ-900 (2024)
+- Microsoft — Azure AI Fundamentals, AI-900 (2024)
 
 ## Languages
 
