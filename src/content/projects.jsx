@@ -1,36 +1,5 @@
-// Content for the portfolio. Projects include `slug` + `details` for the
-// /work/:slug case-study sub-pages.
-
-export const navLinks = [
-  { href: '/#about', label: 'About' },
-  { href: '/#skills', label: 'Skills' },
-  { href: '/#work', label: 'Work' },
-  { href: '/#path', label: 'Path' },
-  { href: '/#mulearn', label: 'µLearn' },
-]
-
-export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer', 'Photographer']
-
-export const stats = [
-  { count: 40, suffix: '%', label: 'growth I drove on campus' },
-  { count: 10, suffix: '+', label: 'workshops I actually ran' },
-  { count: 98, suffix: '%', label: 'model accuracy, no rounding up' },
-  { count: 3, suffix: ' langs', label: 'spoken, give or take a verb tense' },
-]
-
-export const aboutTags = [
-  'Edge AI', 'Applied NLP', 'IoT Systems', 'Public Safety', 'Healthcare', 'Design Systems',
-]
-
-export const skills = [
-  { idx: '01', name: 'Languages', chips: ['Python', 'Java', 'JavaScript', 'C'] },
-  { idx: '02', name: 'AI / ML', chips: ['NLP', 'Text Extraction', 'Scikit-learn', 'Pandas', 'NumPy', 'ANN / Deep Learning', 'LLMs', 'Generative AI'] },
-  { idx: '03', name: 'Prompt Engineering', chips: ['Prompt Design', 'System Prompts', 'Few-shot & CoT', 'LLM App Building', 'RAG Workflows', 'Evals & Iteration', 'Coding with LLMs'] },
-  { idx: '04', name: 'Web & Mobile', chips: ['React', 'React Native', 'Flutter', 'Dart', 'Tailwind CSS', 'Framer Motion', 'GSAP', 'HTML', 'CSS', 'REST APIs'] },
-  { idx: '05', name: 'Cloud & Tools', chips: ['Firebase', 'Cloud Functions', 'Razorpay', 'MongoDB', 'Google Colab', 'Git', 'GitHub', 'VS Code'] },
-  { idx: '06', name: 'Hardware / IoT', chips: ['ESP32', 'Neo-6M GPS', 'MPU6050 IMU', 'BLE', 'WebSocket', 'microSD'] },
-  { idx: '07', name: 'Design & UX', chips: ['Figma', 'Wireframing', 'UX Prototyping', 'User Flow Design'] },
-]
+// Project case studies. Each entry carries a `slug` and `details`, which
+// together drive the /work/:slug sub-pages.
 
 export const projects = [
   {
@@ -297,69 +266,4 @@ export const projects = [
       },
     ],
   },
-]
-
-export const timeline = [
-  {
-    when: 'Jul 2025 – Apr 2026',
-    where: ['GTech µLearn · MES College of Engineering', 'Kuttippuram, India'],
-    title: 'Campus Lead',
-    role: "GTech µLearn is Kerala's largest student developer community, backed by the Government of Kerala. I ran our chapter.",
-    list: [
-      <>Grew active student participation by <b>40%</b> — turns out structured learning tracks plus a bit of peer accountability actually works.</>,
-      <>Ran <b>10+ technical workshops</b> across AI, Web Dev, Cybersecurity, and Open Source — 100+ students a semester showed up.</>,
-      <>Wrangled <b>10+ mentors</b> and campus leads across institutions to pull off collaborative programs and hackathons.</>,
-      <>Handled onboarding, tracked everyone's learning milestones, and kept cohorts actually finishing what they started.</>,
-    ],
-  },
-  {
-    when: '2022 – May 2026',
-    where: ['APJ Abdul Kalam Technological University (KTU)', 'Kerala, India'],
-    title: 'B.Tech — Computer Science & Engineering',
-    role: "Four years of the deep end — from soldering logic gates to training neural nets. Here's what actually filled the timetable, and what I got up to between lectures.",
-    list: [
-      <>Built my capstone — the <b>FIR document-analysis NLP system</b> — straight out of the Machine Learning and DBMS coursework, and the IoT safety app off the back of Embedded Systems.</>,
-      <>Ran <b>peer learning sessions</b> for juniors on DSA and Python — turns out the fastest way to actually learn a thing is to teach it badly first, then teach it well.</>,
-      <>Represented the department in <b>hackathons and tech fests</b>, and helped onboard batchmates into the µLearn tracks I was leading.</>,
-    ],
-    sub: 'The full syllabus, by theme:',
-    courses: [
-      'Linear Algebra & Calculus', 'Discrete Mathematics', 'Probability & Statistics',
-      'Programming in C', 'Object-Oriented Programming', 'Data Structures', 'Design & Analysis of Algorithms',
-      'DBMS', 'Operating Systems', 'Computer Networks', 'Computer Organization & Architecture',
-      'Digital Electronics', 'Microprocessors', 'Embedded Systems',
-      'Theory of Computation', 'Compiler Design', 'Software Engineering',
-      'Web Programming', 'Machine Learning', 'Artificial Intelligence', 'Data Science',
-      'Cryptography & Network Security', 'Cloud Computing', 'Distributed Systems',
-    ],
-  },
-]
-
-export const certs = [
-  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Generative AI', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
-  { issuer: 'Google', yr: 'May 2024', title: 'Introduction to Large Language Models', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
-  { issuer: 'Google', yr: 'Jun 2024', title: 'Introduction to Responsible AI', href: 'https://www.coursera.org/account/accomplishments/verify/CREDENTIAL_ID' },
-  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise-grade AI', href: 'https://www.youracclaim.com/credentials/CREDENTIAL_ID' },
-  { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise Data Science', href: 'https://www.youracclaim.com/credentials/CREDENTIAL_ID' },
-  { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AZ-900)', href: 'https://learn.microsoft.com/en-us/users/ahamed-shakir/credentials/CREDENTIAL_ID' },
-]
-
-export const mulearnMeta = [
-  { b: 'Campus Lead', s: 'MES COLLEGE CHAPTER' },
-  { b: '+40%', s: 'PARTICIPATION GROWTH' },
-  { b: '100+', s: 'STUDENTS REACHED / SEM' },
-]
-
-export const languages = [
-  { name: 'English', level: 'Professional working', lvl: 0.85 },
-  { name: 'Malayalam', level: 'Native speaker', lvl: 1 },
-  { name: 'Arabic', level: 'Basic conversational', lvl: 0.45 },
-]
-
-export const contactLinks = [
-  { href: 'mailto:ahamedshakir02@gmail.com', label: '✉ ahamedshakir02@gmail.com' },
-  { href: 'https://github.com/ahamedshakir02', label: '↗ GitHub', external: true },
-  { href: 'https://g.dev/ahamedshakir', label: '↗ Google Developer', external: true },
-  { href: 'https://www.linkedin.com/in/ahamed-shakir', label: '↗ LinkedIn', external: true },
-  { href: 'https://app.mulearn.org/profile/ahamedshakir@mulearn', label: '↗ µLearn', external: true },
 ]
