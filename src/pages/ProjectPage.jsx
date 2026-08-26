@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { projects } from '../content/index.js'
-import { ArrowOutIcon } from '../ui/icons.jsx'
+import { ArrowOutIcon } from '../ui/Icons.jsx'
 import Section from '../ui/Section.jsx'
 import Button from '../ui/Button.jsx'
 import MetaBadge from '../ui/MetaBadge.jsx'

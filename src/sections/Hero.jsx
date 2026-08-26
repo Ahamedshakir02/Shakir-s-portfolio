@@ -1,6 +1,6 @@
 import { Fragment, useRef } from 'react'
 import { roles } from '../content/index.js'
-import { useHeroIntro } from '../motion/HeroIntro.jsx'
+import { useHeroIntro } from '../motion/useHeroIntro.js'
 import Button from '../ui/Button.jsx'
 
 export default function Hero() {

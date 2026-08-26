@@ -3,7 +3,7 @@ import { projects } from '../content/index.js'
 import Section from '../ui/Section.jsx'
 import SectionHeader from '../ui/SectionHeader.jsx'
 import ImageSlot from '../ui/ImageSlot.jsx'
-import { ArrowOutIcon } from '../ui/icons.jsx'
+import { ArrowOutIcon } from '../ui/Icons.jsx'
 
 const COUNT_WORDS = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight']
 

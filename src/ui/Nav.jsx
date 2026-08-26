@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { navLinks } from '../content/index.js'
-import { MoonIcon, SunIcon } from './icons.jsx'
+import { MoonIcon, SunIcon } from './Icons.jsx'
 
 function ThemeToggle({ onToggle }) {
   return (
