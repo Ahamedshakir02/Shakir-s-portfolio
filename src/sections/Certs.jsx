@@ -18,10 +18,10 @@ function Cert({ c }) {
   )
 
   const shell = 'block h-full rounded-card border border-line p-6'
-  if (!c.href) return <li className={shell}>{inner}</li>
+  if (!c.href) return <li className={`reveal ${shell}`}>{inner}</li>
 
   return (
-    <li>
+    <li className="reveal">
       <a
         href={c.href}
         target="_blank"
@@ -38,7 +38,7 @@ export default function Certs() {
   return (
     <Section id="certs">
       <SectionHeader idx="05" label="Certifications" title={<>Receipts.<br />I keep them.</>} />
-      <ul className="reveal mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {certs.map((c) => <Cert key={c.title} c={c} />)}
       </ul>
     </Section>

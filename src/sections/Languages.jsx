@@ -13,7 +13,7 @@ export default function Languages() {
 
       <ul className="mt-12 grid gap-8 sm:grid-cols-3">
         {languages.map((l, i) => (
-          <li key={l.name} className="reveal" data-delay={i || undefined}>
+          <li key={l.name} className="reveal">
             <h3 className="font-display text-heading font-medium">{l.name}</h3>
             <p className="mt-1 text-caption text-muted">{l.level}</p>
             {/* The meter is decorative — the level is already stated above. */}
