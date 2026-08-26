@@ -23,7 +23,7 @@ export const projects = [
     link: 'https://github.com/Ahamedshakir02/firai',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/firai', caption: 'firai — repository' },
+      { src: '/assets/shots/gh-firai.png', caption: 'firai — repository' },
     ],
     details: [
       {
@@ -63,12 +63,12 @@ export const projects = [
       { b: '1 backend', s: 'FIREBASE + TS FUNCTIONS' },
       { b: 'Payments', s: 'RAZORPAY INTEGRATION' },
     ],
-    media: null,
-    alt: 'ThengaPari — four-app Flutter marketplace',
+    media: '/assets/proj-4.png',
+    alt: 'ThengaPari — multi-screen Flutter app flow',
     link: 'https://github.com/Ahamedshakir02/Thengapari',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/Thengapari', caption: 'Thengapari — monorepo repository' },
+      { src: '/assets/shots/gh-thengapari.png', caption: 'Thengapari — monorepo repository' },
     ],
     details: [
       {
@@ -113,8 +113,8 @@ export const projects = [
     link: 'https://github.com/Ahamedshakir02/TailSafe',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/TailSafe', caption: 'TailSafe — repository' },
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/TrailSafeApp', caption: 'TrailSafeApp — React Native app repository' },
+      { src: '/assets/shots/gh-tailsafe.png', caption: 'TailSafe — repository' },
+      { src: '/assets/shots/gh-trailsafeapp.png', caption: 'TrailSafeApp — React Native app repository' },
     ],
     details: [
       {
@@ -158,7 +158,7 @@ export const projects = [
     link: 'https://github.com/Ahamedshakir02/Strokeprediction-ML',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://opengraph.githubassets.com/1/Ahamedshakir02/Strokeprediction-ML', caption: 'Strokeprediction-ML — repository' },
+      { src: '/assets/shots/gh-strokeprediction-ml.png', caption: 'Strokeprediction-ML — repository' },
     ],
     details: [
       {
@@ -197,16 +197,16 @@ export const projects = [
       { b: 'Fluid', s: 'CLAMP() TYPE SYSTEM' },
       { b: 'A11y', s: 'REDUCED-MOTION SAFE' },
     ],
-    media: null,
-    alt: 'Holytouch — construction company website',
+    media: '/assets/shots/holytouch-home.jpg',
+    alt: 'Holytouch — construction and design studio website',
     live: 'https://holytouch-website.vercel.app',
     link: 'https://github.com/Ahamedshakir02/holytouch-website',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/', caption: 'Home — hero' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/services', caption: 'Services' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/projects', caption: 'Projects' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://holytouch-website.vercel.app/contact', caption: 'Contact' },
+      { src: '/assets/shots/holytouch-home.jpg', caption: 'Home — hero' },
+      { src: '/assets/shots/holytouch-services.jpg', caption: 'Services' },
+      { src: '/assets/shots/holytouch-projects.jpg', caption: 'Projects' },
+      { src: '/assets/shots/holytouch-contact.jpg', caption: 'Contact' },
     ],
     details: [
       {
@@ -245,16 +245,16 @@ export const projects = [
       { b: '15', s: 'SERVICE DETAIL PAGES' },
       { b: 'WhatsApp', s: 'ZERO-BACKEND CONTACT' },
     ],
-    media: 'https://www.safaritypingservices.com/og-image.jpg',
+    media: '/assets/shots/safari-home.jpg',
     alt: 'Safari Typing Services — bilingual business website',
     live: 'https://www.safaritypingservices.com',
     link: 'https://github.com/Ahamedshakir02/safari-typing',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/', caption: 'Home — bilingual hero' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/services', caption: 'All 15 service areas' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/about', caption: 'About' },
-      { src: 'https://image.thum.io/get/width/1400/crop/875/noanimate/https://www.safaritypingservices.com/contact', caption: 'Contact — WhatsApp-first' },
+      { src: '/assets/shots/safari-home.jpg', caption: 'Home — bilingual hero' },
+      { src: '/assets/shots/safari-services.jpg', caption: 'All 15 service areas' },
+      { src: '/assets/shots/safari-about.jpg', caption: 'About' },
+      { src: '/assets/shots/safari-contact.jpg', caption: 'Contact — WhatsApp-first' },
     ],
     details: [
       {
