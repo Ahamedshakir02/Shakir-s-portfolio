@@ -1,17 +1,19 @@
 # Ahamed Shakir M P
 
-> AI, IoT & Mobile Engineer. Computer Science graduate (B.Tech, APJ Abdul Kalam
-> Technological University / KTU) from Kerala, India. Builds Edge AI, applied NLP,
-> machine-learning models, IoT/embedded systems, and React Native mobile apps.
-> Freelancing in web and AI engineering since June 2026, and open to international engineering roles.
+> Designer, developer and builder. Computer Science graduate (B.Tech, APJ Abdul Kalam
+> Technological University / KTU) from Kerala, India. Designs, builds and ships
+> client websites, mobile apps and hardware projects: a typing centre in Ajman, a
+> construction firm in Kerala, a four-app Flutter marketplace, an ESP32
+> accident-detection device, and FIR-AI, a team project for Kerala Police.
+> Freelancing since June 2026, and open to engineering roles — remote first, open to relocating.
 
 - **Name:** Ahamed Shakir M P (Ahamed Shakir)
 - **Location:** Kerala, India
-- **Roles:** AI & Prompt Engineer, IoT Developer, Mobile Developer
+- **Positioning:** Designer · Developer · Builder
 - **Education:** B.Tech in Computer Science & Engineering, MES College of Engineering, Kuttippuram (APJ Abdul Kalam Technological University / KTU), 2022–2026
 - **Website:** https://shakir-s-portfolio.vercel.app/
 - **Email:** ahamedshakir02@gmail.com
-- **Availability:** Currently freelancing (web & AI engineering) and open to full-time international engineering roles in AI/ML, IoT, and mobile.
+- **Availability:** Currently freelancing and open to full-time engineering roles — remote first, open to relocating.
 
 ## Skills
 
@@ -34,7 +36,7 @@
 
 ## Experience
 
-- **Freelance Engineer — Web & AI** (Jun 2026 – present, Kerala, India, working remotely). Shipping production work for clients since graduating: Safari Typing Services, a bilingual English/Arabic document-services centre in Ajman, UAE, live at safaritypingservices.com; and Holytouch, a construction and design firm in Kerala. Currently building the site and brand direction for Orbelis Studio and a paid bilingual site for the VFC Arts, Sports & Welfare Club in Vellalur, Palakkad. Also building ThengaPari solo, a Melos monorepo of four standalone Flutter apps on one Firebase backend. Handles briefs end to end — scoping, design system, build, SEO audits and structured data, deployment, and post-launch changes.
+- **Freelance Engineer** (Jun 2026 – present, Kerala, India, working remotely). Shipping production work for clients since graduating: Safari Typing Services, a bilingual English/Arabic document-services centre in Ajman, UAE, live at safaritypingservices.com; and Holytouch, a construction and design firm in Kerala. Currently building the site and brand direction for Orbelis Studio and a paid bilingual site for the VFC Arts, Sports & Welfare Club in Vellalur, Palakkad. Also building ThengaPari solo, a Melos monorepo of four standalone Flutter apps on one Firebase backend. Handles briefs end to end — scoping, design system, build, SEO audits and structured data, deployment, and post-launch changes.
 
 - **Campus Lead — GTech µLearn, MES College of Engineering** (Aug 2025 – Apr 2026). GTech µLearn is Kerala's largest student developer community, backed by the Government of Kerala. Started the chapter solo (established 26 September 2025) and grew it from one department into a campus-wide group. Grew active student participation by 40%, ran 10+ technical workshops (AI, Web Dev, Cybersecurity, Open Source) reaching 100+ students per semester, coordinated 10+ mentors across institutions, and co-led the Google Build with AI hackathon (Google for Developers × µLearn).
 
