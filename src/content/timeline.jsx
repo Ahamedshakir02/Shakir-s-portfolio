@@ -3,7 +3,7 @@
 export const timeline = [
   {
     when: 'Jun 2026 – present',
-    where: ['Freelance · Web & AI Engineering', 'Kerala, India · working remotely'],
+    where: ['Freelance · Design & Engineering', 'Kerala, India · working remotely'],
     title: 'Freelance Engineer',
     role: 'Building and shipping for real clients since graduating — production websites with live users, plus my own product and AI work between briefs.',
     list: [

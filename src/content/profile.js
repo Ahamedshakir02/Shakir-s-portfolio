@@ -7,7 +7,8 @@ export const navLinks = [
   { href: '/#path', label: 'Path' },
 ]
 
-export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer']
+// Cycled under the wordmark in the preloader.
+export const roles = ['Designer', 'Developer', 'Builder']
 
 export const stats = [
   { count: 40, suffix: '%', label: 'growth I drove on campus' },

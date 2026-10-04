@@ -21,7 +21,6 @@ export function useHeroIntro(ref) {
 
     const targets = [
       '[data-hero-line] > span',
-      '[data-hero-roles] > *',
       '[data-hero-desc]',
       '[data-hero-actions] > *',
       '[data-hero-photo]',
@@ -39,16 +38,10 @@ export function useHeroIntro(ref) {
         { yPercent: 0, duration: 0.9, stagger: 0.08 }
       )
         .fromTo(
-          '[data-hero-roles] > *',
-          { y: 14, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, stagger: 0.06 },
-          '-=0.5'
-        )
-        .fromTo(
           '[data-hero-desc]',
           { y: 16, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6 },
-          '-=0.35'
+          '-=0.5'
         )
         .fromTo(
           '[data-hero-actions] > *',
