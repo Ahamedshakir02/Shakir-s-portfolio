@@ -112,10 +112,10 @@ export const projects = [
     ],
     media: '/assets/proj-2.png',
     alt: 'GPS and IMU safety monitoring — live route and impact detection concept',
-    link: 'https://github.com/Ahamedshakir02/TailSafe',
+    link: 'https://github.com/Ahamedshakir02/TrailSafe',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: '/assets/shots/gh-tailsafe.png', caption: 'TailSafe — repository' },
+      { src: '/assets/shots/gh-tailsafe.png', caption: 'TrailSafe — repository' },
       { src: '/assets/shots/gh-trailsafeapp.png', caption: 'TrailSafeApp — React Native app repository' },
     ],
     details: [
