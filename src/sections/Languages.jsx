@@ -11,7 +11,7 @@ export default function Languages() {
         title={<>I&apos;ll meet you<br />in your language.</>}
       />
 
-      <ul className="mt-12 grid gap-8 sm:grid-cols-3">
+      <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {languages.map((l) => (
           <li key={l.name} className="reveal">
             <h3 className="font-display text-heading font-medium">{l.name}</h3>
