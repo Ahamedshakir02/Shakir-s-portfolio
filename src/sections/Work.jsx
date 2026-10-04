@@ -2,29 +2,21 @@ import { Link } from 'react-router-dom'
 import { projects } from '../content/index.js'
 import Section from '../ui/Section.jsx'
 import SectionHeader from '../ui/SectionHeader.jsx'
-import ImageSlot from '../ui/ImageSlot.jsx'
 import { ArrowOutIcon } from '../ui/Icons.jsx'
 
 const COUNT_WORDS = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight']
 
 /**
- * A teaser, not the whole story: image, title, a clamped lead, and the stack.
- * The full description, the key numbers, and the write-up live on the case
- * study at /work/:slug — which keeps the card short enough to sit inside a
+ * A teaser, not the whole story: title, a clamped lead, and the stack. The
+ * project's image, the full description, the key numbers, and the write-up
+ * all live on the case study at /work/:slug — you see the picture once you
+ * open the project, which also keeps the card short enough to sit inside a
  * pinned horizontal rail without overflowing the viewport.
  */
 function ProjectCard({ p }) {
   return (
     <article className="reveal flex h-full flex-col rounded-card border border-line bg-paper-2/40 p-5 transition-colors hover:border-line-2">
-      <ImageSlot
-        src={p.media}
-        alt={p.alt}
-        placeholder={p.alt}
-        className="aspect-16/10 shrink-0 lg:aspect-auto lg:min-h-0 lg:flex-1"
-        imgClassName="project-media scale-110"
-      />
-
-      <div className="mt-5 flex items-start justify-between gap-4">
+      <div className="flex items-start justify-between gap-4">
         <span className="label text-muted">{p.idx}</span>
         <a
           href={p.live || p.link}
@@ -42,7 +34,7 @@ function ProjectCard({ p }) {
       </h3>
       <p className="label mt-2 text-muted">{p.type}</p>
 
-      <div className="mt-4 line-clamp-3 text-caption text-ink-2">{p.desc}</div>
+      <div className="mt-4 line-clamp-5 text-caption text-ink-2">{p.desc}</div>
 
       <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
         {p.stack.slice(0, 4).map((s) => (
@@ -52,7 +44,7 @@ function ProjectCard({ p }) {
 
       <Link
         to={`/work/${p.slug}`}
-        className="inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
+        className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
       >
         Read the case study <span aria-hidden="true">→</span>
       </Link>
@@ -83,7 +75,7 @@ export default function Work() {
           {projects.map((p) => (
             <div
               key={p.idx}
-              className="lg:h-[calc(100dvh-var(--nav-h)-3rem)] lg:max-h-[40rem] lg:w-[26rem] lg:shrink-0"
+              className="lg:w-[26rem] lg:shrink-0"
             >
               <ProjectCard p={p} />
             </div>
