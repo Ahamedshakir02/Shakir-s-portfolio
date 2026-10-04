@@ -21,7 +21,7 @@ You have a Google Developers account. This guide shows you **exactly how** to us
 ### The Problem
 Right now, your portfolio exists on the internet, but:
 - ❌ Google doesn't know about it
-- ❌ Recruiters can't find you when they search "AI engineer" or "IoT developer"
+- ❌ Recruiters can't find you when they search "freelance developer Kerala" or "React developer portfolio"
 - ❌ You have no idea who's visiting or which projects they care about
 - ❌ You don't know if your site loads fast on mobile
 
@@ -34,7 +34,7 @@ Google provides **free tools** to:
 5. **Receive alerts** → Get notified if anything breaks
 
 ### Real-World Impact
-- A recruiter searches "AI engineer portfolio Kerala" → **Your site appears**
+- A recruiter searches "developer portfolio Kerala" → **Your site appears**
 - They visit → **You see it in analytics** (traffic source: Google Search)
 - They spend 3 min on the Projects section → **You know projects matter**
 - Next time you update, you make projects more prominent → **Better results**
@@ -60,7 +60,7 @@ Google provides **free tools** to:
 
 **With it:** Google crawls your site in days. You see exactly which searches lead to clicks on your portfolio. You can optimize based on real data.
 
-**For recruiters:** When someone searches "IoT developer" or "AI engineer portfolio", your portfolio appears in results → they visit → you get the interview.
+**For recruiters:** When someone searches "React developer" or "developer portfolio", your portfolio appears in results → they visit → you get the interview.
 
 ### Step-by-Step Setup
 
@@ -108,27 +108,27 @@ Google will ask you to prove you own the site. Two options:
 
 | Metric | What It Means | Action |
 |--------|---|---|
-| **Queries** | Search terms that show your site in results | If no searches for "AI engineer", update your bio/about section with more keywords |
+| **Queries** | Search terms that show your site in results | If no searches for "developer portfolio", update your bio/about section with more keywords |
 | **Clicks** | Real people clicking your link in search results | Higher clicks = better ranking. CTR too low? Improve your meta description |
 | **Impressions** | Times your site showed up in search results | Shows visibility. If low, you need better keywords |
 | **Position** | Where you rank for a keyword (1-100) | Position 1-5 is ideal. Below 10? Optimize your content |
 
 ### Example Data You'll See
 ```
-Query: "AI engineer portfolio"
+Query: "developer portfolio"
   - Impressions: 24 (showed up in search 24 times)
   - Clicks: 3 (3 people clicked to visit)
   - CTR: 12.5% (decent)
   - Avg Position: 18 (middle of results)
 
-Query: "IoT developer"
+Query: "React developer"
   - Impressions: 5
   - Clicks: 1
   - CTR: 20%
   - Avg Position: 45 (further down)
 ```
 
-**Action:** You rank well for "AI engineer portfolio" (CTR 12.5%) but not for "IoT developer". Update your About section to emphasize IoT more.
+**Action:** You rank well for "developer portfolio" (CTR 12.5%) but not for "React developer". Update your About section to emphasize React more.
 
 ### Common Issues & Fixes
 

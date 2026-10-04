@@ -44,7 +44,7 @@ src/
 - **`src/app/`** — `App.jsx` composes the page and routes; `loadGate.js` is the store
   every animation waits on (see [Motion](#motion)).
 - **`src/sections/`** — `Hero`, `Stats`, `About`, `Skills`, `Work`, `Path`, `Certs`,
-  `Mulearn`, `Languages`, `Contact`. Each is self-contained and mobile-first.
+  `Languages`, `Contact`. Each is self-contained and mobile-first.
 - **`src/ui/`** — `Nav`, `Footer`, `ToTop`, `Section`, `SectionHeader`, `Button`, `Chip`,
   `MetaBadge`, `CountUp`, `ImageSlot`, `Icons`.
 - **`src/motion/`** — `Preloader`, `Choreography` (scroll effects), `Curtain` (route
