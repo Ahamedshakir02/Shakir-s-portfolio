@@ -60,11 +60,18 @@
         "addressRegion": "Kerala",
         "addressCountry": "IN"
       },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "APJ Abdul Kalam Technological University (KTU)",
-        "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" }
-      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "MES College of Engineering, Kuttippuram",
+          "address": { "@type": "PostalAddress", "addressLocality": "Kuttippuram", "addressRegion": "Kerala", "addressCountry": "IN" }
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "APJ Abdul Kalam Technological University (KTU)",
+          "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" }
+        }
+      ],
       "affiliation": {
         "@type": "Organization",
         "name": "GTech µLearn",
@@ -73,7 +80,8 @@
       "knowsLanguage": [
         { "@type": "Language", "name": "English" },
         { "@type": "Language", "name": "Malayalam" },
-        { "@type": "Language", "name": "Arabic" }
+        { "@type": "Language", "name": "Tamil" },
+        { "@type": "Language", "name": "Hindi" }
       ],
       "knowsAbout": [
         "Artificial Intelligence",
@@ -88,10 +96,16 @@
         "ESP32",
         "React Native",
         "Mobile App Development",
-        "Python",
-        "Java",
+        "Flutter",
         "JavaScript",
+        "Python",
+        "TypeScript",
+        "C++",
+        "Java",
         "Firebase",
+        "AWS",
+        "Docker",
+        "PostgreSQL",
         "MongoDB",
         "UX Design"
       ],
@@ -129,13 +143,13 @@
       "url": "https://shakir-s-portfolio.vercel.app/work/fir-ai",
       "name": "FIR-AI — Investigation Assistant for Kerala Police",
       "genre": "Applied AI · Document Intelligence",
-      "description": "An AI investigation assistant that reads unstructured police FIR documents: entity extraction, cross-case intelligence, and multilingual natural-language Q&A, on a 100% custom-built NLP engine.",
+      "description": "A four-person final-year project for Kerala Police: an AI investigation assistant that reads FIR documents, with an offline BiLSTM + Attention classifier at 98.8% accuracy, Malayalam OCR, Bhashini translation, and legal retrieval.",
       "keywords": [
         "Python",
         "NLP",
-        "Custom AI Engine",
-        "LLMs",
-        "PDF Processing"
+        "BiLSTM + Attention",
+        "OCR",
+        "Bhashini API"
       ],
       "creator": {
         "@id": "https://shakir-s-portfolio.vercel.app/#person"
@@ -199,7 +213,7 @@
       },
       "inLanguage": "en",
       "sameAs": [
-        "https://github.com/Ahamedshakir02/TailSafe"
+        "https://github.com/Ahamedshakir02/TrailSafe"
       ]
     },
     {
@@ -304,7 +318,7 @@
   <main>
     <h1>Ahamed Shakir M P — AI, IoT &amp; Mobile Engineer</h1>
     <p>
-      Computer Science graduate (B.Tech, APJ Abdul Kalam Technological University) and engineer
+      Computer Science graduate (B.Tech, MES College of Engineering, Kuttippuram — APJ Abdul Kalam Technological University) and engineer
       from Kerala, India. I build at the border between AI and the real world — Edge AI, applied
       NLP, machine learning, IoT/embedded systems, and React Native mobile apps. Open to
       international engineering roles.
@@ -312,35 +326,43 @@
 
     <h2>Skills</h2>
     <ul>
-      <li><strong>Languages:</strong> Python, Java, JavaScript, C</li>
+      <li><strong>Languages:</strong> JavaScript, Python, TypeScript, C++, Java, C</li>
       <li><strong>AI / ML:</strong> NLP, Text Extraction, Scikit-learn, Pandas, NumPy, LLMs, Generative AI</li>
       <li><strong>Prompt Engineering:</strong> Prompt design, system prompts, few-shot &amp; chain-of-thought, RAG workflows, evals</li>
-      <li><strong>Web &amp; Mobile:</strong> React, React Native, Flutter, Dart, Tailwind CSS, Framer Motion, GSAP, HTML, CSS, REST APIs</li>
+      <li><strong>Web &amp; Mobile:</strong> React, Next.js, React Native, Expo, Flutter, Dart, Node.js, Express, Tailwind CSS, Framer Motion, GSAP, HTML, CSS, REST APIs</li>
       <li><strong>Hardware / IoT:</strong> ESP32, Neo-6M GPS, MPU6050 IMU, BLE, WebSocket, microSD</li>
-      <li><strong>Cloud &amp; Tools:</strong> Firebase, MongoDB, Google Colab, Git, Figma</li>
+      <li><strong>Cloud &amp; Tools:</strong> Firebase, AWS, Docker, Terraform, GitHub Actions, Linux, PostgreSQL, MongoDB, Google Colab, Git, Figma</li>
     </ul>
 
     <h2>Projects</h2>
     <ul>
-      <li><strong>FIR-AI — Investigation Assistant for Kerala Police</strong> — an AI-powered investigation assistant with a 100% custom-built AI engine: real-time FIR analysis, case intelligence, legal guidance, and multilingual support. <a href="https://github.com/Ahamedshakir02/firai">GitHub</a></li>
+      <li><strong>FIR-AI — Investigation Assistant for Kerala Police</strong> — a four-person final-year project, on a problem statement from Kerala Startup Mission and the Kerala AI Mission (K-AI). Ahamed built the offline BiLSTM + Attention model (98.8% crime-classification accuracy) and designed the system architecture, data schemas and workflows for Malayalam OCR, Bhashini translation and legal retrieval. <a href="https://github.com/Ahamedshakir02/firai">GitHub</a></li>
       <li><strong>ThengaPari — Agri-Harvest Marketplace</strong> — a hyperlocal marketplace for Kerala: a Melos monorepo with four standalone Flutter apps sharing one core package and one Firebase backend, with TypeScript Cloud Functions and Razorpay payments. <a href="https://github.com/Ahamedshakir02/Thengapari">GitHub</a></li>
-      <li><strong>Real-Time GPS &amp; IMU Safety Monitoring App</strong> — ESP32 firmware streaming GPS + IMU data over BLE/WebSocket into a React Native app, with automatic accident SOS, geofencing, and offline microSD logging. <a href="https://github.com/Ahamedshakir02/TailSafe">GitHub</a></li>
+      <li><strong>Real-Time GPS &amp; IMU Safety Monitoring App</strong> — ESP32 firmware streaming GPS + IMU data over BLE/WebSocket into a React Native app, with automatic accident SOS, geofencing, and offline microSD logging. <a href="https://github.com/Ahamedshakir02/TrailSafe">GitHub</a></li>
       <li><strong>Stroke Prediction on Imbalanced Clinical Data</strong> — SVM, Decision Tree and KNN compared on a 972:50 imbalanced dataset with SMOTE resampling; the highest-accuracy model (89.2%) recovers the fewest stroke cases, which is the point. <a href="https://github.com/Ahamedshakir02/Strokeprediction-ML">GitHub</a></li>
       <li><strong>Holytouch — Construction &amp; Design Studio Site</strong> — a premium multi-page client site (React, Tailwind CSS, Framer Motion, Lenis) with a branded preloader and page-transition curtain. <a href="https://github.com/Ahamedshakir02/holytouch-website">GitHub</a></li>
       <li><strong>Safari Typing Services — Bilingual Business Site</strong> — a bilingual English/Arabic client site for a document-services centre in Ajman, UAE, with 15 service detail pages and a WhatsApp-first contact flow. <a href="https://github.com/Ahamedshakir02/safari-typing">GitHub</a></li>
     </ul>
 
     <h2>Experience</h2>
-    <p>
-      <strong>Freelance Engineer, Web &amp; AI</strong> (Jun 2026 – present) — shipping production
-      client work since graduating, including two live sites: Safari Typing Services (Ajman, UAE)
-      and Holytouch (Kerala).
-    </li>
-    <li>
-      <strong>Campus Lead, GTech µLearn</strong> (Jul 2025 – Apr 2026) — Kerala's largest student
-      developer community, backed by the Government of Kerala. Grew participation by 40%, ran 10+
-      technical workshops, and coordinated 10+ mentors across institutions.
-    </p>
+    <ul>
+      <li>
+        <strong>Freelance Engineer, Web &amp; AI</strong> (Jun 2026 – present) — shipping production
+        client work since graduating, including two live sites: Safari Typing Services (Ajman, UAE)
+        and Holytouch (Kerala). Currently building for Orbelis Studio and the VFC Arts, Sports
+        &amp; Welfare Club (Vellalur, Palakkad).
+      </li>
+      <li>
+        <strong>Campus Lead, GTech µLearn, MES College of Engineering</strong> (Aug 2025 – Apr 2026)
+        — Kerala's largest student developer community, backed by the Government of Kerala. Started
+        the chapter solo (established 26 September 2025), grew participation by 40%, ran 10+
+        technical workshops, coordinated 10+ mentors across institutions, and co-led the Google
+        Build with AI hackathon.
+      </li>
+    </ul>
+
+    <h2>Languages</h2>
+    <p>English (professional), Malayalam (native), Tamil and Hindi (conversational).</p>
 
     <h2>Contact</h2>
     <ul>
