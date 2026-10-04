@@ -162,8 +162,9 @@ export default function Contact() {
             Tell me what you&apos;re building.
           </h2>
           <p className="mt-5 max-w-[46ch] text-ink-2">
-            Open to international engineering roles and interesting freelance work. The form goes
-            straight to my inbox — or reach me wherever you already are.
+            Open to engineering roles — remote first, happy to relocate — and to interesting
+            freelance work. The form goes straight to my inbox, or reach me wherever you already
+            are.
           </p>
 
           <ul className="mt-8 space-y-3">

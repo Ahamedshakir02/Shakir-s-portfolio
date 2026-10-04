@@ -23,9 +23,9 @@ export default function Hero() {
           </h1>
 
           <p data-hero-desc className="mt-7 max-w-[52ch] text-ink-2">
-            I build at the messy, exciting border between AI and the real world — sensors,
-            microcontrollers, NLP pipelines, ML models, and prompts that get LLMs to behave. Not
-            demos. Stuff that works when it matters.
+            I design it, build it, and put it in front of people — client websites with real
+            customers, a marketplace that ships as four Flutter apps, and the occasional piece of
+            hardware wired to an app. Not demos. Stuff that works when it matters.
           </p>
 
           <div data-hero-actions className="mt-9 flex flex-wrap gap-3">

@@ -18,7 +18,7 @@ export const stats = [
 ]
 
 export const aboutTags = [
-  'Edge AI', 'Applied NLP', 'IoT Systems', 'Public Safety', 'Healthcare', 'Design Systems',
+  'Client Websites', 'Mobile Apps', 'Applied AI', 'Hardware', 'Cloud & DevOps', 'Brand & UI Design',
 ]
 
 export const languages = [
