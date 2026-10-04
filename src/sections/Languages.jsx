@@ -6,7 +6,7 @@ export default function Languages() {
   return (
     <Section id="languages">
       <SectionHeader
-        idx="06"
+        idx="05"
         label="Languages"
         title={<>I&apos;ll meet you<br />in your language.</>}
       />

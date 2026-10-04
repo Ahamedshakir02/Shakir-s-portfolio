@@ -5,7 +5,6 @@ export const navLinks = [
   { href: '/#skills', label: 'Skills' },
   { href: '/#work', label: 'Work' },
   { href: '/#path', label: 'Path' },
-  { href: '/#mulearn', label: 'µLearn' },
 ]
 
 export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer']
