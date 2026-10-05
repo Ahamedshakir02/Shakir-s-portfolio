@@ -12,7 +12,6 @@ import About from '../sections/About.jsx'
 import Skills from '../sections/Skills.jsx'
 import Work from '../sections/Work.jsx'
 import Path from '../sections/Path.jsx'
-import Mulearn from '../sections/Mulearn.jsx'
 import Languages from '../sections/Languages.jsx'
 import Contact from '../sections/Contact.jsx'
 
@@ -35,7 +34,6 @@ function Home() {
       <Skills />
       <Work />
       <Path />
-      <Mulearn />
       <Languages />
       <Contact />
     </main>

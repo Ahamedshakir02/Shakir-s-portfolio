@@ -6,17 +6,17 @@ export const projects = [
     idx: '01',
     slug: 'fir-ai',
     seoDescription:
-      'An AI investigation assistant that reads unstructured police FIR documents: entity extraction, cross-case intelligence, and multilingual natural-language Q&A, on a 100% custom-built NLP engine.',
+      'A four-person final-year project for Kerala Police: an AI investigation assistant that reads FIR documents, with an offline BiLSTM + Attention classifier at 98.8% accuracy, Malayalam OCR, Bhashini translation, and legal retrieval.',
     title: 'FIR-AI — Investigation Assistant for Kerala Police',
     type: 'Applied AI · Document Intelligence',
     desc: (
-      <>Police FIR documents are a mess of unstructured text — so I built an AI investigation assistant that reads them. A <em>100% custom-built AI engine</em> does real-time FIR analysis: entity extraction (names, dates, locations, incidents), case intelligence across files, and legal guidance, with multilingual support for officers on the ground. Ask a case a question in plain English (or Malayalam) and get an answer.</>
+      <>Police FIR documents are a mess of unstructured text — so our four-person final-year team built an AI investigation assistant that reads them, on a problem statement that came through Kerala Startup Mission and the Kerala AI Mission (K-AI). My part: the offline BiLSTM + Attention model, which classifies crime type and severity at <em>98.8% accuracy</em>, plus the system architecture, data schemas and workflows behind Malayalam OCR, Bhashini translation and legal information retrieval.</>
     ),
-    stack: ['Python', 'NLP', 'Custom AI Engine', 'LLMs', 'PDF Processing'],
+    stack: ['Python', 'NLP', 'BiLSTM + Attention', 'OCR', 'Bhashini API'],
     feats: [
-      { b: 'Custom', s: '100% CUSTOM-BUILT AI ENGINE' },
-      { b: 'Realtime', s: 'LIVE FIR ANALYSIS' },
-      { b: 'Multilingual', s: 'CASE Q&A · LEGAL GUIDANCE' },
+      { b: '98.8%', s: 'CRIME CLASSIFICATION ACCURACY' },
+      { b: 'Offline', s: 'BiLSTM + ATTENTION ON CPU' },
+      { b: 'Team of 4', s: 'K-AI · KERALA STARTUP MISSION' },
     ],
     media: '/assets/proj-1.png',
     alt: 'FIR-AI — police document intelligence concept',
@@ -30,19 +30,21 @@ export const projects = [
         h: 'The problem',
         ps: [
           "A First Information Report is where every criminal case in India begins — and it's a wall of unstructured, often handwritten-then-scanned text. Officers spend hours reading, cross-referencing, and manually extracting the facts that matter: who, where, when, what. At scale, across thousands of cases, that time adds up to slower investigations.",
+          'The problem statement came to us through Kerala Startup Mission and the Kerala AI Mission (K-AI), and we took it on as a final-year project in a team of four.',
         ],
       },
       {
         h: 'What it does',
         ps: [
-          'FIR-AI ingests FIR documents and turns them into structured, queryable case intelligence in real time. The engine extracts entities — names, dates, locations, incident types — parses the underlying PDFs, and links related information across files.',
-          'On top of that sits a natural-language layer: an officer can ask a case a question in plain English or Malayalam and get a direct answer, along with relevant legal guidance for the sections involved. No query syntax, no training required.',
+          'FIR-AI ingests FIR documents — PDFs or images, in Malayalam or English — and turns them into structured, queryable case intelligence. It classifies the crime type and severity, extracts entities such as names, locations, vehicles and amounts, maps the applicable IPC/BNS sections, and finds similar past cases.',
+          'Narratives are translated between Malayalam and English through the Bhashini API, and a legal assistant answers questions from a built-in knowledge base of Indian law, so an officer gets guidance on the sections involved without learning a query syntax.',
         ],
       },
       {
-        h: 'How it is built',
+        h: 'My part',
         ps: [
-          'The core is a 100% custom-built AI engine in Python: a full NLP pipeline covering PDF parsing, tokenization, pattern matching, and entity extraction, with an LLM-powered Q&A layer for conversational access. Building the engine rather than renting one keeps sensitive police data controllable and the system auditable.',
+          'I built the offline neural model at the centre of the engine: a BiLSTM with attention that reaches 98.8% accuracy on crime classification and runs on a CPU with no internet connection — which matters when the documents are police records.',
+          'I also designed the system architecture, the data schemas and the workflow diagrams, and wrote the UI prompts for the Malayalam OCR, Bhashini translation and legal information retrieval flows. The rest of the build was shared across the team.',
         ],
       },
     ],
@@ -110,10 +112,10 @@ export const projects = [
     ],
     media: '/assets/proj-2.png',
     alt: 'GPS and IMU safety monitoring — live route and impact detection concept',
-    link: 'https://github.com/Ahamedshakir02/TailSafe',
+    link: 'https://github.com/Ahamedshakir02/TrailSafe',
     linkLabel: 'View on GitHub',
     shots: [
-      { src: '/assets/shots/gh-tailsafe.png', caption: 'TailSafe — repository' },
+      { src: '/assets/shots/gh-tailsafe.png', caption: 'TrailSafe — repository' },
       { src: '/assets/shots/gh-trailsafeapp.png', caption: 'TrailSafeApp — React Native app repository' },
     ],
     details: [

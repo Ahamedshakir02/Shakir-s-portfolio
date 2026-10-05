@@ -11,23 +11,29 @@ export default function About() {
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <h2 className="reveal font-display text-heading font-medium text-balance">
           CS grad from{' '}
-          <span className="text-accent">APJ Abdul Kalam Technological University</span>, building
-          across hardware and software — embedded systems, applied NLP, machine learning, and
-          mobile. Basically, if it computes, I&apos;ve probably poked at it.
+          <span className="text-accent">MES College of Engineering, Kuttippuram</span>. I work
+          across the whole thing — the design, the code, and the part where a real person has to
+          use it.
         </h2>
 
         <div className="reveal space-y-5 text-ink-2">
           <p>
-            My favourite spot is the bit most people avoid: where physical hardware meets messy
-            software. Microcontrollers and IMU sensors on one end, LLM-powered query interfaces and
-            React Native apps on the other. If a project has real stakes, I&apos;m in.
+            Most of what I make starts with a problem someone actually has. A typing centre in
+            Ajman that customers couldn&apos;t find online. A construction firm in Kerala that
+            needed a site as good as its builds. Police stations buried in FIR paperwork. A rider
+            who can&apos;t call for help after a crash.
           </p>
           <p>
-            The proof is in the work — an accident-detection system that bridges embedded hardware
-            with a live mobile app, and an NLP system that reads and answers questions about
-            unstructured police documents. Since graduating I&apos;ve been freelancing — two client
-            sites live in production so far — and I&apos;m open to international engineering
-            roles where I can build things that genuinely matter (and ship them).
+            So the work ranges wide: client websites in React, a coconut-harvest marketplace
+            I&apos;m building solo as four Flutter apps, an ESP32 accident-detection device with
+            its companion app, and FIR-AI — a four-person final-year project for Kerala Police,
+            where I built the classification model and designed the architecture.
+          </p>
+          <p>
+            Along the way I started the µLearn chapter at my college and grew it campus-wide, and
+            learned AWS, Docker and Terraform by deploying things until they stopped breaking.
+            I&apos;ve been freelancing since graduating, and I&apos;m open to engineering roles —
+            remote first, happy to relocate.
           </p>
 
           <ul className="flex flex-wrap gap-2 pt-2">

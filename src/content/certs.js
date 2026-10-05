@@ -9,9 +9,3 @@ export const certs = [
   { issuer: 'IBM', yr: 'Jun 2024', title: 'Getting Started with Enterprise Data Science' },
   { issuer: 'Microsoft', yr: 'Jun 2024', title: 'Azure AI Fundamentals (AI-900)' },
 ]
-
-export const mulearnMeta = [
-  { b: 'Campus Lead', s: 'MES COLLEGE CHAPTER' },
-  { b: '+40%', s: 'PARTICIPATION GROWTH' },
-  { b: '100+', s: 'STUDENTS REACHED / SEM' },
-]

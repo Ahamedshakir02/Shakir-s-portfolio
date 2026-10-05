@@ -5,26 +5,27 @@ export const navLinks = [
   { href: '/#skills', label: 'Skills' },
   { href: '/#work', label: 'Work' },
   { href: '/#path', label: 'Path' },
-  { href: '/#mulearn', label: 'µLearn' },
 ]
 
-export const roles = ['AI & Prompt Engineer', 'IoT Developer', 'Mobile Developer']
+// Cycled under the wordmark in the preloader.
+export const roles = ['Designer', 'Developer', 'Builder']
 
 export const stats = [
   { count: 40, suffix: '%', label: 'growth I drove on campus' },
   { count: 10, suffix: '+', label: 'workshops I actually ran' },
   { count: 89, suffix: '%', label: 'best model accuracy, on imbalanced clinical data' },
-  { count: 3, suffix: ' langs', label: 'spoken, give or take a verb tense' },
+  { count: 4, suffix: ' langs', label: 'spoken, give or take a verb tense' },
 ]
 
 export const aboutTags = [
-  'Edge AI', 'Applied NLP', 'IoT Systems', 'Public Safety', 'Healthcare', 'Design Systems',
+  'Client Websites', 'Mobile Apps', 'Applied AI', 'Hardware', 'Cloud & DevOps', 'Brand & UI Design',
 ]
 
 export const languages = [
   { name: 'English', level: 'Professional working', lvl: 0.85 },
   { name: 'Malayalam', level: 'Native speaker', lvl: 1 },
-  { name: 'Arabic', level: 'Basic conversational', lvl: 0.45 },
+  { name: 'Tamil', level: 'Conversational', lvl: 0.6 },
+  { name: 'Hindi', level: 'Conversational', lvl: 0.6 },
 ]
 
 export const contactLinks = [

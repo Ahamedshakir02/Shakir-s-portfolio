@@ -1,5 +1,4 @@
-import { Fragment, useRef } from 'react'
-import { roles } from '../content/index.js'
+import { useRef } from 'react'
 import { useHeroIntro } from '../motion/useHeroIntro.js'
 import Button from '../ui/Button.jsx'
 
@@ -23,22 +22,10 @@ export default function Hero() {
             ))}
           </h1>
 
-          <div
-            data-hero-roles
-            className="label mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-muted"
-          >
-            {roles.map((r, i) => (
-              <Fragment key={r}>
-                <b className="font-medium text-ink-2">{r}</b>
-                {i < roles.length - 1 && <span aria-hidden="true" className="text-line-2">/</span>}
-              </Fragment>
-            ))}
-          </div>
-
           <p data-hero-desc className="mt-7 max-w-[52ch] text-ink-2">
-            I build at the messy, exciting border between AI and the real world — sensors,
-            microcontrollers, NLP pipelines, ML models, and prompts that get LLMs to behave. Not
-            demos. Stuff that works when it matters.
+            I design it, build it, and put it in front of people — client websites with real
+            customers, a marketplace that ships as four Flutter apps, and the occasional piece of
+            hardware wired to an app. Not demos. Stuff that works when it matters.
           </p>
 
           <div data-hero-actions className="mt-9 flex flex-wrap gap-3">

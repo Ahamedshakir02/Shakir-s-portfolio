@@ -154,7 +154,7 @@ function ContactForm() {
 export default function Contact() {
   return (
     <Section id="contact">
-      <SectionHeader idx="07" label="Let&apos;s build something" className="mb-10" />
+      <SectionHeader idx="06" label="Let&apos;s build something" className="mb-10" />
 
       <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
         <div className="reveal">
@@ -162,8 +162,9 @@ export default function Contact() {
             Tell me what you&apos;re building.
           </h2>
           <p className="mt-5 max-w-[46ch] text-ink-2">
-            Open to international engineering roles and interesting freelance work. The form goes
-            straight to my inbox — or reach me wherever you already are.
+            Open to engineering roles — remote first, happy to relocate — and to interesting
+            freelance work. The form goes straight to my inbox, or reach me wherever you already
+            are.
           </p>
 
           <ul className="mt-8 space-y-3">
