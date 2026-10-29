@@ -5,6 +5,7 @@ export const projects = [
   {
     idx: '01',
     slug: 'fir-ai',
+    year: '2026',
     seoDescription:
       'A four-person final-year project for Kerala Police: an AI investigation assistant that reads FIR documents, with an offline BiLSTM + Attention classifier at 98.8% accuracy, Malayalam OCR, Bhashini translation, and legal retrieval.',
     title: 'FIR-AI — Investigation Assistant for Kerala Police',
@@ -52,6 +53,7 @@ export const projects = [
   {
     idx: '02',
     slug: 'thengapari',
+    year: '2026',
     seoDescription:
       'A hyperlocal agri-harvest marketplace for Kerala: four standalone Flutter apps built from one Melos monorepo and a shared core package, on a single Firebase backend with TypeScript Cloud Functions.',
     title: 'ThengaPari — Agri-Harvest Marketplace',
@@ -189,6 +191,7 @@ export const projects = [
   {
     idx: '05',
     slug: 'holytouch',
+    year: '2026',
     seoDescription:
       'A premium multi-page marketing site for a Kerala construction and design firm, with a branded preloader, page-transition curtain, Lenis smooth scroll, and fully reduced-motion-safe animation.',
     title: 'Holytouch — Construction & Design Studio Site',
@@ -237,6 +240,7 @@ export const projects = [
   {
     idx: '06',
     slug: 'safari-typing',
+    year: '2026',
     seoDescription:
       'A bilingual English/Arabic site for a government typing and document-services centre in Ajman, UAE: fifteen service detail pages, a WhatsApp-first zero-backend contact flow, and JSON-LD structured data.',
     title: 'Safari Typing Services — Bilingual Business Site',
