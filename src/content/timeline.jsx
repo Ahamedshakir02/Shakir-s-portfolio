@@ -31,7 +31,7 @@ export const timeline = [
     when: '2022 – May 2026',
     where: ['MES College of Engineering, Kuttippuram', 'APJ Abdul Kalam Technological University (KTU) · Kerala, India'],
     title: 'B.Tech — Computer Science & Engineering',
-    role: 'From logic gates to neural nets: the coursework, and what I did alongside it.',
+    role: 'Capstone: FIR-AI, in a team of four. Internships at ICT Academy of Kerala and Edunet × AICTE × IBM in 2024, and the NASA Space Apps Challenge twice.',
     list: [
       <>Built the capstone, <b>FIR-AI</b>, an investigation assistant for Kerala Police, in a team of four, drawing on Machine Learning and DBMS. Built the IoT safety app from Embedded Systems.</>,
       <>Two internships in 2024: <b>Machine Learning &amp; AI</b> at ICT Academy of Kerala, and the <b>Edunet × AICTE × IBM</b> programme.</>,
