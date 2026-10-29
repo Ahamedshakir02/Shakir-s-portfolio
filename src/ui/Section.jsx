@@ -1,8 +1,10 @@
-/** A page section: consistent vertical rhythm and a centred content column. */
-export default function Section({ id, className = '', children }) {
+/** A home-page section: the 40rem column, section spacing, and a plain h2. */
+export default function Section({ id, title, children }) {
+  const headingId = `${id}-heading`
   return (
-    <section id={id} className={`relative py-16 md:py-24 lg:py-32 ${className}`}>
-      <div className="wrap">{children}</div>
+    <section id={id} aria-labelledby={headingId} className="wrap mt-16 scroll-mt-6 md:mt-24">
+      <h2 id={headingId} className="mb-6 text-heading font-semibold">{title}</h2>
+      {children}
     </section>
   )
 }

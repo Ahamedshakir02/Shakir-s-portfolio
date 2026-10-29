@@ -1,8 +1,8 @@
 # Ahamed Shakir — Portfolio
 
-A single-page React portfolio with per-project case-study routes. Warm cocoa/cream
-design system, light and dark themes, scroll-choreographed motion that is fully
-gated behind `prefers-reduced-motion`.
+A single-page React portfolio with per-project case-study routes. Minimal design:
+one narrow column, one typeface, two neutrals and a cocoa accent, light and dark
+themes, and no decorative motion. The spec is in `DESIGN.md`.
 
 **Live:** https://shakir-s-portfolio.vercel.app
 
@@ -15,46 +15,31 @@ npm run build    # production build → dist/
 npm run preview  # serve the production build
 ```
 
-### Environment
-
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `VITE_CONTACT_ENDPOINT` | for the contact form | Form POST target (Formspree / Web3Forms). Without it the form shows its error state and falls back to the `mailto:` link. |
-
-Set it in `.env` locally and in the Vercel project settings for production.
-
 ## Stack
 
-React 18 · Vite 6 · Tailwind CSS v4 · GSAP (ScrollTrigger) · Lenis · React Router · Zustand
+React 18 · Vite 6 · Tailwind CSS v4 · React Router
 
 ## Structure
 
 ```
 src/
-  app/        App shell, routes, and the load gate
+  app/        App shell and routes
   sections/   One file per page section
   ui/         Reusable presentational pieces
-  motion/     Everything that animates
   content/    All site copy and data
-  hooks/      Non-motion hooks
+  hooks/      Theme and document-metadata hooks
   pages/      Route-level views
   styles/     Design tokens
 ```
 
-- **`src/app/`** — `App.jsx` composes the page and routes; `loadGate.js` is the store
-  every animation waits on (see [Motion](#motion)).
-- **`src/sections/`** — `Hero`, `Stats`, `About`, `Skills`, `Work`, `Path`, `Certs`,
-  `Languages`, `Contact`. Each is self-contained and mobile-first.
-- **`src/ui/`** — `Nav`, `Footer`, `ToTop`, `Section`, `SectionHeader`, `Button`, `Chip`,
-  `MetaBadge`, `CountUp`, `ImageSlot`, `Icons`.
-- **`src/motion/`** — `Preloader`, `Choreography` (scroll effects), `Curtain` (route
-  transition), `SmoothScroll` (Lenis), `useReveal`, `useHeroIntro`, and `gsap.js`, which is
-  the **only** place GSAP plugins are registered.
-- **`src/content/`** — `profile.js`, `skills.js`, `projects.jsx`, `timeline.jsx`, `certs.js`,
+- **`src/app/`** — `App.jsx` composes the page and routes.
+- **`src/sections/`** — `Hero`, `Work`, `About`, `Path` (experience), `Skills`, `Contact`,
+  plus the parked `Certs`.
+- **`src/ui/`** — `Nav`, `Footer`, `Section`, `ImageSlot`, `Icons`.
+- **`src/content/`** — `profile.js`, `home.js`, `skills.js`, `projects.jsx`, `timeline.jsx`, `certs.js`,
   re-exported through `index.js`. **All copy lives here** — sections never hardcode text.
-- **`src/styles/theme.css`** — the whole design system: colour, spacing, and type scales
-  declared in Tailwind's `@theme`, plus the dark overrides and the few compound utilities
-  (`wrap`, `label`, `reveal`).
+- **`src/styles/theme.css`** — the design tokens (colour, type, spacing) in Tailwind's
+  `@theme`, the dark overrides, and three utilities: `wrap`, `link` and `quiet`.
 - **`index.html`** — head metadata: canonical, Open Graph / Twitter, JSON-LD (`Person`,
   `WebSite`, `ProfilePage`, and a `CreativeWork` per project), fonts, and the inline
   no-flash theme script. Also carries a `<noscript>` fallback for crawlers.
@@ -65,38 +50,23 @@ src/
 
 ## Design system
 
-Everything comes from tokens in `src/styles/theme.css`; components use Tailwind
-utilities that read them, so there are no ad-hoc colours or spacing values.
+`DESIGN.md` is the spec; `src/styles/theme.css` implements it. Keep the two in step.
 
-- **Colour** — warm cream paper with a cocoa-clay accent, and a rich espresso dark mode.
-  Every text-on-surface pair meets **WCAG AA (4.5:1) for small text in both themes**. The
-  light accent is deliberately deep: a brighter clay sits at the luminance midpoint where
-  neither cream nor ink text passes on a filled button.
-- **Type** — Unbounded (display), IBM Plex Sans (body), IBM Plex Mono (labels). Every step
-  is a `clamp()`, so headings scale without breakpoint jumps.
-- **Layout** — content column capped at 1320px. Text blocks carry their own `ch`-based
-  max-widths, so the measure stays readable as the column widens.
+- **Colour** — `paper`, `ink`, `ink-2`, `muted`, `line` and one `accent`, in both themes.
+  Every text pair meets WCAG AA for small text. The accent shows only on hover, focus and
+  selection.
+- **Type** — Inter at five sizes (`name`, `heading`, `item`, `body`, `small`). Hierarchy comes
+  from weight and space, not size. Sentence case everywhere.
+- **Layout** — one 40rem column; case-study images can run to 48rem. Static header, one-line
+  footer.
 - **Theme** — driven by `data-theme` on `<html>` so the toggle beats the OS setting;
   applied before paint by the inline script in `index.html`.
 
 ## Motion
 
-Two rules govern all of it:
-
-1. **Nothing moves until loading is genuinely finished.** `Preloader` derives progress from
-   real readiness — `document.fonts.ready`, `img.decode()` on every image, and `window.load`
-   — with a 6s safety timeout so a dead CDN can't trap anyone. When it completes it releases
-   `loadGate`, which the hero intro, scroll reveals, count-ups, and ScrollTrigger all wait on.
-2. **Every scroll effect is declared inside `gsap.matchMedia()`.** Desktop choreography and
-   its mobile fallback sit side by side and tear down automatically. Pinning and the
-   horizontal project rail never register below `lg` (1024px) — that's what keeps it smooth
-   on a phone.
-
-The rail is pinned and scrubbed sideways on desktop, offset by the `--nav-h` token so cards
-never slide under the fixed header, with both edges masked so they dissolve rather than clip.
-
-`prefers-reduced-motion` is honoured throughout: no preloader animation, no Lenis, no scrub,
-all content rendered in its final state.
+Almost none: 150ms colour transitions on links, and native smooth scrolling for anchor
+jumps, switched off under `prefers-reduced-motion`. No preloader, no scroll reveals, no
+animation libraries.
 
 ## Content
 
@@ -107,16 +77,16 @@ Editing the site means editing `src/content/` — nothing else.
   `public/llms.txt`, and a `CreativeWork` node in `index.html`.
 - **Certifications** have an optional `href`. Entries without one render as plain text
   rather than a dead link — the current six have no verified URLs yet, so they are unlinked.
-- **Résumé / CV** live in `public/assets/` and are linked from the hero, contact, and footer.
+- **Home copy** (intro, About, Contact) lives in `home.js`.
+- **Résumé / CV** live in `public/assets/` and are linked from the intro and the footer.
 
 ## Accessibility
 
 - One `h1`, an `h2` per section, `h3` for items — no skipped levels.
 - Contrast meets WCAG AA for small text in both themes.
-- The mobile nav sheet traps focus, closes on Escape, restores focus to its trigger, and is
-  `inert` while closed.
+- A skip link jumps past the header to the content.
 - Standalone tap targets are ≥44px; inline links in prose are exempt by design.
-- Visible focus rings everywhere, and all motion is reduced-motion safe.
+- Visible focus rings everywhere (2px accent, 3px offset).
 
 ## Deployment
 

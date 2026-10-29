@@ -1,94 +1,69 @@
 import { useEffect } from 'react'
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useNavigationType } from 'react-router-dom'
 import ProjectPage from '../pages/ProjectPage.jsx'
 
 import Nav from '../ui/Nav.jsx'
 import Footer from '../ui/Footer.jsx'
-import ToTop from '../ui/ToTop.jsx'
 
 import Hero from '../sections/Hero.jsx'
-import Stats from '../sections/Stats.jsx'
-import About from '../sections/About.jsx'
-import Skills from '../sections/Skills.jsx'
 import Work from '../sections/Work.jsx'
+import About from '../sections/About.jsx'
 import Path from '../sections/Path.jsx'
-import Languages from '../sections/Languages.jsx'
+import Skills from '../sections/Skills.jsx'
 import Contact from '../sections/Contact.jsx'
 
-import Preloader from '../motion/Preloader.jsx'
-import Choreography from '../motion/Choreography.jsx'
-import Curtain from '../motion/Curtain.jsx'
-import SmoothScroll from '../motion/SmoothScroll.jsx'
-import { useReveal } from '../motion/useReveal.js'
-
-import { useLoadGate } from './loadGate.js'
 import { useTheme } from '../hooks/useTheme.js'
-import { useScrolled } from '../hooks/useScrolled.js'
 
 function Home() {
   return (
     <main>
       <Hero />
-      <Stats />
-      <About />
-      <Skills />
       <Work />
+      <About />
       <Path />
-      <Languages />
+      <Skills />
       <Contact />
     </main>
   )
 }
 
 export default function App() {
-  const gateOpen = useLoadGate((s) => s.open)
-  const { toggle } = useTheme()
-  const { scrolled, showTop } = useScrolled()
+  const { theme, toggle } = useTheme()
   const { pathname, hash } = useLocation()
-  useReveal(pathname)
+  const navType = useNavigationType()
 
-  // The location owns the scroll position. With a hash we scroll to that
-  // section; without one we go to the top. Previously a hash only suppressed
-  // the reset and nothing scrolled to the target, so a shared "/#work" link
-  // opened at the top of the page.
+  // The location owns the scroll position: a hash scrolls to its section,
+  // anything else starts at the top. Back and forward (POP) are left to the
+  // browser, which puts the reader back where they were.
   useEffect(() => {
-    if (!gateOpen) return // don't scroll underneath the preloader
-
+    if (navType === 'POP') return
     if (!hash) {
-      if (window.__lenis) window.__lenis.scrollTo(0, { immediate: true })
-      else window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
       return
     }
-
-    // Wait a frame so the target exists after a route change.
     const id = requestAnimationFrame(() => {
-      const target = document.getElementById(hash.slice(1))
-      if (!target) return
-      if (window.__lenis) window.__lenis.scrollTo(target, { offset: -10 })
-      else target.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById(hash.slice(1))?.scrollIntoView()
     })
     return () => cancelAnimationFrame(id)
-  }, [pathname, hash, gateOpen])
+  }, [pathname, hash, navType])
 
   return (
-    <SmoothScroll>
-      <Preloader />
-      <Curtain pathname={pathname} />
-      <Choreography pathname={pathname} />
-      {/* While the preloader is up the page underneath is hidden but was still
-          tabbable and still in the accessibility tree, so a keyboard or screen
-          reader user could reach a page they cannot see. `inert` closes that,
-          the same way it does for the mobile nav sheet. */}
-      <div inert={gateOpen ? undefined : ''}>
-        <Nav scrolled={scrolled} onToggleTheme={toggle} />
+    <>
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-10 focus:bg-paper focus:px-3 focus:py-2"
+      >
+        Skip to content
+      </a>
+      <Nav theme={theme} onToggleTheme={toggle} />
+      <div id="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work/:slug" element={<ProjectPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer />
-        <ToTop show={showTop} />
       </div>
-    </SmoothScroll>
+      <Footer />
+    </>
   )
 }
