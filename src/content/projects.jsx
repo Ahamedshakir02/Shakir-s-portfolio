@@ -10,7 +10,7 @@ export const projects = [
     title: 'FIR-AI — Investigation Assistant for Kerala Police',
     type: 'Applied AI · Document Intelligence',
     desc: (
-      <>Police FIR documents are a mess of unstructured text — so our four-person final-year team built an AI investigation assistant that reads them, on a problem statement that came through Kerala Startup Mission and the Kerala AI Mission (K-AI). My part: the offline BiLSTM + Attention model, which classifies crime type and severity at <em>98.8% accuracy</em>, plus the system architecture, data schemas and workflows behind Malayalam OCR, Bhashini translation and legal information retrieval.</>
+      <>An AI assistant that turns unstructured police FIRs into structured case data. A four-person final-year project on a problem statement from Kerala Startup Mission and the Kerala AI Mission (K-AI). I built the offline BiLSTM + Attention model that classifies crime type and severity at <em>98.8% accuracy</em>, and designed the architecture, schemas and workflows for Malayalam OCR, Bhashini translation and legal retrieval.</>
     ),
     stack: ['Python', 'NLP', 'BiLSTM + Attention', 'OCR', 'Bhashini API'],
     feats: [
@@ -29,22 +29,22 @@ export const projects = [
       {
         h: 'The problem',
         ps: [
-          "A First Information Report is where every criminal case in India begins — and it's a wall of unstructured, often handwritten-then-scanned text. Officers spend hours reading, cross-referencing, and manually extracting the facts that matter: who, where, when, what. At scale, across thousands of cases, that time adds up to slower investigations.",
-          'The problem statement came to us through Kerala Startup Mission and the Kerala AI Mission (K-AI), and we took it on as a final-year project in a team of four.',
+          'Every criminal case in India starts with a First Information Report: unstructured, often scanned text. Officers spend hours pulling out who, where, when and what, and across thousands of cases that slows investigations.',
+          'The problem statement came through Kerala Startup Mission and the Kerala AI Mission (K-AI). We took it on as a final-year project, in a team of four.',
         ],
       },
       {
         h: 'What it does',
         ps: [
-          'FIR-AI ingests FIR documents — PDFs or images, in Malayalam or English — and turns them into structured, queryable case intelligence. It classifies the crime type and severity, extracts entities such as names, locations, vehicles and amounts, maps the applicable IPC/BNS sections, and finds similar past cases.',
-          'Narratives are translated between Malayalam and English through the Bhashini API, and a legal assistant answers questions from a built-in knowledge base of Indian law, so an officer gets guidance on the sections involved without learning a query syntax.',
+          'FIR-AI reads FIRs (PDFs or images, in Malayalam or English) and returns structured case data: crime type and severity, entities such as names, locations, vehicles and amounts, the applicable IPC/BNS sections, and similar past cases.',
+          'The Bhashini API translates between Malayalam and English, and a legal assistant answers questions from a built-in knowledge base of Indian law.',
         ],
       },
       {
         h: 'My part',
         ps: [
-          'I built the offline neural model at the centre of the engine: a BiLSTM with attention that reaches 98.8% accuracy on crime classification and runs on a CPU with no internet connection — which matters when the documents are police records.',
-          'I also designed the system architecture, the data schemas and the workflow diagrams, and wrote the UI prompts for the Malayalam OCR, Bhashini translation and legal information retrieval flows. The rest of the build was shared across the team.',
+          'I built the core model: a BiLSTM with attention that reaches 98.8% accuracy on crime classification and runs on a CPU with no internet connection, which matters for police records.',
+          'I also designed the system architecture, data schemas and workflow diagrams, and wrote the UI prompts for the OCR, translation and legal retrieval flows. The rest of the build was shared across the team.',
         ],
       },
     ],
@@ -57,7 +57,7 @@ export const projects = [
     title: 'ThengaPari — Agri-Harvest Marketplace',
     type: 'Product · Flutter Monorepo',
     desc: (
-      <>A hyperlocal agri-harvest marketplace for Kerala — and a real exercise in product architecture. One Melos monorepo, one shared core package, and <em>four</em> standalone Flutter apps (Homeowner, Worker, Site Manager, B2B buyer), all talking to a single Firebase backend with TypeScript Cloud Functions. Payments run through Razorpay, state through Riverpod, and every app runs on its own with seeded demo data.</>
+      <>A hyperlocal harvest marketplace for Kerala. One Melos monorepo and shared core package power <em>four</em> standalone Flutter apps (Homeowner, Worker, Site Manager, B2B buyer) on a single Firebase backend with TypeScript Cloud Functions. Razorpay for payments, Riverpod for state, and seeded demo data in every app.</>
     ),
     stack: ['Flutter', 'Dart', 'Riverpod', 'Firebase', 'TypeScript Cloud Functions', 'Razorpay', 'Melos'],
     feats: [
@@ -76,20 +76,20 @@ export const projects = [
       {
         h: 'The idea',
         ps: [
-          "Kerala's homesteads produce more than their owners can harvest — coconuts being the classic case. ThengaPari connects the people who own the trees with the workers who climb them, the site managers who coordinate jobs, and the B2B buyers who purchase the harvest. Four very different users, one marketplace.",
+          "Kerala's homesteads grow more coconuts than their owners can harvest. ThengaPari connects tree owners with the workers who climb, the site managers who coordinate jobs, and the B2B buyers who purchase the harvest.",
         ],
       },
       {
         h: 'The architecture',
         ps: [
-          'Instead of one bloated app with role switches, each role gets its own standalone Flutter app — Homeowner, Worker, Site Manager, and B2B buyer — chosen at install, with no role-gate friction. All four are built from a single Melos monorepo and share one core package: models, services, providers, theme, widgets, and auth screens.',
-          'The backend is one shared Firebase project (Auth, Firestore, Storage, Messaging) with TypeScript Cloud Functions. Razorpay handles payments, with keys living only in function secrets — never on the client. State management is Riverpod throughout, and every app boots with seeded demo data so the full UI runs without a live backend.',
+          'Each role gets its own standalone Flutter app instead of one app with role switches. All four build from a single Melos monorepo and share one core package: models, services, providers, theme, widgets and auth screens.',
+          'The backend is one Firebase project (Auth, Firestore, Storage, Messaging) with TypeScript Cloud Functions. Razorpay keys live only in function secrets, never on the client. State is Riverpod throughout, and every app runs on seeded demo data without a live backend.',
         ],
       },
       {
         h: 'Why it matters',
         ps: [
-          'One codebase shipping four products is the whole point: a fix in the core package lands in every app, each app stays small and focused for its user, and the platform can grow a fifth role without touching the other four. It is the kind of architecture decision that pays rent every week of development.',
+          'A fix in the core package lands in every app, each app stays focused on its user, and a fifth role can be added without touching the other four.',
         ],
       },
     ],
@@ -102,7 +102,7 @@ export const projects = [
     title: 'Real-Time GPS & IMU Safety Monitoring App',
     type: 'IoT · Embedded + Mobile',
     desc: (
-      <>Hardware and an app, talking to each other in real time. ESP32 firmware reads a Neo-6M GPS module and an MPU6050 IMU at once, streaming over BLE and WebSocket into React Native. If the acceleration numbers say "that was a crash," it fires an automatic SOS — no tapping required. Geofencing, live maps, and offline microSD logging mean it keeps working even when the signal doesn't.</>
+      <>ESP32 firmware reads a Neo-6M GPS and an MPU6050 IMU and streams over BLE and WebSocket to a React Native app. When the motion data looks like a crash, it sends an SOS automatically. Geofencing, live maps and offline microSD logging keep it working without signal.</>
     ),
     stack: ['React Native', 'Firebase', 'ESP32', 'Neo-6M GPS', 'MPU6050', 'WebSocket', 'BLE'],
     feats: [
@@ -122,19 +122,19 @@ export const projects = [
       {
         h: 'The problem',
         ps: [
-          'In a serious road accident, the victim often cannot call for help — and the minutes before someone else does are the ones that decide outcomes. The goal: a system that notices the crash by itself and raises the alarm with a live location, no human tap required.',
+          'After a serious road accident, the victim often cannot call for help. The goal: detect the crash automatically and send an alert with a live location.',
         ],
       },
       {
         h: 'The hardware',
         ps: [
-          'An ESP32 reads a Neo-6M GPS module and an MPU6050 accelerometer/gyroscope simultaneously, fusing position and motion into one telemetry stream. The firmware speaks both BLE (for the paired phone) and WebSocket (for cloud sync), and when connectivity drops, it logs everything to a microSD card so no data is lost between signal pockets.',
+          'An ESP32 reads a Neo-6M GPS and an MPU6050 accelerometer/gyroscope together and fuses them into one telemetry stream. The firmware talks BLE to the phone and WebSocket to the cloud, and logs to a microSD card when connectivity drops.',
         ],
       },
       {
         h: 'The app',
         ps: [
-          'The React Native app renders the live map, manages geofences, and syncs telemetry through Firebase in real time. Impact detection watches the IMU stream for crash signatures — a sudden deceleration spike beyond normal riding dynamics — and fires an automatic SOS with coordinates to emergency contacts. Geofencing alerts when the vehicle leaves a defined zone, which doubles as theft detection.',
+          'The React Native app shows a live map, manages geofences and syncs telemetry through Firebase in real time. Impact detection watches for sudden deceleration beyond normal riding and sends an SOS with coordinates to emergency contacts. Geofence alerts double as theft detection.',
         ],
       },
     ],
@@ -147,7 +147,7 @@ export const projects = [
     title: 'Stroke Prediction on Imbalanced Clinical Data',
     type: 'Machine Learning · Healthcare',
     desc: (
-      <>Three classical models — SVM, Decision Tree, KNN — trained to predict stroke risk on a dataset where only <em>50 of 1,022</em> test cases are positive. The interesting result is the uncomfortable one: the model with the best accuracy (89.2%) catches the fewest strokes. Accuracy is the wrong metric here, and the project is about showing why.</>
+      <>SVM, Decision Tree and KNN compared on stroke prediction, where only <em>50 of 1,022</em> test cases are positive. The model with the best accuracy (89.2%) catches the fewest strokes. The project shows why accuracy is the wrong metric here.</>
     ),
     stack: ['Python', 'Scikit-learn', 'SMOTE', 'Pandas', 'NumPy', 'Google Colab'],
     feats: [
@@ -164,25 +164,24 @@ export const projects = [
     ],
     details: [
       {
-        h: 'The problem with the data',
+        h: 'The data',
         ps: [
-          'The stroke dataset is severely imbalanced: of 1,022 held-out cases, 972 are negative and 50 are positive. A model that predicts "no stroke" every single time scores 95% accuracy and is completely useless, which makes accuracy an actively misleading metric on this problem.',
-          'The pipeline deals with that before any model runs: missing values imputed, features standardised with StandardScaler, and the training set rebalanced with SMOTE so the minority class is actually represented while the held-out test set stays untouched and honest.',
+          'Of 1,022 held-out cases, 972 are negative and 50 positive. Predicting "no stroke" every time scores 95% accuracy and is useless.',
+          'Missing values are imputed, features scaled with StandardScaler, and the training set rebalanced with SMOTE. The test set stays untouched.',
         ],
       },
       {
-        h: 'Three models, compared',
+        h: 'Three models',
         ps: [
-          'Support Vector Machine, Decision Tree, and K-Nearest Neighbours were each trained and scored on the same split — 79.2%, 89.2% and 80.2% accuracy respectively, averaging 82.9%.',
-          'Ranked on accuracy the Decision Tree wins. Ranked on the thing that matters — catching strokes — it is the worst of the three.',
+          'SVM, Decision Tree and KNN were trained on the same split: 79.2%, 89.2% and 80.2% accuracy, averaging 82.9%.',
+          'On accuracy the Decision Tree wins. On catching strokes, it is the worst of the three.',
         ],
       },
       {
-        h: 'What the confusion matrices actually say',
+        h: 'What the confusion matrices show',
         ps: [
-          'The Decision Tree reaches 89.2% accuracy while recovering 8 of the 50 stroke cases: recall 0.16, F1 0.13. The SVM scores nearly ten points lower at 79.2% accuracy but recovers 24 of 50: recall 0.48, F1 0.18. In a screening context, where a missed stroke is far more expensive than a false alarm, the less accurate model is the better one.',
-          'Precision on the positive class stays low across all three (around 0.11), which is the honest limit of this approach on this dataset — resampling raises recall but floods the positives with false alarms. Fixing that properly needs cost-sensitive learning or a threshold tuned against a clinical cost function, not a better classifier.',
-          'That gap between a headline accuracy number and a model that is any use is the actual deliverable here.',
+          'The Decision Tree finds 8 of 50 strokes (recall 0.16, F1 0.13). The SVM, ten points lower on accuracy, finds 24 of 50 (recall 0.48, F1 0.18). In screening, where a missed stroke costs far more than a false alarm, the less accurate model is the better one.',
+          'Positive-class precision stays around 0.11 for all three: resampling raises recall but adds false alarms. Fixing that needs cost-sensitive learning or a threshold tuned to clinical cost, not a different classifier.',
         ],
       },
     ],
@@ -195,7 +194,7 @@ export const projects = [
     title: 'Holytouch — Construction & Design Studio Site',
     type: 'Client Work · Web',
     desc: (
-      <>A premium multi-page marketing site for a Kerala construction &amp; design firm. Deep teal and brass, a branded preloader, a "dip-to-teal" page-transition curtain, Lenis smooth scroll, fluid clamp() typography, and a scroll-aware WhatsApp button — all fully gated behind prefers-reduced-motion. Restrained motion, premium feel, real client, real deadline.</>
+      <>A multi-page marketing site for a construction and design firm in Kerala. Deep teal and brass, a branded preloader, a page-transition curtain, Lenis smooth scroll, fluid clamp() type and a scroll-aware WhatsApp button, all respecting prefers-reduced-motion.</>
     ),
     stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lenis'],
     feats: [
@@ -218,19 +217,19 @@ export const projects = [
       {
         h: 'The brief',
         ps: [
-          '"Your Perfect Builder" — an end-to-end construction and design firm in Kerala that needed a web presence to match the quality of its builds: premium, trustworthy, and unmistakably theirs. Multi-page, mobile-first, and fast.',
+          'Holytouch ("Your Perfect Builder") is a construction and design firm in Kerala. It needed a multi-page, mobile-first site that matched the quality of its builds.',
         ],
       },
       {
         h: 'The design system',
         ps: [
-          "Deep teal-green surfaces with a brass/gold accent and warm cream paper — pulled down from near-white to cut glare. Outfit for display type echoing the geometric logo mark, Inter for body. The architectural language runs throughout: hairline 1px dividers, numeric section indices, fluid clamp()-based display sizes so headings scale without breakpoint jumps, and one shared vertical-rhythm utility driving spacing everywhere.",
+          'Deep teal-green with a brass accent on warm cream, toned down to cut glare. Outfit for display type to echo the logo, Inter for body. Hairline dividers, numbered sections, fluid clamp() headings, and one shared spacing utility.',
         ],
       },
       {
         h: 'The motion',
         ps: [
-          'Intentionally restrained: a once-per-session brand preloader, a "dip-to-teal" page-transition curtain that covers route swaps so there is never a flash of cream, Lenis smooth scrolling, scroll-reveal fades, count-up stats, and a scroll-aware WhatsApp button that hides on the hero and reappears after it. Every effect falls back to a static state under prefers-reduced-motion.',
+          'Kept restrained: a once-per-session preloader, a teal page-transition curtain that hides route swaps, Lenis smooth scroll, scroll-reveal fades, count-up stats, and a WhatsApp button that appears after the hero. Every effect falls back to a static state under prefers-reduced-motion.',
         ],
       },
     ],
@@ -243,7 +242,7 @@ export const projects = [
     title: 'Safari Typing Services — Bilingual Business Site',
     type: 'Client Work · Web',
     desc: (
-      <>A bilingual English/Arabic site for a government typing &amp; document-services centre in Ajman, UAE — live at safaritypingservices.com. Fifteen service areas each with their own detail page, a WhatsApp-first contact flow with zero backend, self-hosted fonts including IBM Plex Sans Arabic, JSON-LD structured data, and deliberately honest trust claims — accurate beats impressive.</>
+      <>A bilingual English/Arabic site for a government typing and document-services centre in Ajman, UAE, live at safaritypingservices.com. Fifteen service pages, a WhatsApp-first contact flow with no backend, self-hosted fonts including IBM Plex Sans Arabic, JSON-LD structured data, and trust claims kept accurate.</>
     ),
     stack: ['React', 'Vite', 'Tailwind CSS', 'React Router'],
     feats: [
@@ -266,20 +265,20 @@ export const projects = [
       {
         h: 'The brief',
         ps: [
-          'Safari Typing Services (سفاري لخدمات الطباعة) is a government typing and document-services centre in Ajman, UAE. Its customers search in two languages and mostly on phones — the site had to be bilingual in brand, mobile-first, fast on cheap devices, and easy to act on: find the service, message the shop.',
+          'Safari Typing Services (سفاري لخدمات الطباعة) is a government typing and document-services centre in Ajman, UAE. Its customers search in two languages, mostly on phones, so the site had to be bilingual, mobile-first, fast on cheap devices, and quick to act on: find the service, message the shop.',
         ],
       },
       {
         h: 'The build',
         ps: [
-          'React + Vite + Tailwind with React Router: home, about, FAQ, contact, and fifteen individual service detail pages — from business setup and PRO services to visas, Emirates ID, attestation, and tax — each with its own SEO metadata. Brand colours are sampled straight from the logo; fonts are self-hosted — Space Grotesk for display, Inter for body, and IBM Plex Sans Arabic for the Arabic brand accents.',
-          'There is deliberately no backend: the contact form opens a pre-filled WhatsApp message (with an email fallback), which is exactly how the business already talks to its customers. Motion is light CSS and IntersectionObserver only, fully disabled under prefers-reduced-motion.',
+          'React, Vite, Tailwind and React Router: home, about, FAQ, contact, and fifteen service pages (business setup, PRO services, visas, Emirates ID, attestation, tax and more), each with its own SEO metadata. Colours come from the logo; fonts are self-hosted: Space Grotesk, Inter and IBM Plex Sans Arabic.',
+          'There is no backend. The contact form opens a pre-filled WhatsApp message, with an email fallback, which is how the business already talks to customers. Motion is light CSS and IntersectionObserver, off under prefers-reduced-motion.',
         ],
       },
       {
         h: 'The details',
         ps: [
-          'Trust claims on the site are intentionally accurate — "ICP e-Channel Submissions" rather than an unqualified "Government Authorised" — because in the document-services business, precision is the brand. JSON-LD structured data, Open Graph tags, and Ajman-accurate service terminology round out the package. The site is live in production at safaritypingservices.com, serving a real business and its customers in five languages.',
+          'Trust claims are kept precise: "ICP e-Channel Submissions" rather than an unqualified "Government Authorised". JSON-LD structured data, Open Graph tags and Ajman-accurate service terms complete it. The site is live at safaritypingservices.com, serving customers in five languages.',
         ],
       },
     ],
