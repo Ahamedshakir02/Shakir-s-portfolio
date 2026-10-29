@@ -1,61 +1,22 @@
-import { Fragment } from 'react'
 import { timeline } from '../content/index.js'
 import Section from '../ui/Section.jsx'
-import SectionHeader from '../ui/SectionHeader.jsx'
-import Chip from '../ui/Chip.jsx'
 
+/** Experience, with education as the last row. One sentence per role. */
 export default function Path() {
   return (
-    <Section id="path">
-      <SectionHeader
-        idx="04"
-        label="Experience & education"
-        title={<>Leading, learning,<br />and shipping.</>}
-      />
-
-      <div className="mt-12 divide-y divide-line border-t border-line">
+    <Section id="path" title="Experience">
+      <ol className="space-y-6 md:space-y-8">
         {timeline.map((item) => (
-          <div
-            key={item.title}
-            className="reveal grid gap-6 py-10 md:grid-cols-[minmax(0,15rem)_1fr] md:gap-10"
-          >
+          <li key={item.title} className="md:grid md:grid-cols-[8rem_1fr] md:gap-6">
+            <p className="text-small text-muted tabular-nums md:pt-0.5">{item.when}</p>
             <div>
-              <div className="label text-accent">{item.when}</div>
-              <div className="mt-3 text-caption text-muted">
-                {item.where.map((w, i) => (
-                  <Fragment key={w}>
-                    {w}
-                    {i < item.where.length - 1 && <br />}
-                  </Fragment>
-                ))}
-              </div>
+              <h3 className="text-item font-medium">{item.title}</h3>
+              <p className="text-small text-muted">{item.where[0]}</p>
+              <p className="mt-2">{item.role}</p>
             </div>
-
-            <div>
-              <h3 className="font-display text-heading font-semibold">{item.title}</h3>
-              <p className="mt-3 text-ink-2">{item.role}</p>
-              <ul className="mt-5 space-y-3">
-                {item.list.map((li, i) => (
-                  <li key={i} className="relative pl-5 text-caption text-ink-2">
-                    <span
-                      aria-hidden="true"
-                      className="absolute left-0 top-[0.6em] size-1.5 rounded-full bg-accent"
-                    />
-                    {li}
-                  </li>
-                ))}
-              </ul>
-
-              {item.sub && <p className="label mt-8 text-muted">{item.sub}</p>}
-              {item.courses && (
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {item.courses.map((c) => <Chip key={c}>{c}</Chip>)}
-                </ul>
-              )}
-            </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </Section>
   )
 }

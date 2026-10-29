@@ -1,87 +1,24 @@
 import { Link } from 'react-router-dom'
 import { projects } from '../content/index.js'
 import Section from '../ui/Section.jsx'
-import SectionHeader from '../ui/SectionHeader.jsx'
-import { ArrowOutIcon } from '../ui/Icons.jsx'
 
-const COUNT_WORDS = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight']
-
-/**
- * A teaser, not the whole story: title, a clamped lead, and the stack. The
- * project's image, the full description, the key numbers, and the write-up
- * all live on the case study at /work/:slug — you see the picture once you
- * open the project, which also keeps the card short enough to sit inside a
- * pinned horizontal rail without overflowing the viewport.
- */
-function ProjectCard({ p }) {
+/** A plain list: title, a short description, and a meta line. Details live on /work/:slug. */
+export default function Work() {
   return (
-    <article className="reveal flex h-full flex-col rounded-card border border-line bg-paper-2/40 p-5 transition-colors hover:border-line-2">
-      <div className="flex items-start justify-between gap-4">
-        <span className="label text-muted">{p.idx}</span>
-        <a
-          href={p.live || p.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={p.live ? `Visit ${p.title} live site` : `${p.linkLabel} — ${p.title}`}
-          className="grid size-11 shrink-0 place-items-center rounded-pill border border-line text-ink-2 transition-colors hover:border-ink hover:text-ink"
-        >
-          <ArrowOutIcon />
-        </a>
-      </div>
-
-      <h3 className="mt-2 font-display text-heading font-semibold text-balance">
-        <Link to={`/work/${p.slug}`} className="hover:text-accent">{p.title}</Link>
-      </h3>
-      <p className="label mt-2 text-muted">{p.type}</p>
-
-      <div className="mt-4 line-clamp-5 text-caption text-ink-2">{p.desc}</div>
-
-      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
-        {p.stack.slice(0, 4).map((s) => (
-          <li key={s} className="label text-muted">{s}</li>
+    <Section id="work" title="Work">
+      <ul className="space-y-6 md:space-y-8">
+        {projects.map((p) => (
+          <li key={p.slug}>
+            <h3 className="text-item font-medium">
+              <Link to={`/work/${p.slug}`} className="link">{p.title}</Link>
+            </h3>
+            <div className="mt-1 line-clamp-2 text-ink-2">{p.desc}</div>
+            <p className="mt-1 text-small text-muted">
+              {[p.year, ...p.stack.slice(0, 3)].filter(Boolean).join(' · ')}
+            </p>
+          </li>
         ))}
       </ul>
-
-      <Link
-        to={`/work/${p.slug}`}
-        className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
-      >
-        Read the case study <span aria-hidden="true">→</span>
-      </Link>
-    </article>
-  )
-}
-
-export default function Work() {
-  const n = COUNT_WORDS[projects.length - 1] ?? projects.length
-
-  return (
-    <Section id="work">
-      <SectionHeader
-        idx="03"
-        label="Selected work"
-        title={<>{n} project{projects.length === 1 ? '' : 's'}.<br />Zero filler.</>}
-      />
-
-      {/* Below lg: a plain stack, then a two-up grid. At lg and up,
-          Choreography pins this and scrubs the track sideways — see
-          src/motion/Choreography.jsx. The rail stays inside the content
-          column because ScrollTrigger fixes the pinned element's width. */}
-      <div
-        data-rail
-        className="mt-12 lg:overflow-hidden lg:[mask-image:linear-gradient(to_right,transparent_0,#000_5rem,#000_calc(100%-5rem),transparent_100%)]"
-      >
-        <div data-rail-track className="grid gap-6 md:grid-cols-2 lg:flex lg:w-max lg:gap-8 lg:px-24">
-          {projects.map((p) => (
-            <div
-              key={p.idx}
-              className="lg:w-[26rem] lg:shrink-0"
-            >
-              <ProjectCard p={p} />
-            </div>
-          ))}
-        </div>
-      </div>
     </Section>
   )
 }
