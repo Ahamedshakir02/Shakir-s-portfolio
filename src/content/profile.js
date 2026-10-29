@@ -12,9 +12,9 @@ export const roles = ['Designer', 'Developer', 'Builder']
 
 export const stats = [
   { count: 40, suffix: '%', label: 'growth I drove on campus' },
-  { count: 10, suffix: '+', label: 'workshops I actually ran' },
-  { count: 89, suffix: '%', label: 'best model accuracy, on imbalanced clinical data' },
-  { count: 4, suffix: ' langs', label: 'spoken, give or take a verb tense' },
+  { count: 10, suffix: '+', label: 'workshops run' },
+  { count: 89, suffix: '%', label: 'best accuracy on imbalanced clinical data' },
+  { count: 4, suffix: ' langs', label: 'spoken' },
 ]
 
 export const aboutTags = [
