@@ -90,11 +90,11 @@
   @media (width >= 48rem) { padding-inline: 24px; }
 }
 
-/* Body link: ink with a hairline underline that turns accent on hover. */
+/* Body link: ink with a muted underline (so links stand apart from body text) that turns accent on hover. */
 @utility link {
   color: var(--color-ink);
   text-decoration: underline;
-  text-decoration-color: var(--color-line);
+  text-decoration-color: var(--color-muted);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 150ms, text-decoration-color 150ms;
