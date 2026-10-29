@@ -1,15 +1,11 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { useDocumentMeta } from '../hooks/useDocumentMeta.js'
 import { projects } from '../content/index.js'
-import { ArrowOutIcon } from '../ui/Icons.jsx'
-import Section from '../ui/Section.jsx'
-import Button from '../ui/Button.jsx'
-import MetaBadge from '../ui/MetaBadge.jsx'
 import ImageSlot from '../ui/ImageSlot.jsx'
 
 /**
- * /work/:slug — the case study for a single project: hero, media, the written
- * detail sections, screenshots, and a handoff to the next project.
+ * /work/:slug — one project's case study, in the same column and type as home:
+ * title, meta line, links, lead image, the written sections, then the next project.
  */
 export default function ProjectPage() {
   const { slug } = useParams()
@@ -26,103 +22,84 @@ export default function ProjectPage() {
 
   if (!p) return <Navigate to="/" replace />
   const next = projects[(i + 1) % projects.length]
+  const links = [
+    p.live && { href: p.live, label: 'Visit the live site ↗' },
+    { href: p.link, label: `${p.linkLabel} ↗` },
+  ].filter(Boolean)
 
   return (
-    <main className="pt-16">
-      <Section>
-        <Link to="/#work" className="label inline-flex min-h-11 items-center text-muted hover:text-ink">
-          ← All work
-        </Link>
+    <main>
+      <article>
+        <div className="wrap pt-16 md:pt-24">
+          <Link to="/#work" className="quiet inline-flex min-h-11 items-center text-small">
+            ← Work
+          </Link>
 
-        <div className="label mt-6 mb-5 flex items-baseline gap-3 text-muted">
-          <b className="font-medium text-accent">{p.idx}</b> {p.type}
+          <h1 className="mt-4 text-name font-semibold text-balance">{p.title}</h1>
+          <p className="mt-2 text-small text-muted">
+            {[p.type, p.year, ...p.stack].filter(Boolean).join(' · ')}
+          </p>
+
+          <ul className="mt-4 flex flex-wrap gap-x-6">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} target="_blank" rel="noopener noreferrer" className="link inline-flex min-h-11 items-center">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-6">{p.desc}</div>
+
+          {p.feats?.length > 0 && (
+            <dl className="mt-6 space-y-1">
+              {p.feats.map((f) => (
+                <div key={f.b} className="flex flex-wrap gap-x-2">
+                  <dt className="font-medium text-ink">{f.b}</dt>
+                  <dd className="text-muted">{f.s}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
 
-        <h1 className="font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.05] font-semibold tracking-[-0.025em] text-balance">
-          {p.title}
-        </h1>
-        <div className="mt-7 max-w-[62ch] text-ink-2">{p.desc}</div>
-
-        <ul className="mt-7 flex flex-wrap gap-x-3 gap-y-1">
-          {p.stack.map((s) => <li key={s} className="label text-muted">{s}</li>)}
-        </ul>
-
-        <div className="mt-8 grid grid-cols-1 gap-5 border-y border-line py-6 sm:grid-cols-3">
-          {p.feats.map((f) => <MetaBadge key={f.b} {...f} />)}
+        <div className="mx-auto mt-12 w-full max-w-[48rem] px-5 md:px-6">
+          <ImageSlot src={p.media} alt={p.alt} loading="eager" />
         </div>
 
-        <ImageSlot
-          src={p.media}
-          alt={p.alt}
-          placeholder={p.alt}
-          className="mt-10 aspect-[16/9]"
-          imgClassName="project-media scale-110"
-        />
-      </Section>
-
-      <Section>
-        {p.details.map((d) => (
-          <div
-            key={d.h}
-            className="reveal grid gap-5 border-t border-line py-10 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-10"
-          >
-            <h2 className="font-display text-heading font-semibold text-balance">{d.h}</h2>
-            <div className="space-y-5 text-ink-2">
-              {d.ps.map((t, j) => <p key={j}>{t}</p>)}
-            </div>
-          </div>
-        ))}
+        <div className="wrap">
+          {p.details.map((d) => (
+            <section key={d.h} className="mt-12 md:mt-16">
+              <h2 className="mb-6 text-heading font-semibold">{d.h}</h2>
+              <div className="space-y-4">
+                {d.ps.map((t, j) => <p key={j}>{t}</p>)}
+              </div>
+            </section>
+          ))}
+        </div>
 
         {p.shots?.length > 0 && (
-          <div className="reveal mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mx-auto mt-12 w-full max-w-[48rem] space-y-8 px-5 md:px-6">
             {p.shots.map((s) => (
               <figure key={s.src}>
-                <img
+                <ImageSlot
                   src={s.src}
                   alt={`${p.title} — ${s.caption}`}
-                  loading="lazy"
-                  decoding="async"
                   onError={(e) => { e.currentTarget.closest('figure').hidden = true }}
-                  className="w-full rounded-card border border-line"
                 />
-                <figcaption className="label mt-3 text-muted">{s.caption}</figcaption>
+                <figcaption className="mt-2 text-small text-muted">{s.caption}</figcaption>
               </figure>
             ))}
           </div>
         )}
+      </article>
 
-        <div className="mt-12 flex flex-wrap gap-3">
-          {p.live && (
-            <Button href={p.live} target="_blank" rel="noopener noreferrer" variant="primary">
-              Visit the live site <span aria-hidden="true">↗</span>
-            </Button>
-          )}
-          <Button
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant={p.live ? 'ghost' : 'primary'}
-          >
-            {p.linkLabel} <span aria-hidden="true">↗</span>
-          </Button>
-          <Button as={Link} to="/#contact">
-            Discuss a project like this <span aria-hidden="true">→</span>
-          </Button>
-        </div>
-      </Section>
-
-      <Section className="border-t border-line">
-        <div className="label mb-6 flex items-baseline gap-3 text-muted">
-          <b className="font-medium text-accent">Next</b> Keep exploring
-        </div>
-        <Link
-          to={`/work/${next.slug}`}
-          className="group flex items-center justify-between gap-6 font-display text-title font-semibold text-balance hover:text-accent"
-        >
-          {next.title}
-          <ArrowOutIcon size={28} className="shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+      <nav aria-label="Next project" className="wrap mt-16 md:mt-24">
+        <Link to={`/work/${next.slug}`} className="link text-item font-medium">
+          Next: {next.title} →
         </Link>
-      </Section>
+      </nav>
     </main>
   )
 }
