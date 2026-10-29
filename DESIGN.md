@@ -40,7 +40,8 @@ Rules:
 
 - No second background tone, no panels, no gradients, no shadows, no `backdrop-blur`.
 - Use the accent sparingly. It shows on hover and focus, and nowhere else by default.
-  Body links are `ink` with a `line` underline that turns `accent` on hover.
+  Body links are `ink` with a `muted` underline that turns `accent` on hover. (A `line` underline
+  was too faint to mark a link without relying on colour.)
 - Dark mode keeps working the way it does now: `data-theme` on `<html>`, set by the inline
   script before paint, and switched by the toggle.
 
