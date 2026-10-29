@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useNavigationType } from 'react-router-dom'
 import ProjectPage from '../pages/ProjectPage.jsx'
 
 import Nav from '../ui/Nav.jsx'
@@ -30,10 +30,13 @@ function Home() {
 export default function App() {
   const { theme, toggle } = useTheme()
   const { pathname, hash } = useLocation()
+  const navType = useNavigationType()
 
   // The location owns the scroll position: a hash scrolls to its section,
-  // anything else starts at the top.
+  // anything else starts at the top. Back and forward (POP) are left to the
+  // browser, which puts the reader back where they were.
   useEffect(() => {
+    if (navType === 'POP') return
     if (!hash) {
       window.scrollTo(0, 0)
       return
@@ -42,7 +45,7 @@ export default function App() {
       document.getElementById(hash.slice(1))?.scrollIntoView()
     })
     return () => cancelAnimationFrame(id)
-  }, [pathname, hash])
+  }, [pathname, hash, navType])
 
   return (
     <>
