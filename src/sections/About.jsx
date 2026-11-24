@@ -3,8 +3,8 @@ import Section from '../ui/Section.jsx'
 export default function About() {
   return (
     <Section id="about" no="02" label="About" title="The Short Version">
-      <div className="grid gap-12 md:grid-cols-[12rem_1fr] md:gap-x-6 lg:grid-cols-[16rem_1fr]">
-        <dl className="meta grid content-start gap-5 text-muted">
+      <div className="grid gap-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6">
+        <dl className="meta grid content-start gap-5 text-muted sm:grid-cols-3 lg:grid-cols-1">
           <div>
             <dt>Based in</dt>
             <dd className="mt-1 text-ink">Kerala, India</dd>

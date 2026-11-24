@@ -8,14 +8,14 @@ export default function Path() {
         {timeline.map((item) => (
           <li
             key={item.title}
-            className="grid gap-4 border-b border-line py-9 md:grid-cols-[12rem_1fr] md:gap-x-6 lg:grid-cols-[16rem_1fr_22rem]"
+            className="grid gap-4 border-b border-line py-9 lg:grid-cols-[16rem_1fr] lg:gap-x-6 xl:grid-cols-[16rem_1fr_22rem]"
           >
             <p className="meta text-muted [font-variant-numeric:tabular-nums]">{item.when}</p>
             <div>
               <h3 className="font-serif text-item">{item.title}</h3>
               <p className="mt-2 text-sm text-ink-2">{item.where.join(' · ')}</p>
             </div>
-            <div className="md:col-start-2 lg:col-start-auto">
+            <div className="lg:col-start-2 xl:col-start-auto">
               <p className="text-ink-2">{item.role}</p>
               <details className="group mt-4">
                 <summary className="meta inline-flex min-h-11 cursor-pointer list-none items-center gap-2 text-ink hover:text-accent [&::-webkit-details-marker]:hidden">

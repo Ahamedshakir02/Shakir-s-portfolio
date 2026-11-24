@@ -25,7 +25,7 @@ export default function Work() {
             <li key={p.slug} className="border-b border-line">
               <Link
                 to={`/work/${p.slug}`}
-                className="group relative grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 gap-y-2 md:gap-x-6 py-7 md:grid-cols-[12rem_1fr_14rem_2rem] md:py-9 lg:grid-cols-[16rem_1fr_16rem_2rem]"
+                className="group relative grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 gap-y-2 py-7 md:gap-x-6 md:py-9 lg:grid-cols-[16rem_1fr_12rem_2rem] xl:grid-cols-[16rem_1fr_16rem_2rem]"
               >
                 <span className="meta text-muted">{p.idx}</span>
                 <span>
@@ -35,7 +35,7 @@ export default function Work() {
                   </span>
                   {sub && <span className="mt-2 block text-sm text-ink-2">{sub}</span>}
                 </span>
-                <span className="meta col-start-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-muted md:col-start-auto">
+                <span className="meta col-start-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-muted lg:col-start-auto">
                   <span>{p.type}</span>
                   {p.year && <span>{p.year}</span>}
                   {p.live && (
@@ -47,7 +47,7 @@ export default function Work() {
                 </span>
                 <span
                   aria-hidden="true"
-                  className="row-start-1 col-start-3 text-xl transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent md:col-start-4"
+                  className="row-start-1 col-start-3 text-xl transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent lg:col-start-4"
                 >
                   →
                 </span>

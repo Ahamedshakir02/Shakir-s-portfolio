@@ -4,7 +4,7 @@ import Monogram from './Monogram.jsx'
 export default function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="frame meta flex flex-col gap-4 py-8 text-muted md:flex-row md:items-center md:justify-between">
+      <div className="frame meta flex flex-col gap-4 py-8 text-muted lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center gap-5">
           <Monogram />
           <p>

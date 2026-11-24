@@ -28,7 +28,7 @@ export default function ProjectPage() {
             ← All work
           </Link>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]">
+          <div className="mt-6 grid gap-6 lg:grid-cols-[16rem_1fr]">
             <p className="meta text-muted">
               ({p.idx}) {p.type}
               {p.year && <><br />{p.year}</>}
@@ -42,8 +42,8 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-10 md:gap-x-6 border-t border-ink pt-10 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr_20rem]">
-            <dl className="meta grid content-start gap-5 text-muted">
+          <div className="mt-12 grid gap-10 border-t border-ink pt-10 lg:grid-cols-[16rem_1fr] lg:gap-x-6 xl:grid-cols-[16rem_1fr_20rem]">
+            <dl className="meta grid content-start gap-5 text-muted sm:grid-cols-3 lg:grid-cols-1">
               {p.feats.map((f) => (
                 <div key={f.b}>
                   <dt className="font-serif text-3xl normal-case tracking-normal text-ink">{f.b}</dt>
@@ -52,7 +52,7 @@ export default function ProjectPage() {
               ))}
             </dl>
             <div className="max-w-[62ch] text-lede text-ink-2">{p.desc}</div>
-            <div className="md:col-start-2 lg:col-start-auto">
+            <div className="lg:col-start-2 xl:col-start-auto">
               <p className="meta text-muted">Built with</p>
               <p className="mt-2 text-ink-2">{p.stack.join(', ')}</p>
               <p className="mt-6 flex flex-wrap gap-x-6 text-sm font-medium">
@@ -84,7 +84,7 @@ export default function ProjectPage() {
           {p.details.map((d) => (
             <section
               key={d.h}
-              className="grid gap-5 md:gap-x-6 border-t border-line py-12 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]"
+              className="grid gap-5 border-t border-line py-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6"
             >
               <h2 className="font-serif text-3xl leading-tight">{d.h}</h2>
               <div className="max-w-[66ch] space-y-5 text-ink-2">
@@ -114,7 +114,7 @@ export default function ProjectPage() {
       </article>
 
       <nav aria-label="Next project" className="border-t border-line py-16 md:py-24">
-        <div className="frame grid gap-4 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]">
+        <div className="frame grid gap-4 lg:grid-cols-[16rem_1fr] lg:gap-x-6">
           <p className="meta text-muted">Next</p>
           <Link to={`/work/${next.slug}`} className="group font-serif text-title text-balance">
             {next.title.split(' — ')[0]}
