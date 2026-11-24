@@ -8,7 +8,7 @@ export default function Skills() {
         {skills.map((g) => (
           <div key={g.name}>
             <dt className="meta text-muted">{g.name}</dt>
-            <dd className="mt-3 text-ink-2">{g.chips.join(', ')}</dd>
+            <dd className="mt-3 text-ink-2">{g.items.join(', ')}</dd>
           </div>
         ))}
       </dl>
