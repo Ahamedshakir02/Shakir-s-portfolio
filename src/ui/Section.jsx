@@ -4,7 +4,7 @@
  */
 export default function Section({ id, no, label, title, aside, className = '', children }) {
   return (
-    <section id={id} className={`scroll-mt-6 border-t border-line py-20 md:py-28 ${className}`}>
+    <section id={id} className={`scroll-mt-12 border-t border-line py-20 md:py-28 ${className}`}>
       <div className="frame">
         <div className="mb-12 grid gap-6 md:mb-16 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]">
           <p className="meta text-muted">

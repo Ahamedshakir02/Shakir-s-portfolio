@@ -14,7 +14,7 @@ import Contact from '../sections/Contact.jsx'
 
 function Home() {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Work />
       <About />
