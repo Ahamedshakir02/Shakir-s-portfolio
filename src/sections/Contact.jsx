@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-12 border-t border-line py-24 md:py-36">
       <div className="frame">
-        <p className="meta text-muted">(05) Contact</p>
+        <p className="meta text-muted">(06) Contact</p>
 
         <h2 className="mt-8 max-w-[14ch] font-serif text-hero">
           Got Something Worth Building<span className="dot">?</span>

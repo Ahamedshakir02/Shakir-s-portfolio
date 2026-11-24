@@ -11,6 +11,8 @@ import About from '../sections/About.jsx'
 import Path from '../sections/Path.jsx'
 import Skills from '../sections/Skills.jsx'
 import Contact from '../sections/Contact.jsx'
+import Statement from '../sections/Statement.jsx'
+import OffRecord from '../sections/OffRecord.jsx'
 
 function Home() {
   return (
@@ -18,8 +20,10 @@ function Home() {
       <Hero />
       <Work />
       <About />
+      <Statement />
       <Path />
       <Skills />
+      <OffRecord />
       <Contact />
     </main>
   )
