@@ -1,52 +1,46 @@
-/**
- * A centred manifesto, set like the philosophy page of a printed folio.
- */
+import Section from '../ui/Section.jsx'
+
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-12 border-t border-line py-24 md:py-36">
-      <div className="frame">
-        <div className="meta flex justify-between gap-6 text-muted">
-          <span>(02) About</span>
-          <span>Kerala, India</span>
-        </div>
+    <Section id="about" no="02" label="About" title="The Short Version">
+      <div className="grid gap-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6">
+        <dl className="meta grid content-start gap-5 text-muted sm:grid-cols-3 lg:grid-cols-1">
+          <div>
+            <dt>Based in</dt>
+            <dd className="mt-1 text-ink">Kerala, India</dd>
+          </div>
+          <div>
+            <dt>Studied</dt>
+            <dd className="mt-1 text-ink">B.Tech CSE, KTU</dd>
+          </div>
+          <div>
+            <dt>Speaks</dt>
+            <dd className="mt-1 text-ink">English, Malayalam,<br />Tamil, Hindi</dd>
+          </div>
+        </dl>
 
-        <div className="mx-auto mt-14 max-w-[40rem] text-center md:mt-20">
-          <h2 className="font-serif text-[clamp(2.5rem,5vw,4.25rem)] leading-[0.98] tracking-[-0.02em] text-balance">
-            Most of What I Make Starts With a Real Problem<span className="dot">.</span>
-          </h2>
+        <div>
+          <p className="max-w-[28ch] font-serif text-[clamp(1.75rem,3.4vw,3rem)] leading-[1.1] text-balance">
+            CS grad from MES College of Engineering, Kuttippuram. I work across the whole thing: the
+            design, the code, and the part where <em>a real person</em> has to use it.
+          </p>
 
-          <div className="mt-10 space-y-6 text-lede text-pretty md:mt-12">
-            <p className="font-light text-ink-2">
-              A typing centre in Ajman that customers couldn&apos;t find online. A construction firm
-              in Kerala that needed a site as good as its builds. Police stations buried in FIR
-              paperwork. A rider who can&apos;t call for help after a crash.
+          <div className="mt-12 grid gap-8 text-ink-2 lg:grid-cols-2 lg:gap-12">
+            <p>
+              Most of what I make starts with a problem someone actually has. A typing centre in
+              Ajman that customers couldn&apos;t find online. A construction firm in Kerala that
+              needed a site as good as its builds. Police stations buried in FIR paperwork. A rider
+              who can&apos;t call for help after a crash.
             </p>
-            <p className="font-medium text-ink">
-              So I work across the whole thing: the design, the code, and the part where a real
-              person has to use it.
-            </p>
-            <p className="font-light text-ink-2">
+            <p>
               I started the µLearn chapter at my college and grew it campus-wide, and learned AWS,
-              Docker and Terraform by deploying things until they stopped breaking.
+              Docker and Terraform by deploying things until they stopped breaking. I&apos;ve been
+              freelancing since graduating, and I&apos;m open to engineering roles, remote first and
+              happy to relocate.
             </p>
           </div>
-
-          <dl className="meta mx-auto mt-14 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6 text-muted">
-            <div>
-              <dt>Based in</dt>
-              <dd className="mt-1 text-ink">Kerala, India</dd>
-            </div>
-            <div>
-              <dt>Studied</dt>
-              <dd className="mt-1 text-ink">B.Tech CSE, KTU</dd>
-            </div>
-            <div>
-              <dt>Speaks</dt>
-              <dd className="mt-1 text-ink">4 languages</dd>
-            </div>
-          </dl>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
