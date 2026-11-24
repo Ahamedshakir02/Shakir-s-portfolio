@@ -25,7 +25,7 @@ export default function Work() {
             <li key={p.slug} className="border-b border-line">
               <Link
                 to={`/work/${p.slug}`}
-                className="group relative grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 gap-y-2 py-7 md:grid-cols-[12rem_1fr_14rem_2rem] md:py-9 lg:grid-cols-[16rem_1fr_16rem_2rem]"
+                className="group relative grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 gap-y-2 md:gap-x-6 py-7 md:grid-cols-[12rem_1fr_14rem_2rem] md:py-9 lg:grid-cols-[16rem_1fr_16rem_2rem]"
               >
                 <span className="meta text-muted">{p.idx}</span>
                 <span>

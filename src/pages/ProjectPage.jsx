@@ -42,7 +42,7 @@ export default function ProjectPage() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-10 border-t border-ink pt-10 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr_20rem]">
+          <div className="mt-12 grid gap-10 md:gap-x-6 border-t border-ink pt-10 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr_20rem]">
             <dl className="meta grid content-start gap-5 text-muted">
               {p.feats.map((f) => (
                 <div key={f.b}>
@@ -84,7 +84,7 @@ export default function ProjectPage() {
           {p.details.map((d) => (
             <section
               key={d.h}
-              className="grid gap-5 border-t border-line py-12 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]"
+              className="grid gap-5 md:gap-x-6 border-t border-line py-12 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]"
             >
               <h2 className="font-serif text-3xl leading-tight">{d.h}</h2>
               <div className="max-w-[66ch] space-y-5 text-ink-2">

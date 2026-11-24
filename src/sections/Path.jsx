@@ -8,7 +8,7 @@ export default function Path() {
         {timeline.map((item) => (
           <li
             key={item.title}
-            className="grid gap-4 border-b border-line py-9 md:grid-cols-[12rem_1fr] md:gap-0 lg:grid-cols-[16rem_1fr_22rem] lg:gap-x-10"
+            className="grid gap-4 border-b border-line py-9 md:grid-cols-[12rem_1fr] md:gap-x-6 lg:grid-cols-[16rem_1fr_22rem]"
           >
             <p className="meta text-muted [font-variant-numeric:tabular-nums]">{item.when}</p>
             <div>
