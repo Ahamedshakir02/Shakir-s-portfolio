@@ -1,7 +1,8 @@
 /* =========================================================================
    EDITORIAL — design tokens for the Ahamed Shakir portfolio.
-   A white page, one big serif voice, small uppercase meta in the corners,
-   and a single red full stop as the only colour.
+   A white page, one tight serif voice, a light grey grotesk for reading,
+   tiny uppercase meta in the corners, and red only for the full stop and
+   the odd emphasised phrase.
    ========================================================================= */
 
 @import 'tailwindcss';
@@ -12,11 +13,12 @@
 
 @theme {
   /* ---- Colour ----------------------------------------------------------- */
-  --color-paper:  #ffffff;   /* the only surface */
+  --color-paper:  #ffffff;   /* the page */
+  --color-paper-2: #efefef;  /* the soft grey behind photos */
   --color-ink:    #0e0e0e;   /* headlines, primary text */
-  --color-ink-2:  #3a3a3a;   /* body copy (11.6:1 on paper) */
-  --color-muted:  #6b6b6b;   /* meta, captions (5.3:1 on paper) */
-  --color-line:   #e4e4e4;   /* hairlines, the only borders */
+  --color-ink-2:  #555555;   /* body copy, light grey (7.5:1 on paper) */
+  --color-muted:  #6e6e6e;   /* meta, captions (5.1:1 on paper) */
+  --color-line:   #e2e2e2;   /* hairlines, the only borders */
   --color-accent: #e0201b;   /* the red full stop, focus ring (4.6:1) */
 
   /* ---- Spacing ---------------------------------------------------------- */
@@ -24,22 +26,22 @@
 
   /* ---- Type ------------------------------------------------------------- */
   --font-serif: 'Instrument Serif', 'Times New Roman', serif;
-  --font-sans:  'Manrope', system-ui, sans-serif;
+  --font-sans:  'Inter Tight', 'Helvetica Neue', Arial, sans-serif;
 
   --text-hero:   clamp(3.5rem, 8.4vw, 8.75rem);
-  --text-hero--line-height: 0.9;
-  --text-hero--letter-spacing: -0.03em;
+  --text-hero--line-height: 0.88;
+  --text-hero--letter-spacing: -0.045em;
   --text-title:  clamp(3rem, 6vw, 5.5rem);
-  --text-title--line-height: 0.95;
-  --text-title--letter-spacing: -0.025em;
+  --text-title--line-height: 0.92;
+  --text-title--letter-spacing: -0.04em;
   --text-item:   clamp(1.75rem, 3.2vw, 2.75rem);
-  --text-item--line-height: 1.02;
-  --text-item--letter-spacing: -0.015em;
+  --text-item--line-height: 1;
+  --text-item--letter-spacing: -0.03em;
   --text-lede:   clamp(1.125rem, 1.6vw, 1.375rem);
-  --text-lede--line-height: 1.45;
+  --text-lede--line-height: 1.5;
   --text-body:   1rem;
-  --text-body--line-height: 1.7;
-  --text-meta:   0.75rem;    /* 12px uppercase corner labels */
+  --text-body--line-height: 1.6;
+  --text-meta:   0.6875rem;  /* 11px uppercase corner labels */
   --text-meta--line-height: 1.35;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -63,7 +65,8 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     font-size: var(--text-body);
-    line-height: 1.7;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -71,6 +74,11 @@
   ::selection { background: var(--color-ink); color: var(--color-paper); }
 
   a { color: inherit; text-decoration: none; }
+
+  /* Emphasis inside grey body copy steps up to bold italic ink. Inside a
+     serif line it stays the serif's own italic and turns red instead. */
+  em { font-style: italic; font-weight: 600; color: var(--color-ink); }
+  .font-serif em { font-weight: inherit; color: var(--color-accent); }
   img { display: block; max-width: 100%; }
 
   :focus-visible {
@@ -103,7 +111,7 @@
   font-size: var(--text-meta);
   line-height: 1.35;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
