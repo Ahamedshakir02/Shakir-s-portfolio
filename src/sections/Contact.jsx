@@ -52,7 +52,7 @@ export default function Contact() {
           </button>
         </div>
 
-        <ul className="meta mt-10 flex flex-wrap gap-x-8 text-ink">
+        <ul className="meta mt-10 grid grid-cols-2 gap-x-8 text-ink sm:flex sm:flex-wrap">
           {elsewhere.map((l) => (
             <li key={l.href}>
               <a

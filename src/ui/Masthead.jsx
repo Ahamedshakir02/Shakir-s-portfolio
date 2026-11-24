@@ -51,9 +51,10 @@ export default function Masthead() {
         <div className="frame flex items-start justify-between gap-6 pt-4 md:pt-8">
           <Link to="/" className="meta flex min-h-11 items-center text-ink">
             <span>
-              Ahamed Shakir M P
+              Ahamed Shakir<span className="hidden sm:inline"> M P</span>
               <br />
-              Designer + Developer<span className="hidden sm:inline"> + Builder</span>
+              <span className="sm:hidden">Kerala, India</span>
+              <span className="hidden sm:inline">Designer + Developer + Builder</span>
             </span>
           </Link>
           <nav aria-label="Primary">
