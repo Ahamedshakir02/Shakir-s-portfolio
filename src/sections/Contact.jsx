@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const EMAIL = 'ahamedshakir02@gmail.com'
 
 const elsewhere = [
@@ -8,8 +10,20 @@ const elsewhere = [
 
 /** The back cover: one line, the address, and where else to find me. */
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      window.location.href = `mailto:${EMAIL}`
+    }
+  }
+
   return (
-    <section id="contact" className="scroll-mt-6 border-t border-line py-24 md:py-36">
+    <section id="contact" className="scroll-mt-12 border-t border-line py-24 md:py-36">
       <div className="frame">
         <p className="meta text-muted">(05) Contact</p>
 
@@ -17,12 +31,26 @@ export default function Contact() {
           Got Something Worth Building<span className="dot">?</span>
         </h2>
 
-        <a
-          href={`mailto:${EMAIL}`}
-          className="link mt-10 inline-block font-serif text-[clamp(1.5rem,4vw,3rem)] leading-tight break-all md:mt-14"
-        >
-          {EMAIL}
-        </a>
+        <p className="mt-8 max-w-[40ch] text-lede text-ink-2">
+          Open to full-time engineering roles and freelance work. Tell me what you&apos;re
+          building.
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a
+            href={`mailto:${EMAIL}`}
+            className="link font-serif text-[clamp(1.5rem,4vw,3rem)] leading-tight break-all"
+          >
+            {EMAIL}
+          </a>
+          <button
+            type="button"
+            onClick={copy}
+            className="meta inline-flex min-h-11 items-center rounded-full border border-ink px-5 text-ink transition-colors hover:bg-ink hover:text-paper"
+          >
+            <span aria-live="polite">{copied ? 'Copied ✓' : 'Copy email'}</span>
+          </button>
+        </div>
 
         <ul className="meta mt-10 flex flex-wrap gap-x-8 text-ink">
           {elsewhere.map((l) => (
@@ -37,6 +65,15 @@ export default function Contact() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="/assets/Ahamed-Shakir-Resume.pdf"
+              download
+              className="inline-flex min-h-11 items-center hover:text-accent"
+            >
+              Résumé ↓
+            </a>
+          </li>
         </ul>
       </div>
     </section>
