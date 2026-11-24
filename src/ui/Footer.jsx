@@ -1,17 +1,21 @@
+import Monogram from './Monogram.jsx'
+
+/** The bottom edge of the page: monogram, credit line, and the two documents. */
 export default function Footer() {
   return (
-    <footer className="border-t border-line py-10">
-      <div className="wrap label flex flex-col gap-3 text-muted sm:flex-row sm:items-center sm:justify-between">
-        <p>
-          © {new Date().getFullYear()} Ahamed Shakir M P ·{' '}
-          <b className="font-medium text-accent">Available worldwide</b>
-        </p>
-        <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <a
-            href="/assets/Ahamed-Shakir-CV.pdf"
-            download
-            className="inline-flex min-h-11 items-center hover:text-ink"
-          >
+    <footer className="border-t border-line">
+      <div className="frame meta flex flex-col gap-4 py-8 text-muted lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex items-center gap-5">
+          <Monogram />
+          <p>
+            © {new Date().getFullYear()} <b className="font-semibold text-ink">Ahamed Shakir</b> | Kerala, India
+          </p>
+        </div>
+        <p className="flex flex-wrap gap-x-6">
+          <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="inline-flex min-h-11 items-center hover:text-ink">
+            Back to top ↑
+          </a>
+          <a href="/assets/Ahamed-Shakir-CV.pdf" download className="inline-flex min-h-11 items-center hover:text-ink">
             Full CV ↓
           </a>
           <a
@@ -20,7 +24,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex min-h-11 items-center hover:text-ink"
           >
-            Google Developer Profile ↗
+            Google Developer profile ↗
           </a>
         </p>
       </div>

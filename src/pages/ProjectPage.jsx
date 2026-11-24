@@ -1,16 +1,8 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { useDocumentMeta } from '../hooks/useDocumentMeta.js'
 import { projects } from '../content/index.js'
-import { ArrowOutIcon } from '../ui/Icons.jsx'
-import Section from '../ui/Section.jsx'
-import Button from '../ui/Button.jsx'
-import MetaBadge from '../ui/MetaBadge.jsx'
-import ImageSlot from '../ui/ImageSlot.jsx'
 
-/**
- * /work/:slug — the case study for a single project: hero, media, the written
- * detail sections, screenshots, and a handoff to the next project.
- */
+/** /work/:slug — one case study, set like a magazine feature. */
 export default function ProjectPage() {
   const { slug } = useParams()
   const i = projects.findIndex((p) => p.slug === slug)
@@ -26,103 +18,110 @@ export default function ProjectPage() {
 
   if (!p) return <Navigate to="/" replace />
   const next = projects[(i + 1) % projects.length]
+  const [name, sub] = p.title.split(' — ')
 
   return (
-    <main className="pt-16">
-      <Section>
-        <Link to="/#work" className="label inline-flex min-h-11 items-center text-muted hover:text-ink">
-          ← All work
-        </Link>
+    <main id="main">
+      <article>
+        <header className="frame pt-32 md:pt-40">
+          <Link to="/#work" className="meta inline-flex min-h-11 items-center text-muted hover:text-ink">
+            ← All work
+          </Link>
 
-        <div className="label mt-6 mb-5 flex items-baseline gap-3 text-muted">
-          <b className="font-medium text-accent">{p.idx}</b> {p.type}
-        </div>
-
-        <h1 className="font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.05] font-semibold tracking-[-0.025em] text-balance">
-          {p.title}
-        </h1>
-        <div className="mt-7 max-w-[62ch] text-ink-2">{p.desc}</div>
-
-        <ul className="mt-7 flex flex-wrap gap-x-3 gap-y-1">
-          {p.stack.map((s) => <li key={s} className="label text-muted">{s}</li>)}
-        </ul>
-
-        <div className="mt-8 grid grid-cols-1 gap-5 border-y border-line py-6 sm:grid-cols-3">
-          {p.feats.map((f) => <MetaBadge key={f.b} {...f} />)}
-        </div>
-
-        <ImageSlot
-          src={p.media}
-          alt={p.alt}
-          placeholder={p.alt}
-          className="mt-10 aspect-[16/9]"
-          imgClassName="project-media scale-110"
-        />
-      </Section>
-
-      <Section>
-        {p.details.map((d) => (
-          <div
-            key={d.h}
-            className="reveal grid gap-5 border-t border-line py-10 md:grid-cols-[minmax(0,16rem)_1fr] md:gap-10"
-          >
-            <h2 className="font-display text-heading font-semibold text-balance">{d.h}</h2>
-            <div className="space-y-5 text-ink-2">
-              {d.ps.map((t, j) => <p key={j}>{t}</p>)}
+          <div className="mt-6 grid gap-6 lg:grid-cols-[16rem_1fr]">
+            <p className="meta text-muted">
+              ({p.idx}) {p.type}
+              {p.year && <><br />{p.year}</>}
+            </p>
+            <div>
+              <h1 className="max-w-[16ch] font-serif text-title text-balance">
+                {name}
+                <span className="dot">.</span>
+              </h1>
+              {sub && <p className="mt-4 text-lede font-light text-ink-2">{sub}</p>}
             </div>
           </div>
-        ))}
 
-        {p.shots?.length > 0 && (
-          <div className="reveal mt-10 grid gap-6 sm:grid-cols-2">
-            {p.shots.map((s) => (
-              <figure key={s.src}>
-                <img
-                  src={s.src}
-                  alt={`${p.title} — ${s.caption}`}
-                  loading="lazy"
-                  decoding="async"
-                  onError={(e) => { e.currentTarget.closest('figure').hidden = true }}
-                  className="w-full rounded-card border border-line"
-                />
-                <figcaption className="label mt-3 text-muted">{s.caption}</figcaption>
-              </figure>
-            ))}
+          <div className="mt-12 grid gap-10 border-t border-ink pt-10 lg:grid-cols-[16rem_1fr] lg:gap-x-6 xl:grid-cols-[16rem_1fr_20rem]">
+            <dl className="meta grid content-start gap-5 text-muted sm:grid-cols-3 lg:grid-cols-1">
+              {p.feats.map((f) => (
+                <div key={f.b}>
+                  <dt className="font-serif text-3xl normal-case tracking-normal text-ink">{f.b}</dt>
+                  <dd className="mt-1">{f.s}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="max-w-[62ch] text-lede font-light text-ink-2">{p.desc}</div>
+            <div className="lg:col-start-2 xl:col-start-auto">
+              <p className="meta text-muted">Built with</p>
+              <p className="mt-2 text-ink-2">{p.stack.join(', ')}</p>
+              <p className="mt-6 flex flex-wrap gap-x-6 text-sm font-medium">
+                {p.live && (
+                  <a href={p.live} target="_blank" rel="noopener noreferrer" className="link inline-flex min-h-11 items-center">
+                    Visit the live site ↗
+                  </a>
+                )}
+                <a href={p.link} target="_blank" rel="noopener noreferrer" className="link inline-flex min-h-11 items-center">
+                  {p.linkLabel} ↗
+                </a>
+              </p>
+            </div>
           </div>
+        </header>
+
+        {p.media && (
+          <figure className="frame mt-16 md:mt-20">
+            <img
+              src={p.media}
+              alt={p.alt}
+              decoding="async"
+              className="aspect-[16/9] w-full border border-line object-cover"
+            />
+          </figure>
         )}
 
-        <div className="mt-12 flex flex-wrap gap-3">
-          {p.live && (
-            <Button href={p.live} target="_blank" rel="noopener noreferrer" variant="primary">
-              Visit the live site <span aria-hidden="true">↗</span>
-            </Button>
-          )}
-          <Button
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant={p.live ? 'ghost' : 'primary'}
-          >
-            {p.linkLabel} <span aria-hidden="true">↗</span>
-          </Button>
-          <Button as={Link} to="/#contact">
-            Discuss a project like this <span aria-hidden="true">→</span>
-          </Button>
-        </div>
-      </Section>
+        <div className="frame mt-8">
+          {p.details.map((d) => (
+            <section
+              key={d.h}
+              className="grid gap-5 border-t border-line py-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6"
+            >
+              <h2 className="font-serif text-3xl leading-tight">{d.h}</h2>
+              <div className="max-w-[66ch] space-y-5 font-light text-ink-2">
+                {d.ps.map((t, j) => <p key={j}>{t}</p>)}
+              </div>
+            </section>
+          ))}
 
-      <Section className="border-t border-line">
-        <div className="label mb-6 flex items-baseline gap-3 text-muted">
-          <b className="font-medium text-accent">Next</b> Keep exploring
+          {p.shots?.length > 0 && (
+            <div className="grid gap-8 border-t border-line py-12 sm:grid-cols-2">
+              {p.shots.map((s) => (
+                <figure key={s.src}>
+                  <img
+                    src={s.src}
+                    alt={`${p.title}: ${s.caption}`}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => { e.currentTarget.closest('figure').hidden = true }}
+                    className="w-full border border-line"
+                  />
+                  <figcaption className="meta mt-3 text-muted">{s.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
         </div>
-        <Link
-          to={`/work/${next.slug}`}
-          className="group flex items-center justify-between gap-6 font-display text-title font-semibold text-balance hover:text-accent"
-        >
-          {next.title}
-          <ArrowOutIcon size={28} className="shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-        </Link>
-      </Section>
+      </article>
+
+      <nav aria-label="Next project" className="border-t border-line py-16 md:py-24">
+        <div className="frame grid gap-4 lg:grid-cols-[16rem_1fr] lg:gap-x-6">
+          <p className="meta text-muted">Next</p>
+          <Link to={`/work/${next.slug}`} className="group font-serif text-title text-balance">
+            {next.title.split(' — ')[0]}
+            <span className="dot"> →</span>
+          </Link>
+        </div>
+      </nav>
     </main>
   )
 }
