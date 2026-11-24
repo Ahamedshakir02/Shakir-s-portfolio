@@ -6,6 +6,10 @@
 
 @import 'tailwindcss';
 
+/* The side-by-side cover needs both width and a landscape screen. Tall
+   tablets and landscape phones get the stacked poster instead. */
+@custom-variant wide (@media (min-width: 64rem) and (orientation: landscape));
+
 @theme {
   /* ---- Colour ----------------------------------------------------------- */
   --color-paper:  #ffffff;   /* the only surface */
@@ -25,7 +29,7 @@
   --text-hero:   clamp(3.5rem, 8.4vw, 8.75rem);
   --text-hero--line-height: 0.9;
   --text-hero--letter-spacing: -0.03em;
-  --text-title:  clamp(2.75rem, 6vw, 5.5rem);
+  --text-title:  clamp(3rem, 6vw, 5.5rem);
   --text-title--line-height: 0.95;
   --text-title--letter-spacing: -0.025em;
   --text-item:   clamp(1.75rem, 3.2vw, 2.75rem);
@@ -47,6 +51,8 @@
 }
 
 @layer base {
+  :root { --gutter: clamp(20px, 6vw, 96px); }
+
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -88,7 +94,7 @@
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-  padding-inline: clamp(20px, 6vw, 96px);
+  padding-inline: var(--gutter);
 }
 
 /* Small uppercase meta label, the corner type of the editorial grid. */
