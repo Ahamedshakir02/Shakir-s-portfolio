@@ -21,7 +21,7 @@ export default function ProjectPage() {
   const [name, sub] = p.title.split(' — ')
 
   return (
-    <main>
+    <main id="main">
       <article>
         <header className="frame pt-32 md:pt-40">
           <Link to="/#work" className="meta inline-flex min-h-11 items-center text-muted hover:text-ink">
@@ -31,6 +31,7 @@ export default function ProjectPage() {
           <div className="mt-6 grid gap-6 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]">
             <p className="meta text-muted">
               ({p.idx}) {p.type}
+              {p.year && <><br />{p.year}</>}
             </p>
             <div>
               <h1 className="max-w-[16ch] font-serif text-title text-balance">

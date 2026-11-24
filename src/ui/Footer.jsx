@@ -12,6 +12,9 @@ export default function Footer() {
           </p>
         </div>
         <p className="flex flex-wrap gap-x-6">
+          <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="inline-flex min-h-11 items-center hover:text-ink">
+            Back to top ↑
+          </a>
           <a href="/assets/Ahamed-Shakir-CV.pdf" download className="inline-flex min-h-11 items-center hover:text-ink">
             Full CV ↓
           </a>
