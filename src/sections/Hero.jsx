@@ -7,7 +7,7 @@ import Monogram from '../ui/Monogram.jsx'
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden lg:min-h-[max(100svh,46rem)]">
-      <div className="frame relative z-10 pt-32 md:pt-40 lg:flex lg:min-h-[max(100svh,46rem)] lg:flex-col lg:justify-center lg:pt-24 lg:pb-32">
+      <div className="frame relative z-10 pt-32 md:pt-40 lg:flex lg:min-h-[max(100svh,46rem)] lg:flex-col lg:justify-center lg:pt-28 lg:pb-28">
         <h1 className="rise max-w-[11ch] font-serif text-hero">
           Ideas I&apos;ve Built Into Real Things<span className="dot">.</span>
         </h1>
@@ -36,23 +36,37 @@ export default function Hero() {
           </p>
         </div>
 
-        <p
-          className="rise mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium"
+        <div
+          className="rise mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium"
           style={{ animationDelay: '300ms' }}
         >
-          <a href="/#work" className="link inline-flex min-h-11 items-center">
-            See the work →
+          <a
+            href="/#work"
+            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-ink px-6 text-paper transition-colors hover:bg-accent"
+          >
+            See the work <span aria-hidden="true">→</span>
+          </a>
+          <a href="mailto:ahamedshakir02@gmail.com" className="link inline-flex min-h-11 items-center">
+            Email me
           </a>
           <a href="/assets/Ahamed-Shakir-Resume.pdf" download className="link inline-flex min-h-11 items-center">
             Résumé ↓
           </a>
+        </div>
+
+        <p className="rise meta mt-8 flex items-center gap-2 text-ink-2" style={{ animationDelay: '360ms' }}>
+          <span className="relative flex size-2" aria-hidden="true">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#1f9d55] opacity-60" />
+            <span className="relative inline-flex size-2 rounded-full bg-[#1f9d55]" />
+          </span>
+          Open to full-time roles and freelance work · Remote first
         </p>
       </div>
 
       {/* Portrait: in flow under the copy on small screens, bled off the
           right edge of the cover from lg up. */}
       <div
-        className="fade-in pointer-events-none relative -mt-4 ml-auto w-[112%] max-w-none translate-x-[6%] sm:w-[88%] sm:translate-x-[8%] lg:absolute lg:right-0 lg:bottom-0 lg:mt-0 lg:h-[94%] lg:w-auto lg:translate-x-[10%] xl:translate-x-[6%]"
+        className="fade-in pointer-events-none relative mt-6 ml-auto w-[112%] max-w-none translate-x-[6%] sm:w-[88%] sm:translate-x-[8%] lg:absolute lg:right-0 lg:bottom-0 lg:mt-0 lg:h-[94%] lg:w-auto lg:translate-x-[10%] xl:translate-x-[6%]"
         style={{ animationDelay: '150ms' }}
       >
         <img
@@ -66,18 +80,10 @@ export default function Hero() {
         />
       </div>
 
-      {/* Bottom corners of the cover, laid over the portrait like a print credit. */}
-      <div className="absolute inset-x-0 bottom-0 z-10">
-        <div className="frame meta flex items-end justify-between gap-6 pb-6 text-ink md:pb-8">
-          <Monogram className="hidden sm:inline-flex" />
-          <p className="hidden text-ink/70 md:block">
-            © 2026 <b className="font-semibold text-ink">Ahamed Shakir</b> | Selected work 2023–2026
-          </p>
-          <p className="text-right [text-shadow:0_0_12px_#fff]">
-            Open to roles
-            <br />
-            <b className="font-semibold">Remote first</b>
-          </p>
+      {/* Bottom-left stamp, like the mark in the corner of a print. */}
+      <div className="absolute bottom-0 left-0 z-10 hidden lg:block">
+        <div className="frame pb-8">
+          <Monogram />
         </div>
       </div>
     </section>
