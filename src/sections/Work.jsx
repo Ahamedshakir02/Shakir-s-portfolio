@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { projects } from '../content/index.js'
-import Section from '../ui/Section.jsx'
+import Spread from '../ui/Spread.jsx'
 
 // "FIR-AI — Investigation Assistant" reads as a name and a subtitle.
 const split = (t) => {
@@ -8,17 +8,71 @@ const split = (t) => {
   return { name, sub }
 }
 
-/** An index, like the contents page of a magazine: number, name, kind, go. */
+const byslug = (slug) => projects.find((p) => p.slug === slug)
+
+/**
+ * Two statement spreads up front, like pages from a printed folio, then the
+ * full index of every project.
+ */
 export default function Work() {
+  const safari = byslug('safari-typing')
+  const holy = byslug('holytouch')
+
   return (
-    <Section
-      id="work"
-      no="01"
-      label="Selected work"
-      title="Work I've Put My Name On"
-      aside={<>Client sites with real customers, a four-app marketplace, applied AI and a piece of hardware. Each one has a full case study.</>}
-    >
-      <ol className="border-t border-ink">
+    <section id="work" className="scroll-mt-12 border-t border-line pt-20 pb-20 md:pt-28 md:pb-28">
+      <div className="frame">
+        <Spread
+          left="(01) Selected work"
+          right="Client work · 2026"
+          title={<>I Turn Real Problems Into Live Websites</>}
+          caption="Client Websites"
+          body={
+            <>
+              A typing centre in Ajman that customers couldn&apos;t find online, and a builder in
+              Kerala that needed a site as good as its builds. Both are{' '}
+              <em className="font-serif text-[1.2em] text-ink">live today.</em>
+            </>
+          }
+        >
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <Tile to={holy} src="/assets/shots/holytouch-home.jpg" label="Holytouch · Home" />
+            <Tile to={safari} src="/assets/shots/safari-services.jpg" label="Safari Typing · Services" />
+            <Tile to={holy} src="/assets/shots/holytouch-projects.jpg" label="Holytouch · Projects" />
+            <Tile to={safari} src="/assets/shots/safari-home.jpg" label="Safari Typing · Home" />
+          </div>
+        </Spread>
+
+        <Spread
+          className="mt-28 md:mt-40"
+          left="Products, AI & hardware"
+          right="2024–2026"
+          title={<>Some Ideas Needed an App. One Needed a Circuit</>}
+          caption="Products, AI & Hardware"
+          body={
+            <>
+              A marketplace shipped as four Flutter apps, a crime classifier that runs offline at
+              98.8% accuracy, and an ESP32 that calls for help after a crash. Not demos,{' '}
+              <em className="font-serif text-[1.2em] text-ink">working things.</em>
+            </>
+          }
+        >
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <Tile to={byslug('thengapari')} src="/assets/proj-4.png" label="ThengaPari · Four Flutter apps" />
+            <Tile to={byslug('fir-ai')} src="/assets/proj-1.png" label="FIR-AI · Offline classifier" />
+            <Tile to={byslug('tailsafe')} src="/assets/proj-2.png" label="GPS & IMU safety · ESP32" />
+            <Tile to={byslug('stroke-prediction')} src="/assets/proj-3.png" label="Stroke prediction · ML" />
+          </div>
+        </Spread>
+
+        <div className="mt-28 md:mt-40">
+          <div className="mb-8 flex items-end justify-between gap-6">
+            <h3 className="font-serif text-item">
+              Every Project, Indexed<span className="dot">.</span>
+            </h3>
+            <p className="meta text-muted">{projects.length} case studies</p>
+          </div>
+
+          <ol className="border-t border-ink">
         {projects.map((p) => {
           const { name, sub } = split(p.title)
           return (
@@ -64,7 +118,30 @@ export default function Work() {
             </li>
           )
         })}
-      </ol>
-    </Section>
+          </ol>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/** One image in a spread's grid, linking to its case study. */
+function Tile({ to, src, label }) {
+  return (
+    <Link
+      to={`/work/${to.slug}`}
+      className="group relative block aspect-[16/10] overflow-hidden bg-[#f2f2f2]"
+    >
+      <img
+        src={src}
+        alt={`${to.title.split(' — ')[0]}: ${label}`}
+        loading="lazy"
+        decoding="async"
+        className="size-full object-cover object-center transition-transform duration-700 ease-[var(--ease-out)] group-hover:scale-[1.03]"
+      />
+      <span className="meta absolute bottom-2 left-2 bg-paper/90 px-2 py-1 text-ink opacity-0 transition-opacity group-hover:opacity-100 sm:bottom-3 sm:left-3">
+        {label} →
+      </span>
+    </Link>
   )
 }
