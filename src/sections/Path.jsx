@@ -3,7 +3,7 @@ import Section from '../ui/Section.jsx'
 
 export default function Path() {
   return (
-    <Section id="path" no="03" label="Experience & education" title="Where I've Been">
+    <Section id="path" no="03" label="Experience & education" title="Where I've been">
       <ol className="border-t border-ink">
         {timeline.map((item) => (
           <li
@@ -16,7 +16,7 @@ export default function Path() {
               <p className="mt-2 text-sm text-ink-2">{item.where.join(' · ')}</p>
             </div>
             <div className="lg:col-start-2 xl:col-start-auto">
-              <p className="text-ink-2">{item.role}</p>
+              <p className="font-light text-ink-2">{item.role}</p>
               <details className="group mt-4">
                 <summary className="meta inline-flex min-h-11 cursor-pointer list-none items-center gap-2 text-ink hover:text-accent [&::-webkit-details-marker]:hidden">
                   <span className="transition-transform group-open:rotate-45" aria-hidden="true">+</span>

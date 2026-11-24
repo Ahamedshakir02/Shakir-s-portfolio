@@ -28,10 +28,10 @@ export default function Contact() {
         <p className="meta text-muted">(05) Contact</p>
 
         <h2 className="mt-8 max-w-[14ch] font-serif text-hero">
-          Got Something Worth Building<span className="dot">?</span>
+          Got something worth building<span className="dot">?</span>
         </h2>
 
-        <p className="mt-8 max-w-[40ch] text-lede text-ink-2">
+        <p className="mt-8 max-w-[40ch] text-lede font-light text-ink-2">
           Open to full-time engineering roles and freelance work. Tell me what you&apos;re
           building.
         </p>

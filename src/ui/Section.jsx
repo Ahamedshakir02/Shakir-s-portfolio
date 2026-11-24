@@ -15,7 +15,7 @@ export default function Section({ id, no, label, title, aside, className = '', c
               {title}
               <span className="dot">.</span>
             </h2>
-            {aside && <div className="max-w-md text-ink-2 xl:max-w-sm xl:pb-2">{aside}</div>}
+            {aside && <div className="max-w-md font-light text-ink-2 xl:max-w-sm xl:pb-2">{aside}</div>}
           </div>
         </div>
         {children}

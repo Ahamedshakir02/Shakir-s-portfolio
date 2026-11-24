@@ -38,7 +38,7 @@ export default function ProjectPage() {
                 {name}
                 <span className="dot">.</span>
               </h1>
-              {sub && <p className="mt-4 text-lede text-ink-2">{sub}</p>}
+              {sub && <p className="mt-4 text-lede font-light text-ink-2">{sub}</p>}
             </div>
           </div>
 
@@ -51,7 +51,7 @@ export default function ProjectPage() {
                 </div>
               ))}
             </dl>
-            <div className="max-w-[62ch] text-lede text-ink-2">{p.desc}</div>
+            <div className="max-w-[62ch] text-lede font-light text-ink-2">{p.desc}</div>
             <div className="lg:col-start-2 xl:col-start-auto">
               <p className="meta text-muted">Built with</p>
               <p className="mt-2 text-ink-2">{p.stack.join(', ')}</p>
@@ -87,7 +87,7 @@ export default function ProjectPage() {
               className="grid gap-5 border-t border-line py-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6"
             >
               <h2 className="font-serif text-3xl leading-tight">{d.h}</h2>
-              <div className="max-w-[66ch] space-y-5 text-ink-2">
+              <div className="max-w-[66ch] space-y-5 font-light text-ink-2">
                 {d.ps.map((t, j) => <p key={j}>{t}</p>)}
               </div>
             </section>

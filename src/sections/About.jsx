@@ -2,7 +2,7 @@ import Section from '../ui/Section.jsx'
 
 export default function About() {
   return (
-    <Section id="about" no="02" label="About" title="The Short Version">
+    <Section id="about" no="02" label="About" title="The short version">
       <div className="grid gap-12 lg:grid-cols-[16rem_1fr] lg:gap-x-6">
         <dl className="meta grid content-start gap-5 text-muted sm:grid-cols-3 lg:grid-cols-1">
           <div>
@@ -26,13 +26,13 @@ export default function About() {
           </p>
 
           <div className="mt-12 grid gap-8 text-ink-2 lg:grid-cols-2 lg:gap-12">
-            <p>
-              Most of what I make starts with a problem someone actually has. A typing centre in
+            <p className="font-light">
+              Most of what I make starts with <em>a problem someone actually has.</em> A typing centre in
               Ajman that customers couldn&apos;t find online. A construction firm in Kerala that
               needed a site as good as its builds. Police stations buried in FIR paperwork. A rider
               who can&apos;t call for help after a crash.
             </p>
-            <p>
+            <p className="font-light">
               I started the µLearn chapter at my college and grew it campus-wide, and learned AWS,
               Docker and Terraform by deploying things until they stopped breaking. I&apos;ve been
               freelancing since graduating, and I&apos;m open to engineering roles, remote first and

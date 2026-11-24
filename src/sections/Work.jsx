@@ -15,7 +15,7 @@ export default function Work() {
       id="work"
       no="01"
       label="Selected work"
-      title="Work I've Put My Name On"
+      title="Work I've put my name on"
       aside={<>Client sites with real customers, a four-app marketplace, applied AI and a piece of hardware. Each one has a full case study.</>}
     >
       <ol className="border-t border-ink">
