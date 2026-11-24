@@ -15,7 +15,20 @@ export default function Path() {
               <h3 className="font-serif text-item">{item.title}</h3>
               <p className="mt-2 text-sm text-ink-2">{item.where.join(' · ')}</p>
             </div>
-            <p className="text-ink-2 md:col-start-2 lg:col-start-auto">{item.role}</p>
+            <div className="md:col-start-2 lg:col-start-auto">
+              <p className="text-ink-2">{item.role}</p>
+              <details className="group mt-4">
+                <summary className="meta inline-flex min-h-11 cursor-pointer list-none items-center gap-2 text-ink hover:text-accent [&::-webkit-details-marker]:hidden">
+                  <span className="transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                  Highlights
+                </summary>
+                <ul className="mt-2 space-y-3 text-sm text-ink-2">
+                  {item.list.map((li, i) => (
+                    <li key={i} className="border-l border-line pl-4">{li}</li>
+                  ))}
+                </ul>
+              </details>
+            </div>
           </li>
         ))}
       </ol>
