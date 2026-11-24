@@ -14,8 +14,8 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden wide:min-h-[max(100svh,40rem)]">
       <div className="frame pt-24 sm:pt-32 wide:flex wide:min-h-[max(100svh,40rem)] wide:flex-col wide:justify-center wide:pt-28 wide:pb-24">
-        <h1 className="rise relative z-10 max-w-[11ch] font-serif text-[clamp(3.5rem,min(18vw,20vh),9rem)] leading-[0.88] tracking-[-0.03em] wide:text-hero">
-          Ideas I&apos;ve Built Into Real Things<span className="dot">.</span>
+        <h1 className="rise relative z-10 max-w-[9ch] font-serif landscape:max-w-[11ch] text-[clamp(3.5rem,min(18vw,20vh),9rem)] leading-[0.88] tracking-[-0.045em] wide:text-hero">
+          Ideas I&apos;ve built into real things<span className="dot">.</span>
         </h1>
 
         <div>
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="relative z-10 border-t border-ink pt-8 pb-14 sm:max-w-[44%] sm:border-0 sm:pt-10 sm:pb-16 wide:max-w-[min(30rem,40vw)] wide:p-0 wide:pt-8">
             <p className="rise max-w-[30ch] text-lede font-light text-ink-2" style={{ animationDelay: '120ms' }}>
               A working record of the websites, apps and hardware I took from a sketch to{' '}
-              <em className="font-serif text-[1.25em] text-ink">shipped.</em>
+              <em>shipped.</em>
             </p>
 
             <div className="rise mt-8 flex items-end gap-8" style={{ animationDelay: '220ms' }}>
