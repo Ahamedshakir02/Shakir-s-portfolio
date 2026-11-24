@@ -1,87 +1,52 @@
 import { Link } from 'react-router-dom'
 import { projects } from '../content/index.js'
 import Section from '../ui/Section.jsx'
-import SectionHeader from '../ui/SectionHeader.jsx'
-import { ArrowOutIcon } from '../ui/Icons.jsx'
 
-const COUNT_WORDS = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight']
-
-/**
- * A teaser, not the whole story: title, a clamped lead, and the stack. The
- * project's image, the full description, the key numbers, and the write-up
- * all live on the case study at /work/:slug — you see the picture once you
- * open the project, which also keeps the card short enough to sit inside a
- * pinned horizontal rail without overflowing the viewport.
- */
-function ProjectCard({ p }) {
-  return (
-    <article className="reveal flex h-full flex-col rounded-card border border-line bg-paper-2/40 p-5 transition-colors hover:border-line-2">
-      <div className="flex items-start justify-between gap-4">
-        <span className="label text-muted">{p.idx}</span>
-        <a
-          href={p.live || p.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={p.live ? `Visit ${p.title} live site` : `${p.linkLabel} — ${p.title}`}
-          className="grid size-11 shrink-0 place-items-center rounded-pill border border-line text-ink-2 transition-colors hover:border-ink hover:text-ink"
-        >
-          <ArrowOutIcon />
-        </a>
-      </div>
-
-      <h3 className="mt-2 font-display text-heading font-semibold text-balance">
-        <Link to={`/work/${p.slug}`} className="hover:text-accent">{p.title}</Link>
-      </h3>
-      <p className="label mt-2 text-muted">{p.type}</p>
-
-      <div className="mt-4 line-clamp-5 text-caption text-ink-2">{p.desc}</div>
-
-      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
-        {p.stack.slice(0, 4).map((s) => (
-          <li key={s} className="label text-muted">{s}</li>
-        ))}
-      </ul>
-
-      <Link
-        to={`/work/${p.slug}`}
-        className="mt-auto inline-flex min-h-11 items-center gap-2 self-start pt-5 text-caption text-accent transition-all hover:gap-3"
-      >
-        Read the case study <span aria-hidden="true">→</span>
-      </Link>
-    </article>
-  )
+// "FIR-AI — Investigation Assistant" reads as a name and a subtitle.
+const split = (t) => {
+  const [name, sub] = t.split(' — ')
+  return { name, sub }
 }
 
+/** An index, like the contents page of a magazine: number, name, kind, go. */
 export default function Work() {
-  const n = COUNT_WORDS[projects.length - 1] ?? projects.length
-
   return (
-    <Section id="work">
-      <SectionHeader
-        idx="03"
-        label="Selected work"
-        title={<>{n} project{projects.length === 1 ? '' : 's'}.<br />Zero filler.</>}
-      />
-
-      {/* Below lg: a plain stack, then a two-up grid. At lg and up,
-          Choreography pins this and scrubs the track sideways — see
-          src/motion/Choreography.jsx. The rail stays inside the content
-          column because ScrollTrigger fixes the pinned element's width. */}
-      <div
-        data-rail
-        className="mt-12 lg:overflow-hidden lg:[mask-image:linear-gradient(to_right,transparent_0,#000_5rem,#000_calc(100%-5rem),transparent_100%)]"
-      >
-        <div data-rail-track className="grid gap-6 md:grid-cols-2 lg:flex lg:w-max lg:gap-8 lg:px-24">
-          {projects.map((p) => (
-            <div
-              key={p.idx}
-              className="lg:w-[26rem] lg:shrink-0"
-            >
-              <ProjectCard p={p} />
-            </div>
-          ))}
-        </div>
-      </div>
+    <Section
+      id="work"
+      no="01"
+      label="Selected work"
+      title="Work I've Put My Name On"
+      aside={<>Client sites with real customers, a four-app marketplace, applied AI and a piece of hardware. Each one has a full case study.</>}
+    >
+      <ol className="border-t border-ink">
+        {projects.map((p) => {
+          const { name, sub } = split(p.title)
+          return (
+            <li key={p.slug} className="border-b border-line">
+              <Link
+                to={`/work/${p.slug}`}
+                className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 gap-y-2 py-7 md:grid-cols-[12rem_1fr_14rem_2rem] md:py-9 lg:grid-cols-[16rem_1fr_16rem_2rem]"
+              >
+                <span className="meta text-muted">{p.idx}</span>
+                <span>
+                  <span className="block font-serif text-item transition-transform duration-500 ease-[var(--ease-out)] group-hover:translate-x-3">
+                    {name}
+                    <span className="dot opacity-0 transition-opacity group-hover:opacity-100">.</span>
+                  </span>
+                  {sub && <span className="mt-2 block text-sm text-ink-2">{sub}</span>}
+                </span>
+                <span className="meta col-start-2 text-muted md:col-start-auto">{p.type}</span>
+                <span
+                  aria-hidden="true"
+                  className="row-start-1 col-start-3 text-xl transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent md:col-start-4"
+                >
+                  ↗
+                </span>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
     </Section>
   )
 }

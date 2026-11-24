@@ -1,57 +1,44 @@
-import { aboutTags } from '../content/index.js'
 import Section from '../ui/Section.jsx'
-import SectionHeader from '../ui/SectionHeader.jsx'
-import Chip from '../ui/Chip.jsx'
 
 export default function About() {
   return (
-    <Section id="about">
-      <SectionHeader idx="01" label="The gist" className="mb-10" />
+    <Section id="about" no="02" label="About" title="The Short Version">
+      <div className="grid gap-12 md:grid-cols-[12rem_1fr] lg:grid-cols-[16rem_1fr]">
+        <dl className="meta grid content-start gap-5 text-muted">
+          <div>
+            <dt>Based in</dt>
+            <dd className="mt-1 text-ink">Kerala, India</dd>
+          </div>
+          <div>
+            <dt>Studied</dt>
+            <dd className="mt-1 text-ink">B.Tech CSE, KTU</dd>
+          </div>
+          <div>
+            <dt>Speaks</dt>
+            <dd className="mt-1 text-ink">English, Malayalam,<br />Tamil, Hindi</dd>
+          </div>
+        </dl>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
-        <h2 className="reveal font-display text-heading font-medium text-balance">
-          CS grad from{' '}
-          <span className="text-accent">MES College of Engineering, Kuttippuram</span>. I work
-          across the whole thing — the design, the code, and the part where a real person has to
-          use it.
-        </h2>
-
-        <div className="reveal space-y-5 text-ink-2">
-          <p>
-            Most of what I make starts with a problem someone actually has. A typing centre in
-            Ajman that customers couldn&apos;t find online. A construction firm in Kerala that
-            needed a site as good as its builds. Police stations buried in FIR paperwork. A rider
-            who can&apos;t call for help after a crash.
-          </p>
-          <p>
-            So the work ranges wide: client websites in React, a coconut-harvest marketplace
-            I&apos;m building solo as four Flutter apps, an ESP32 accident-detection device with
-            its companion app, and FIR-AI — a four-person final-year project for Kerala Police,
-            where I built the classification model and designed the architecture.
-          </p>
-          <p>
-            Along the way I started the µLearn chapter at my college and grew it campus-wide, and
-            learned AWS, Docker and Terraform by deploying things until they stopped breaking.
-            I&apos;ve been freelancing since graduating, and I&apos;m open to engineering roles —
-            remote first, happy to relocate.
+        <div>
+          <p className="max-w-[28ch] font-serif text-[clamp(1.75rem,3.4vw,3rem)] leading-[1.1] text-balance">
+            CS grad from MES College of Engineering, Kuttippuram. I work across the whole thing: the
+            design, the code, and the part where <em>a real person</em> has to use it.
           </p>
 
-          <ul className="flex flex-wrap gap-2 pt-2">
-            {aboutTags.map((t) => <Chip key={t}>{t}</Chip>)}
-          </ul>
-
-          <p className="text-caption text-muted">
-            Find my certifications, skills, and GitHub projects on my{' '}
-            <a
-              href="https://g.dev/ahamedshakir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-line-2 underline-offset-4 hover:text-ink"
-            >
-              Google Developer profile
-            </a>
-            .
-          </p>
+          <div className="mt-12 grid gap-8 text-ink-2 lg:grid-cols-2 lg:gap-12">
+            <p>
+              Most of what I make starts with a problem someone actually has. A typing centre in
+              Ajman that customers couldn&apos;t find online. A construction firm in Kerala that
+              needed a site as good as its builds. Police stations buried in FIR paperwork. A rider
+              who can&apos;t call for help after a crash.
+            </p>
+            <p>
+              I started the µLearn chapter at my college and grew it campus-wide, and learned AWS,
+              Docker and Terraform by deploying things until they stopped breaking. I&apos;ve been
+              freelancing since graduating, and I&apos;m open to engineering roles, remote first and
+              happy to relocate.
+            </p>
+          </div>
         </div>
       </div>
     </Section>
